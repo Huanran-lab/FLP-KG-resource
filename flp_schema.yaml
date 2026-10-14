@@ -1,0 +1,137 @@
+name: solid-FLP-knowledge-graph
+description: Solid / heterogeneous Frustrated Lewis Pairs knowledge graph from review literature
+neo4j:
+  uri: "bolt://localhost:7687"
+  user: neo4j
+  browser: "http://localhost:7474"
+node_labels:
+  # Material system
+  - Material
+  - Catalyst
+  - Support
+  - ActiveSite
+  - Defect
+
+  # FLP system
+  - FLP
+  - LewisAcid
+  - LewisBase
+
+  # Reaction system
+  - Reaction
+  - Reactant
+  - Intermediate
+  - Product
+  - Molecule
+
+  # Mechanism
+  - Mechanism
+  - ReactionStep
+
+  # Descriptor / activity
+  - Descriptor
+  - ElectronicDescriptor
+  - GeometricDescriptor
+  - EnergeticDescriptor
+  - Activity
+
+  # Condition / evidence
+  - Condition
+
+
+relationship_types:
+  # FLP structure
+  - HAS_ACID_SITE
+  - HAS_BASE_SITE
+  - FORMS_PAIR_WITH
+  - CONTAINS
+
+  # Material structure
+  - HAS_COMPONENT
+  - HAS_ACTIVE_SITE
+  - LOCATED_ON
+  - SUPPORTED_ON
+  - HAS_SURFACE
+  - HAS_DEFECT
+  - ENABLES
+
+  # Reaction
+  - CATALYZES
+  - HAS_REACTANT
+  - HAS_PRODUCT
+  - FORMS
+  - PROCEEDS_VIA
+  - ACTIVATES
+
+  # Mechanism
+  - INVOLVES
+  - FACILITATES
+  - SUPPRESSES
+
+  # Descriptor
+  - HAS_DESCRIPTOR
+  - DESCRIBED_BY
+  - CORRELATES_WITH
+
+  # Condition
+  - HAS_CONDITION
+
+
+
+canonical_patterns:
+  # FLP formation
+  - Material -HAS_DEFECT-> Defect
+  - Defect -ENABLES-> FLP
+
+  # FLP composition
+  - FLP -HAS_ACID_SITE-> LewisAcid
+  - FLP -HAS_BASE_SITE-> LewisBase
+  - LewisAcid -CONTAINS-> LewisAcid
+
+  # FLP location
+  - FLP -LOCATED_ON-> Material
+
+  # FLP activation
+  - FLP -ACTIVATES-> Molecule
+
+  # Catalysis
+  - FLP -CATALYZES-> Reaction
+
+  # Reaction pathway
+  - Reaction -HAS_REACTANT-> Reactant
+  - Reaction -HAS_INTERMEDIATE-> Intermediate
+  - Reaction -HAS_PRODUCT-> Product
+  - Reaction -PROCEEDS_VIA-> Mechanism
+
+  # Descriptor relationship
+  - ActiveSite -HAS_DESCRIPTOR-> Descriptor
+  - Descriptor -CORRELATES_WITH-> Activity
+
+merge_keys:
+  # All entity nodes MERGE on label + normalized name
+  unique_property: name
+  normalize: lowercase_strip
+
+synonyms:
+  oxygen vacancy:
+    - "oxygen vacancy"
+    - "o vacancy"
+    - "vo"
+    - "v_o"
+    - "oxygen vacancies"
+  surface flp:
+    - "surface flp"
+    - "surface frustrated lewis pair"
+    - "solid flp"
+    - "heterogeneous flp"
+  ceo2:
+    - "ceo2"
+    - "ceria"
+    - "cerium oxide"
+    - "ceoxide"
+
+notes:
+  - Generic solid FLP is stored as FLP.name = surface FLP
+  - Boron-centered acid instances are nested under boron Lewis acid via CONTAINS
+  - Entity identity is label + lowercase-stripped name after synonym normalization
+  - Document nodes store source PDF metadata for REPORTED_IN provenance

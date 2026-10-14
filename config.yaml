@@ -1,0 +1,56 @@
+# Paths (relative to project root)
+paths:
+  schema: flp_schema.yaml
+  api_key_file: api.txt
+  pdf_dir: zongshu
+  out_dir: out
+  synonyms_extra: synonyms_extra.yaml
+
+# DeepSeek (OpenAI-compatible)
+llm:
+  base_url: https://api.deepseek.com
+  # DeepSeek API (2026): deepseek-chat retired; use v4-flash or v4-pro
+  model: deepseek-v4-flash
+  temperature: 0.1
+  max_tokens: 4096
+  timeout_s: 120
+  max_retries: 4
+  # Prefer high-signal chunks; 0 = process all prioritized chunks
+  max_chunks_per_pdf: 40
+
+# PDF chunking
+chunking:
+  target_chars: 3200
+  overlap_chars: 400
+  min_chars: 200
+
+# Neo4j
+neo4j:
+  uri: bolt://localhost:7687
+  user: neo4j
+  # Password from env NEO4J_PASSWORD or .env; default neo4j for first setup
+  password_env: NEO4J_PASSWORD
+  database: neo4j
+
+# Priority keywords for chunk ranking (case-insensitive)
+priority_keywords:
+  - frustrated lewis
+  - flp
+  - oxygen vacancy
+  - heterolytic
+  - lewis acid
+  - lewis base
+  - surface defect
+  - co2
+  - hydrogenation
+  - methanation
+  - activation
+  - ceria
+  - ceo2
+  - d-band
+  - p-band
+  - d-band center
+  - p-band center
+  - orbital hybridization
+  - density of states
+  - fermi

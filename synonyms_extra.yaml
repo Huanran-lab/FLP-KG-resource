@@ -1,0 +1,130 @@
+# Extra entity synonyms used by the pipeline / merge tools.
+# Kept outside flp_schema.yaml so schema edits stay under user control.
+#
+# canonical_name:
+#   - variant_a
+#   - variant_b
+
+VO-Ce-O:
+  - "VO-Ce-O"
+  - "VCe-O"
+  - "Vo-Ce-O"
+  - "VO–Ce–O"
+  - "VCe–O"
+
+VO-Ce-O cluster:
+  - "VO-Ce-O cluster"
+  - "VCe-O cluster"
+  - "Vo-Ce-O cluster"
+  - "VO–Ce–O cluster"
+
+surface FLP:
+  - "surface FLP"
+  - "surface flp"
+  - "frustrated Lewis pair"
+  - "frustrated lewis pair"
+  - "FLP mechanism"
+  - "dynamic frustrated Lewis pair"
+  - "solid FLP"
+  - "heterogeneous FLP"
+  - "surface frustrated lewis pair"
+
+CeO2:
+  - "CeO2"
+  - "ceria"
+  - "cerium oxide"
+  - "cerium dioxide"
+  - "CeO2(110)"
+  - "CeO2(111)"
+  - "CeO2(100)"
+  - "CeO2 surface"
+  - "defect CeO2(110)"
+  - "defective CeO2"
+  - "reduced CeO2"
+  - "CeO2 nanorods"
+  - "ceria nanorod"
+
+ZnO:
+  - "ZnO"
+  - "ZnO (100)"
+  - "ZnO(100)"
+  - "ZnO (100) surface"
+  - "ZnO (001) surface"
+  - "ZnO surface"
+
+MgO:
+  - "MgO"
+  - "MgO(100)"
+  - "MgO(110)"
+  - "MgO(111)"
+
+Al2O3:
+  - "Al2O3"
+  - "γ-Al2O3"
+  - "γ-Al2O3(100)"
+  - "γ-Al2O3(110)"
+  - "gamma-Al2O3"
+  - "alumina"
+  - "Al₂O₃"
+
+d-band center:
+  - "d-band center"
+  - "d band center"
+  - "εd"
+  - "Ed"
+  - "d-band-center"
+
+p-band center:
+  - "p-band center"
+  - "p band center"
+  - "εp"
+  - "Ep"
+  - "p-band-center"
+
+d-p hybridization:
+  - "d-p hybridization"
+  - "d–p hybridization"
+  - "d-p orbital hybridization"
+  - "d–p orbital hybridization"
+  - "d-p interaction"
+  - "d–p interaction"
+
+Au:
+  - "Au"
+  - "gold"
+  - "Au(111)"
+  - "Au surface"
+  - "gold surface"
+
+In2O3:
+  - "In2O3"
+  - "In(OH)3-x"
+  - "In(OH)3"
+  - "In2O3-x(OH)y"
+  - "indium hydroxide"
+  - "InOH"
+  - "In(OH)"
+  - "In-OH"
+
+Ce-O FLP:
+  - "Ce-O FLP"
+  - "Ce/O FLP"
+  - "Ce-O FLP on CeO2"
+  - "surface FLP on CeO2"
+
+oxygen vacancy:
+  - "oxygen vacancy"
+  - "oxygen vacancies"
+  - "O vacancy"
+  - "Ov"
+  - "VO"
+  - "Vo"
+
+COOH*:
+  - "COOH*"
+  - "*COOH"
+
+B/N-codoped carbon:
+  - "B/N-codoped carbon"
+  - "B/N codoped carbon"
+  - "B-N co-doped carbon"
