@@ -1,0 +1,689 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "GaN",
+      "props": {
+        "note": "wurtzite; hosts GaI···NII SFLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "ZnO",
+      "props": {
+        "note": "wurtzite; hosts ZnI···OII SFLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "AlP",
+      "props": {
+        "note": "wurtzite; hosts AlI···PII SFLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "GaI···NII FLP",
+      "props": {
+        "note": "unbonded SFLP on GaN"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "ZnI···OII FLP",
+      "props": {
+        "note": "unbonded SFLP on ZnO"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "AlI···PII FLP",
+      "props": {
+        "note": "unbonded SFLP on AlP"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "GaI",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "NII",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "ZnI",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "OII",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "AlI",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "PII",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "H2 activation",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "methane activation",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogen sulfide activation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "methane",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "hydrogen sulfide",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "PDOS",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "p-σ orbital overlap",
+      "props": {
+        "note": "small-molecule···SFLP orbital overlap"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "p-σ* orbital overlap",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "p-band center",
+      "props": {
+        "note": "merged from a995; LA/LB p-band ε"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "d-band center",
+      "props": {
+        "note": "merged from a995; Zn LA d-band ε"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Fermi level",
+      "props": {
+        "note": "merged from a995"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "orbital hybridization",
+      "props": {
+        "note": "merged from a995"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "surface density of SFLPs",
+      "props": {
+        "note": "merged from a995"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnO"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "AlP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "GaI···NII FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "ZnO"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "ZnI···OII FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "AlP"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "AlI···PII FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "GaI···NII FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "ZnI···OII FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnO"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "AlI···PII FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "AlP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "GaI"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "NII"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnO"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "ZnI"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnO"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "OII"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "AlP"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "AlI"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "AlP"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "PII"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "GaI"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "NII"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "ZnI"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "OII"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "AlI"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "PII"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "GaI···NII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "PDOS"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "GaI···NII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "p-σ orbital overlap"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "GaI···NII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "p-σ* orbital overlap"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2 activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "methane activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogen sulfide activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "methane"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "GaN"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "hydrogen sulfide"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 activation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "methane activation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "methane"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogen sulfide activation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "hydrogen sulfide"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "PDOS"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2 activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "p-σ orbital overlap"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2 activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "p-σ* orbital overlap"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2 activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "GaI···NII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "p-band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "GaI···NII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Fermi level"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "GaI···NII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "orbital hybridization"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "ZnI···OII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "d-band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "ZnI···OII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "p-band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlI···PII FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "p-band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "p-band center"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "surface density of SFLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "d-band center"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "surface density of SFLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "Fermi level"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "surface density of SFLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "orbital hybridization"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "surface density of SFLPs"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "a79bd80b9e784ac4",
+    "source_pdf": "Finding Natural, Dense, and Stable Frustrated Lewis Pairs onWurtzite Crystal Surfaces for Small-Molecule Activation.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 21.0,
+    "note": "hierarchy GaI···NII / ZnI···OII / AlI···PII; +p/d-band, Fermi, hybridization, SFLP density from a995"
+  }
+}

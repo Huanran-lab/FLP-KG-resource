@@ -1,0 +1,283 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Pt1@CeO2",
+      "props": {
+        "note": "Pt1@CeO2(110)/(III) with two neighboring OVs; SA-FLP-3 dual active sites retained",
+        "aliases": ["Pt1@CeO2(110)", "Pt1@CeO2(III)"]
+      }
+    },
+    {
+      "label": "Material",
+      "name": "CeO2(110)",
+      "props": {
+        "note": "parent surface"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "two neighboring Vos enable SA-FLP-3; adjacent to Pt; creates Ce···O FLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ce(1)···O(8) FLP",
+      "props": {
+        "note": "SA-FLP-3 FLP site; Ce(1) LA + O(8) LB; stronger methane activation than Ce(2)···O(7); with nearby Pt SA",
+        "aliases": ["Ce···O FLP", "SA-FLP-3", "FLP surface"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce(1)",
+      "props": {
+        "aliases": ["Ce", "Ce site"],
+        "note": "unsaturated Ce near OV"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "O(8)",
+      "props": {
+        "aliases": ["lattice O", "surface O"],
+        "note": "proximal lattice O"
+      }
+    },
+    {
+      "label": "ActiveSite",
+      "name": "Pt site",
+      "props": {
+        "note": "single-atom Pt site of SA-FLP dual active sites; NOT the FLP; activates first CH4",
+        "aliases": ["Pt single atom"]
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "4.54 Å",
+        "note": "Ce(1)···O(8) surface FLP"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "adsorption energy",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "dissociative adsorption energy",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "activation energy",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "nonoxidative coupling of methane",
+      "props": {
+        "note": "NOCM"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "methane dissociation",
+      "props": {
+        "note": "C–H activation step on SA-FLP dual sites"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CH4",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "C2 hydrocarbons",
+      "props": {
+        "note": "ethane/ethylene"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "CH3",
+      "props": {
+        "note": "from methane dissociation; binds as Pt-CH3 on Pt site"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "H",
+      "props": {
+        "note": "from methane dissociation; binds as Pt-H on Pt site"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_COMPONENT",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "Material", "name": "CeO2(110)"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "Pt1@CeO2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "FLP", "name": "Ce(1)···O(8) FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Ce(1)···O(8) FLP"},
+      "target": {"label": "Material", "name": "Pt1@CeO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "Ce(1)···O(8) FLP"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "LewisAcid", "name": "Ce(1)"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "LewisBase", "name": "O(8)"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Ce(1)"},
+      "target": {"label": "LewisBase", "name": "O(8)"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "ActiveSite", "name": "Pt site"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ce(1)···O(8) FLP"},
+      "target": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ce(1)···O(8) FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis basicity"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "ActiveSite", "name": "Pt site"},
+      "target": {"label": "Descriptor", "name": "adsorption energy"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "ActiveSite", "name": "Pt site"},
+      "target": {"label": "Descriptor", "name": "dissociative adsorption energy"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "ActiveSite", "name": "Pt site"},
+      "target": {"label": "Descriptor", "name": "activation energy"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "Reactant", "name": "CH4"},
+      "props": {
+        "note": "Pt SA activates first CH4; Ce(1)···O(8) FLP activates second CH4"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "Reaction", "name": "nonoxidative coupling of methane"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "Pt1@CeO2"},
+      "target": {"label": "Reaction", "name": "methane dissociation"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "nonoxidative coupling of methane"},
+      "target": {"label": "Reactant", "name": "CH4"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "nonoxidative coupling of methane"},
+      "target": {"label": "Product", "name": "C2 hydrocarbons"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "methane dissociation"},
+      "target": {"label": "Reactant", "name": "CH4"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "methane dissociation"},
+      "target": {"label": "Product", "name": "CH3"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "methane dissociation"},
+      "target": {"label": "Product", "name": "H"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "101299d9b28517ca",
+    "source_pdf": "design-of-sa-flp-dual-active-sites-for-nonoxidative-coupling-of-methane.pdf",
+    "page_start": 3,
+    "page_end": 3,
+    "score": 0.0,
+    "note": "新逻辑: merge 306579/608d4; Ce(1)···O(8) on Pt1@CeO2; Ov ENABLES FLP; Pt SA dual site kept; drop Intermediate; not CO2RR"
+  }
+}

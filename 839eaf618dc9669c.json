@@ -1,0 +1,625 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "In2O3-x(OH)y",
+      "props": {
+        "note": "defect-laden indium oxide hydroxide; hosts In···OH SFLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "BizIn2-zO3-x(OH)y",
+      "props": {
+        "note": "Bi-substituted In2O3-x(OH)y; hosts In-OH···Bi SFLP; volcano vs Bi loading"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "surface hydroxide",
+      "props": {
+        "note": "In-OH LB sites on surface"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "In···OH FLP",
+      "props": {
+        "note": "unsaturated In (LA) + In-OH (LB)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "In-OH···Bi FLP",
+      "props": {
+        "note": "In-OH (LB) + Bi3+ (LA); Bi at acid site"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "unsaturated In",
+      "props": {
+        "note": "coordinatively unsaturated In LA"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "In-OH",
+      "props": {
+        "note": "surface In-OH LB"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Bi3+",
+      "props": {
+        "note": "Bi substituted at LA site of SFLP"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic/gas-phase RWGS; CO2→CO (+H2O)"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic splitting",
+      "props": {
+        "note": "FLP-mediated H2 heterolysis"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "acidity of In/Bi LA site; tuned by Bi substitution"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity of In-OH LB; aided by Ov"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "FLP site strength",
+      "props": {
+        "note": "combined LA/LB strength; volcano vs Bi loading"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "CO production rate"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Bader charge",
+      "props": {
+        "note": "charges on LA/LB near FLP; quantifies acidity/basicity"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "BizIn2-zO3-x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "BizIn2-zO3-x(OH)y"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In-OH···Bi FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "In-OH···Bi FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "BizIn2-zO3-x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "surface hydroxide"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "BizIn2-zO3-x(OH)y"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In-OH···Bi FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "surface hydroxide"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "unsaturated In"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "unsaturated In"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "BizIn2-zO3-x(OH)y"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Bi3+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "BizIn2-zO3-x(OH)y"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Bi3+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {
+        "note": "In-OH···Bi"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "FLP site strength"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In-OH···Bi FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "FLP site strength"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Bader charge"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "FLP site strength"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "volcano vs Bi loading"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "Bader charge"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "Bader charge"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "BizIn2-zO3-x(OH)y"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "BizIn2-zO3-x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "H2O"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic splitting"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "839eaf618dc9669c",
+    "source_pdf": "Tailoring Surface Frustrated Lewis Pairs of In2O3 x OH y for Gas‐Phase Heterogeneous.pdf",
+    "page_start": 1,
+    "page_end": 8,
+    "score": 13.0,
+    "note": "merged a368: In···OH + In-OH···Bi; Bi material; FLP site strength; Ov ENABLES FLPs; Bader; acidity/basicity→FLP→CO2RR activity; deleted a368",
+    "merged_from": [
+      "a36803d409e63412",
+      "c59bfc19ff259c35"
+    ]
+  }
+}

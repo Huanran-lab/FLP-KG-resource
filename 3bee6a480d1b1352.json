@@ -1,0 +1,477 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Ni-CeO2(110)-Ov",
+      "props": {
+        "note": "Ni-doped CeO2(110) with oxygen vacancy; hosts Ce/O and Ni/O pairs"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ce1/O1 FLP",
+      "props": {
+        "note": "Ce site (LA) / O1 (LB) frustrated pair"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce4+",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "O1",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ni/O FLP",
+      "props": {
+        "note": "Ni (LA) / O2 (LB) frustrated pair"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ni",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "O2",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ce1/O2 CLP",
+      "props": {
+        "note": "classical Lewis pair Ce1/O2 (not frustrated)"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce1",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "C2H2 hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "C2H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic dissociation",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "homolytic dissociation",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella; contains Ni-CeO2(110)-Ov host"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "C2H2",
+      "props": {}
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "note": "FLP if LA–LB >~2 Å (Ce1–O1 >4.4 Å; Ni–O2 3.52 Å); CLP if adjacent 1–2 Å"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce1/O1 FLP"
+      },
+      "props": {
+        "note": "Ov induces mono-Ce/O FLP"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ni/O FLP"
+      },
+      "props": {
+        "note": "Ov geometry enables Ni–O2 FLP (~3.52 Å)"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce4+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O1"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ce4+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O1"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ni"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O2"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ni"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O2"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ce1"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "C2H2 hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "C2H2 hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "C2H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "C2H2 hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "C2H2 hydrogenation"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "C2H2 hydrogenation"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "homolytic dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ce1/O1 FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ni/O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce1/O1 FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ni/O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce1/O2 CLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ce1/O2 CLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce1"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ni-CeO2(110)-Ov"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "C2H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ce1/O1 FLP"
+      },
+      "target": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce1/O1 FLP"
+      },
+      "props": {
+        "note": "Ce1–O1 >4.4 Å → mono-Ce/O FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ni/O FLP"
+      },
+      "target": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ni/O FLP"
+      },
+      "props": {
+        "note": "Ni–O2 3.52 Å → Ni/O FLP"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "3bee6a480d1b1352",
+    "source_pdf": "Acetylene hydrogenation catalyzed by bare and Nidoped CeO2(110) the role of frustrated Lewispairs.pdf",
+    "page_start": 3,
+    "page_end": 3,
+    "score": 20.0,
+    "note": "hierarchy: surface FLP CONTAINS Ni-CeO2(110)-Ov CONTAINS Ce1/O1, Ni/O FLP + Ce1/O2 CLP; Ov ENABLES Ce1/O1 & Ni/O FLP; dropped unsupported Lewis basicity chain; LA-LB distance ENABLES Ce1/O1 & Ni/O FLP"
+  }
+}

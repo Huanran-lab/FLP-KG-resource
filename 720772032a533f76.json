@@ -1,0 +1,350 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "ZnSn(OH)6",
+      "props": {
+        "crystal_structure": "cubic",
+        "exposed_facet": "(100)",
+        "note": "alternating Zn-OH / Sn-OH; vacuum Xe irradiation creates OVs at Sn"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "formation": "photocorrosion of light-unstable Sn-OH under vacuum irradiation",
+        "epr_signal": "g = 2.003",
+        "note": "creates unsaturated Sn Lewis acid"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Sn···Zn-OH FLP",
+      "props": {
+        "note": "ordering FLP: OV-derived unsaturated Sn (LA) + proximal light-stable Zn-OH (LB)"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "unsaturated Sn site",
+      "props": {
+        "oxidation_state": "Snδ+ (δ < 4)",
+        "note": "created by photoinduced OVs at Sn"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "Zn-OH",
+      "props": {
+        "note": "light-stable terminal hydroxyl; Lewis base"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic CO2 + H2 → CO + H2O (RWGS-like)"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic cleavage",
+      "props": {
+        "note": "FLP heterolytic cleavage of H2; aids CO2 capture/activation/reduction to CO"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "CO yield; peaks ~99.2 μmol g−1 on ZnSn(OH)6-OVs-2 h with FLP concentration"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Sn···Zn-OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Sn···Zn-OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Sn···Zn-OH FLP"
+      },
+      "props": {
+        "note": "photo-OV at Sn + proximal Zn-OH → ordering FLP"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "unsaturated Sn site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Zn-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "unsaturated Sn site"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Zn-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "ZnSn(OH)6"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "Sn···Zn-OH FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {
+        "note": "heterolytic H2 cleavage on ordering FLP"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "Sn···Zn-OH FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {
+        "note": "capture/activation/reduction of CO2 to CO with H2"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "H2O"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic cleavage"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "FLP",
+        "name": "Sn···Zn-OH FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic cleavage"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Sn···Zn-OH FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "FLP/OV concentration tunes CO yield; FLP lowers barriers for CO2 capture/activation/reduction"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "720772032a533f76",
+    "source_pdf": "Dual-metal hydroxide with ordering frustrated Lewis pairs forphotoactivating CO2 to CO.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 5.0,
+    "note": "新逻辑: surface FLP→ZnSn(OH)6→Sn···Zn-OH; Ov ENABLES FLP; FORMS_PAIR_WITH; Reaction=CO2RR; drop unsupported d-band; sole; FLP↔CO2RR activity"
+  }
+}

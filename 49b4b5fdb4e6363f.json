@@ -1,0 +1,575 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "NOCC5",
+      "props": {
+        "note": "Ni/NiOx@C/g-C3N4 composite; 5 wt% Ni/NiOx@C; main photocatalyst (NOCC)"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Ni/NiOx@C",
+      "props": {
+        "note": "carbon-encapsulated Ni/NiOx cocatalyst; FLP host at grain boundaries (Jahn–Teller-induced VO/VNi)"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "g-C3N4",
+      "props": {
+        "note": "host photocatalyst / light absorber"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Ni/NiOx",
+      "props": {
+        "note": "core oxide/metal of cocatalyst"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "graphitized carbon",
+      "props": {
+        "note": "carbon shell; π–π conjugation with vacancy-induced FLP sites"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "aliases": [
+          "VO"
+        ],
+        "note": "at Ni/NiOx@C grain boundaries; enables FLP-VO-C basic site"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "nickel vacancy",
+      "props": {
+        "aliases": [
+          "VNi",
+          "Ni vacancy"
+        ],
+        "note": "at Ni/NiOx@C grain boundaries; enables FLP-VNi-C acidic site"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "VNi-C···VO-C FLP",
+      "props": {
+        "note": "adjacent FLP-VNi-C acid + FLP-VO-C base at grain boundaries; paper synergistic FLP pair",
+        "aliases": [
+          "FLP-VNi-C/FLP-VO-C"
+        ]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "VNi-C",
+      "props": {
+        "note": "FLP-VNi-C acidic site; activates H* (ΔGH = 0.6 eV)"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "VO-C",
+      "props": {
+        "note": "FLP-VO-C basic site; activates OH* in H2O splitting"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "photocatalytic hydrogen evolution",
+      "props": {
+        "note": "photothermal-assisted; H2O → H2 over NOCC"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "H2O dissociation on FLP",
+      "props": {
+        "note": "Volmer H2O → H*+OH* then Tafel H* → H2; FLP-VO-C activates OH*, FLP-VNi-C activates H*"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "spatial charge polarization",
+      "props": {
+        "note": "localized charge redistribution around VNi/VO; forms adjacent FLP sites"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "of FLP-VNi-C site"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "of FLP-VO-C site"
+      }
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "H2O splitting energy barrier",
+      "props": {
+        "value": "2.2 eV",
+        "note": "vs 2.46 eV on defect-free Ni/NiO/Graphite"
+      }
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "H adsorption free energy",
+      "props": {
+        "value": "0.6 eV",
+        "note": "ΔGH at FLP-VNi-C; vs 1.5 eV on defect-free surface"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "apparent activation energy",
+      "props": {
+        "note": "from Arrhenius fitting; lowered by FLP + photothermal effect"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "hydrogen evolution rate",
+      "props": {
+        "value": "10.7 mmol g-1 h-1",
+        "note": "NOCC5; 1.76× Pt cocatalyst; AQY 40.78% at 380 nm"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "NOCC5"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "NOCC5"
+      },
+      "target": {
+        "label": "Material",
+        "name": "g-C3N4"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "Material",
+        "name": "g-C3N4"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni/NiOx"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "Material",
+        "name": "graphitized carbon"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "nickel vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "props": {
+        "note": "VO → FLP-VO-C basic site"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "nickel vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "props": {
+        "note": "VNi → FLP-VNi-C acidic site"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "VNi-C"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "VO-C"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "VNi-C"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "VO-C"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "spatial charge polarization"
+      },
+      "props": {
+        "note": "VNi/VO opposing charge clouds with C conjugation → FLP pair"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "EnergeticDescriptor",
+        "name": "H2O splitting energy barrier"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "EnergeticDescriptor",
+        "name": "H adsorption free energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "NOCC5"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "apparent activation energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ni/NiOx@C"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2O"
+      },
+      "props": {
+        "note": "synergistic FLP-VO-C (OH*) + FLP-VNi-C (H*); spatial charge polarization"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2O"
+      },
+      "props": {
+        "note": "FLP-VO-C activates OH*; FLP-VNi-C activates H*; mediates H2O splitting"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "NOCC5"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "photocatalytic hydrogen evolution"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "photocatalytic hydrogen evolution"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2O"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "photocatalytic hydrogen evolution"
+      },
+      "target": {
+        "label": "Product",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "photocatalytic hydrogen evolution"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "H2O dissociation on FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "H2O dissociation on FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "spatial charge polarization"
+      },
+      "target": {
+        "label": "EnergeticDescriptor",
+        "name": "H2O splitting energy barrier"
+      },
+      "props": {
+        "note": "defect-induced polarization → lower barrier (2.2 vs 2.46 eV)"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "EnergeticDescriptor",
+        "name": "H2O splitting energy barrier"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "hydrogen evolution rate"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "apparent activation energy"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "hydrogen evolution rate"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "VNi-C···VO-C FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "hydrogen evolution rate"
+      },
+      "props": {
+        "note": "FLP synergy + photothermal defect effect"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "49b4b5fdb4e6363f",
+    "source_pdf": "Unveiling the Synergistic Role of Frustrated Lewis Pairs in Carbon‐Encapsulated Ni NiOx.pdf",
+    "page_start": 1,
+    "page_end": 10,
+    "score": 0.0,
+    "note": "新逻辑: merge 07b73/2cf8; VNi-C···VO-C; FLP on Ni/NiOx@C; NOCC5 catalyzes HER (not CO2RR); no Intermediate; +FLP ACTIVATES H2O"
+  }
+}

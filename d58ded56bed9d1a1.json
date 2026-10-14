@@ -1,0 +1,381 @@
+{
+  "nodes": [
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "pp-CeO2",
+      "props": {
+        "note": "plasma-phosphating treated CeO2; hosts Ce-P FLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Pt/pp-CeO2",
+      "props": {
+        "note": "Pt on pp-CeO2; Ce-P FLP assists MOR on Pt"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "p-CeO2",
+      "props": {
+        "note": "Ar-plasma treated CeO2; hosts vacancy-type Ce-O FLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {
+        "note": "unmodified nanorod CeO2; comparison"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Pt/p-CeO2",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "Pt/CeO2",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "Pt/C",
+      "props": {
+        "note": "commercial Pt/C reference"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ce···P FLP",
+      "props": {
+        "note": "Ce Lewis acid + P Lewis base after partial O2- → P3- substitution; more active for CO oxidation than Ce-O FLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ce···O FLP",
+      "props": {
+        "note": "traditional vacancy-type Ce Lewis acid + O Lewis base on plasma-treated ceria"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "enriched by Ar plasma on p-CeO2"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "P",
+      "props": {
+        "note": "P-type Lewis base; stronger proton affinity than O-type"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "O",
+      "props": {
+        "note": "O-type Lewis base in Ce-O FLP"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "methanol oxidation reaction",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "methanol",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "MOR activity",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "CO oxidation activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "pp-CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "p-CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "pp-CeO2"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce···P FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "p-CeO2"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···P FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "pp-CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "p-CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "p-CeO2"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "Pt/pp-CeO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "pp-CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "Pt/p-CeO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "p-CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "Pt/CeO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "pp-CeO2"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "pp-CeO2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "P"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "p-CeO2"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "p-CeO2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ce"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "P"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ce"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Pt/pp-CeO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "methanol oxidation reaction"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "methanol oxidation reaction"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "methanol"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "methanol oxidation reaction"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Activity",
+        "name": "MOR activity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO oxidation activity"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "d58ded56bed9d1a1",
+    "source_pdf": "Frustrated Lewis pair engineering on ceria to improve methanol oxidation activity of Pt for direct methanol fuel cell applications.pdf",
+    "page_start": 3,
+    "page_end": 6,
+    "score": 22.0,
+    "note": "two FLPs: Ce···O on p-CeO2 (Ov-enabled); Ce···P on pp-CeO2 (main); Pt/pp-CeO2 CATALYZES MOR"
+  }
+}

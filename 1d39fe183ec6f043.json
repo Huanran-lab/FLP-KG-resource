@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "MIL-101(Cr)",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "CFLP4-0.75@MIL-101(Cr)",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "chiral bifunctional Lewis base",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "tris(pentafluorophenyl)borane",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "heterogeneous asymmetric hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "ActiveSite",
+      "name": "CrIII open site",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "CFLP4-0.75@MIL-101(Cr)"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MIL-101(Cr)"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "CFLP4-0.75@MIL-101(Cr)"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "MIL-101(Cr)"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "tris(pentafluorophenyl)borane"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "MIL-101(Cr)"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "chiral bifunctional Lewis base"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "ActiveSite",
+        "name": "CrIII open site"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "CFLP4-0.75@MIL-101(Cr)"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "heterogeneous asymmetric hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MIL-101(Cr)"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "1d39fe183ec6f043",
+    "source_pdf": "Chiral Frustrated Lewis Pair@Metal-Organic Framework as a NewPlatform for Heterogeneous Asymmetric Hydrogenation.pdf",
+    "page_start": 2,
+    "page_end": 5,
+    "score": 18.0,
+    "note": "CFLP4 renamed to surface FLP; Catalyst→Material merge"
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "In2O3-x(EDA)y",
+      "props": {
+        "note": "E-IO; amine-functionalized In2O3; main host of InNH2···In SFLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "In2O3-x(OH)y",
+      "props": {
+        "note": "H-IO; progenitor/control; InOH···In SFLP"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "helps create unsaturated In (LA)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella SFLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "InNH2···In FLP",
+      "props": {
+        "note": "amine SFLP on E-IO; stronger LB than InOH···In",
+        "aliases": ["InNH2···In SFLP"]
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "InOH···In FLP",
+      "props": {
+        "note": "classic SFLP on H-IO",
+        "aliases": ["InOH···In SFLP"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "In",
+      "props": {
+        "note": "unsaturated In(III) / CUS In near vacancy"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "InNH2",
+      "props": {
+        "note": "surface amine; stronger Lewis base than InOH"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "InOH",
+      "props": {
+        "note": "surface hydroxide on H-IO"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic CO2 hydrogenation; products CO + CH3OH"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CH3OH",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "InNH2 (E-IO) > InOH (H-IO); stronger base → higher CO2RR activity"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "unsaturated In; related to Ov"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "oxygen vacancy concentration",
+      "props": {}
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "note": "In2–N1 4.556 Å; In2–N2 3.378 Å (InNH2···In)"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Bader charge",
+      "props": {
+        "note": "In2 +1.27e; N1/N2 −0.84e on InNH2···In SFLP"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO production rate",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "CH3OH production rate",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "target": {"label": "FLP", "name": "InNH2···In FLP"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "FLP", "name": "InOH···In FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "InNH2···In FLP"},
+      "target": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "InNH2···In FLP"},
+      "props": {
+        "note": "Ov helps create unsaturated In LA for SFLP"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "target": {"label": "LewisAcid", "name": "In"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "target": {"label": "LewisBase", "name": "InNH2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "LewisAcid", "name": "In"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "LewisBase", "name": "InOH"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "In"},
+      "target": {"label": "LewisBase", "name": "InNH2"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "In"},
+      "target": {"label": "LewisBase", "name": "InOH"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "LewisAcid", "name": "In"},
+      "target": {"label": "ElectronicDescriptor", "name": "Bader charge"},
+      "props": {
+        "value": "+1.27e",
+        "note": "In2 local charge on InNH2···In"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "LewisBase", "name": "InNH2"},
+      "target": {"label": "ElectronicDescriptor", "name": "Bader charge"},
+      "props": {
+        "value": "-0.84e",
+        "note": "N1/N2 local charge on InNH2···In"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InNH2···In FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis basicity"},
+      "props": {
+        "note": "InNH2 stronger Lewis base than InOH (E-IO > H-IO)"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis basicity"},
+      "props": {
+        "note": "hydroxide LB; weaker than InNH2"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InNH2···In FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis acidity"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InNH2···In FLP"},
+      "target": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "props": {
+        "note": "In2–N1 4.556 Å; In2–N2 3.378 Å"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "target": {"label": "Descriptor", "name": "oxygen vacancy concentration"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "Lewis basicity"},
+      "target": {"label": "Activity", "name": "CO production rate"},
+      "props": {
+        "note": "stronger basicity (InNH2/E-IO vs InOH/H-IO) → higher CO2RR activity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "Lewis basicity"},
+      "target": {"label": "Activity", "name": "CH3OH production rate"},
+      "props": {
+        "note": "stronger basicity (InNH2/E-IO vs InOH/H-IO) → higher CO2RR activity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "InNH2···In FLP"},
+      "target": {"label": "Activity", "name": "CO production rate"},
+      "props": {
+        "note": "E-IO outperforms H-IO"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "InNH2···In FLP"},
+      "target": {"label": "Activity", "name": "CH3OH production rate"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {
+        "note": "heterolytic H2 on InNH2···In"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "target": {"label": "Molecule", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "In2O3-x(EDA)y"},
+      "target": {"label": "Reaction", "name": "CO2RR"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Reactant", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Reactant", "name": "H2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Product", "name": "CO"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Product", "name": "CH3OH"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "055724a0b11bdf92",
+    "source_pdf": "Amine functionalized surface frustrated Lewispairs boost CO2 photocatalysis.pdf",
+    "page_start": 3,
+    "page_end": 11,
+    "score": 21.0,
+    "note": "新逻辑: E-IO InNH2···In (+H-IO); CO2RR; basicity→activity; Bader on In(+1.27e)/InNH2(−0.84e); siblings pending"
+  }
+}

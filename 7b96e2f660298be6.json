@@ -1,0 +1,310 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "D4-NENU-3",
+      "props": {
+        "note": "defective POM-based MOF; optimal coordination-defect FLP host"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "NENU-3",
+      "props": {
+        "note": "defect-free POM-based MOF control; mainly LB only"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "HPW",
+      "props": {
+        "aliases": [
+          "H3PW12O40"
+        ],
+        "note": "Keggin phosphotungstic acid guest in MOF pores; source of terminal Ot LB"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "missing-linker defect",
+      "props": {
+        "note": "BTC/modulator defect engineering; lowers Cu2 carboxylate CN"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "coordination defect",
+      "props": {
+        "note": "coordination-unsaturated Cu2 (LA); from missing-linker"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Cu2···Ot FLP",
+      "props": {
+        "note": "unsaturated Cu2 node (LA) + HPW terminal oxygen Ot (LB); LA-LB ~4.3 Å"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "unsaturated Cu2 node",
+      "props": {
+        "note": "coordination-defect metal node"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "HPW terminal O",
+      "props": {
+        "aliases": [
+          "Ot"
+        ],
+        "note": "surface/terminal oxygen of Keggin HPW"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "~4.3 Å"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "acetylene semi-hydrogenation",
+      "props": {
+        "note": "paper main reaction; selective hydrogenation via H2 heterolysis"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "acetylene",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "ethylene",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Cu2···Ot FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Cu2···Ot FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "target": {
+        "label": "Material",
+        "name": "HPW"
+      },
+      "props": {
+        "note": "HPW guests in framework pores"
+      }
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "missing-linker defect"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "missing-linker defect"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "coordination defect"
+      },
+      "props": {
+        "note": "ligand deletion → Cu2 coordination unsaturation (CN~3)"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "coordination defect"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Cu2···Ot FLP"
+      },
+      "props": {
+        "note": "unsaturated Cu2 (LA) + POM Ot (LB)"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "unsaturated Cu2 node"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "HPW terminal O"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Cu2···Ot FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Cu2···Ot FLP"
+      },
+      "target": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "acetylene semi-hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "D4-NENU-3"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {
+        "note": "heterolytic dissociation on Cu2···Ot FLP"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "acetylene semi-hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "acetylene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "acetylene semi-hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "acetylene semi-hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "ethylene"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "7b96e2f660298be6",
+    "source_pdf": "Coordination Defect‐Induced Frustrated Lewis Pairs in Polyoxo‐metalate‐Based Metal.pdf",
+    "page_start": 2,
+    "page_end": 6,
+    "score": 8.0,
+    "note": "hierarchy Cu2···Ot; HPW=H3PW12O40 guest as Ot LB source; drop Intermediate; missing-linker ENABLES coordination defect ENABLES Cu2···Ot FLP"
+  }
+}

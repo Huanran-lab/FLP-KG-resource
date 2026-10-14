@@ -1,0 +1,259 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "anatase TiO2",
+      "props": {
+        "note": "Ov-rich anatase; FLP from surface Ti and O (e.g. (101)/(001))"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "constructs FLPs from surface Ti and O for heterolytic H2"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ti···O FLP",
+      "props": {
+        "note": "surface Ti (LA) + lattice O (LB); heterolytic H2 → LA/Hδ−–Hδ+/LB",
+        "aliases": ["Ti-O FLP"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ti",
+      "props": {
+        "note": "surface Ti site"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "O",
+      "props": {
+        "note": "surface lattice O",
+        "aliases": ["lattice O"]
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "C2H2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "acetylene hydrogenation",
+      "props": {
+        "note": "selective C2H2 → C2H4 on Ov-anatase TiO2; not CO2RR"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "C2H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "C2H4",
+      "props": {}
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "note": "Ti–O FLP separations e.g. 3.83 / 4.26 / 4.76 Å with Ov"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "ICOHP",
+      "props": {
+        "note": "Ti–H / O–H bond strength after H2 activation on FLP; correlates with dissociation/hydrogenation barriers"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "energy barrier",
+      "props": {
+        "note": "H2 dissociation / acetylene hydrogenation barriers (DFT)"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "adsorption energy of C2H3*",
+      "props": {
+        "note": "vinyl intermediate on exposed Ti; weaker ads ↔ lower 2nd hydrogenation barrier"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {
+        "note": "higher with Ov after reduction (expt + DFT)"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "anatase TiO2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "anatase TiO2"},
+      "target": {"label": "FLP", "name": "Ti···O FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Ti···O FLP"},
+      "target": {"label": "Material", "name": "anatase TiO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "anatase TiO2"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "Ti···O FLP"},
+      "props": {
+        "note": "Ovs assemble surface Ti/O into FLPs"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "anatase TiO2"},
+      "target": {"label": "LewisAcid", "name": "Ti"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "anatase TiO2"},
+      "target": {"label": "LewisBase", "name": "O"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Ti"},
+      "target": {"label": "LewisBase", "name": "O"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ti···O FLP"},
+      "target": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "props": {
+        "note": "3.83 / 4.26 / 4.76 Å"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ti···O FLP"},
+      "target": {"label": "ElectronicDescriptor", "name": "ICOHP"},
+      "props": {
+        "note": "Ti–H / O–H ICOHP after heterolytic H2 activation (not bare FLP)"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "ElectronicDescriptor", "name": "ICOHP"},
+      "target": {"label": "Activity", "name": "catalytic activity"},
+      "props": {
+        "note": "O–H / Ti–H ICOHP correlates with H2 dissociation and hydrogenation barriers"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "energy barrier"},
+      "target": {"label": "Activity", "name": "catalytic activity"},
+      "props": {
+        "note": "lower barrier ↔ higher activity (H2 dissociation / hydrogenation)"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "adsorption energy of C2H3*"},
+      "target": {"label": "Descriptor", "name": "energy barrier"},
+      "props": {
+        "note": "weaker C2H3* adsorption ↔ lower 2nd hydrogenation barrier (Fig. 8b)"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "anatase TiO2"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {
+        "note": "heterolytic dissociation on Ti···O FLP; PDOS of TS shows Ti 3d / O 2p / H 1s interaction"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "anatase TiO2"},
+      "target": {"label": "Molecule", "name": "C2H2"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "anatase TiO2"},
+      "target": {"label": "Reaction", "name": "acetylene hydrogenation"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "acetylene hydrogenation"},
+      "target": {"label": "Reactant", "name": "H2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "acetylene hydrogenation"},
+      "target": {"label": "Reactant", "name": "C2H2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "acetylene hydrogenation"},
+      "target": {"label": "Product", "name": "C2H4"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "Ti···O FLP"},
+      "target": {"label": "Activity", "name": "catalytic activity"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "061572adc60280ab",
+    "source_pdf": "Selective hydrogenation of acetylene to ethyleneon anatase TiO2 through first-principles studies.pdf",
+    "page_start": 3,
+    "page_end": 3,
+    "score": 25.0,
+    "note": "saved 新逻辑: Ti···O anatase; ICOHP/PDOS notes; energy barrier↔activity; C2H3* ads↔barrier; siblings pending delete"
+  }
+}

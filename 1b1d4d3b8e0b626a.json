@@ -1,0 +1,621 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "rh-In2O3-x(OH)y",
+      "props": {
+        "note": "rhombohedral polymorph; stronger In···OH SFLP; higher CH3OH selectivity"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "c-In2O3-x(OH)y",
+      "props": {
+        "note": "cubic polymorph; weaker SFLP vs rh"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "InOOH",
+      "props": {
+        "note": "precursor; thermal dehydration → rh-In2O3-x(OH)y"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "surface vacancy breaks In-O/In-OH adjuncts; enables SFLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "In···OH FLP",
+      "props": {
+        "note": "unsaturated In (LA) + surface OH (LB); SFLP"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "unsaturated In",
+      "props": {
+        "note": "coordinatively unsaturated In"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "surface OH",
+      "props": {
+        "note": "hydroxide O as Lewis base"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "stronger on rh vs c"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "stronger on rh vs c"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Bader charge difference",
+      "props": {
+        "note": "larger LA In / LB OH-O charge contrast on rh SFLP (scheme B)"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic CO2 hydrogenation; gaseous CO2 + H2; products CH3OH/CO/H2O"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CH3OH",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "CH3OH selectivity",
+      "props": {
+        "note": "methanol over CO; rh > c"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {
+        "note": "rh > c"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "formate pathway",
+      "props": {
+        "note": "to CH3OH"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "RWGS pathway",
+      "props": {
+        "note": "to CO"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "FORMS",
+      "source": {
+        "label": "Material",
+        "name": "InOOH"
+      },
+      "target": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "props": {
+        "note": "thermal dehydration (~350 °C)"
+      }
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {
+        "note": "breaks bridging In-O/In-OH adjuncts"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "unsaturated In"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "surface OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "unsaturated In"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "surface OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "unsaturated In"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "surface OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Bader charge difference"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CH3OH selectivity"
+      },
+      "props": {
+        "note": "stronger SFLP on rh → CH3OH over CO"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic activity"
+      },
+      "props": {
+        "note": "rh > c"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "Bader charge difference"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {
+        "note": "larger LA–LB charge contrast on rh → more active SFLP / easier H2 heterolysis"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "formate pathway"
+      },
+      "props": {
+        "note": "strong SFLP: strong intermediate binding → successive hydride transfer → CH3OH"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "RWGS pathway"
+      },
+      "props": {
+        "note": "weak SFLP: weak intermediate binding → CO"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Mechanism",
+        "name": "formate pathway"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CH3OH selectivity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CH3OH selectivity"
+      },
+      "props": {
+        "note": "improved CH3OH over CO vs cubic"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "c-In2O3-x(OH)y"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CH3OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "H2O"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "formate pathway"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "RWGS pathway"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "1b1d4d3b8e0b626a",
+    "source_pdf": "Polymorph selection towards photocatalyticgaseous CO2 hydrogenation.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 8.0,
+    "note": "merged 6dc58 (+hierarchy In···OH FLP, Bader, H2O); descriptors on specific FLP; await delete 6dc58; sibling 63b21b remains; Reaction→CO2RR; dropped Condition"
+  }
+}

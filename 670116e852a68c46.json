@@ -1,0 +1,530 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "MV-MOF",
+      "props": {
+        "note": "molecular-vise MOF hosting geometry-restricted FLPs (B-MV-MOF series)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "B···aniline FLP",
+      "props": {
+        "note": "boron LA + aniline (BANH2) LB; fixed LA-LB distance 5.4 Å"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "B···phenol FLP",
+      "props": {
+        "note": "boron LA + phenol (BAOH) LB; fixed LA-LB distance 5.5 Å"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "B···benzyl alcohol FLP",
+      "props": {
+        "note": "boron LA + benzyl alcohol (BACH2OH) LB; fixed LA-LB distance 4.8 Å"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "B···pyridine FLP",
+      "props": {
+        "note": "boron LA + pyridine (INA) LB; fixed LA-LB distance 7.1 Å; page-7 focus for electrostatic tuning"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "boron Lewis acid",
+      "props": {
+        "note": "TTBB organoboron linker"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "aniline Lewis base",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "phenol Lewis base",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "benzyl alcohol Lewis base",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "pyridine Lewis base",
+      "props": {
+        "note": "INA linker; substituent tuning on page 7"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2 cycloaddition",
+      "props": {
+        "note": "CO2 with epoxide to cyclic carbonate; was mislabeled CO2 hydrogenation"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "styrene oxide",
+      "props": {
+        "note": "SO substrate"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "conversion product",
+      "props": {
+        "note": "cyclic carbonate detected"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "distance between LA and LB",
+      "props": {
+        "value": "7.1 / 5.5 / 5.4 / 4.8 Å",
+        "note": "INA(pyridine) 7.1 Å; BAOH(phenol) 5.5 Å; BANH2(aniline) 5.4 Å; BACH2OH(benzyl alcohol) 4.8 Å; fixed in MV lattice"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "space at active site",
+      "props": {
+        "note": "steric space affecting styrene oxide approach"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic performance",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···aniline FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···phenol FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···benzyl alcohol FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···pyridine FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···aniline FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···phenol FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···benzyl alcohol FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···pyridine FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "boron Lewis acid"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "aniline Lewis base"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "phenol Lewis base"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "benzyl alcohol Lewis base"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "pyridine Lewis base"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2 cycloaddition"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cycloaddition"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "styrene oxide"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cycloaddition"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cycloaddition"
+      },
+      "target": {
+        "label": "Product",
+        "name": "conversion product"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···aniline FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "distance between LA and LB"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···phenol FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "distance between LA and LB"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···benzyl alcohol FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "distance between LA and LB"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···pyridine FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "distance between LA and LB"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···pyridine FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···phenol FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "space at active site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisBase",
+        "name": "aniline Lewis base"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisBase",
+        "name": "phenol Lewis base"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisBase",
+        "name": "benzyl alcohol Lewis base"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisBase",
+        "name": "pyridine Lewis base"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "MV-MOF"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "space at active site"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "distance between LA and LB"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic performance"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic performance"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "space at active site"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic performance"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "670116e852a68c46",
+    "source_pdf": "precise-distance-control-and-functionality-adjustment-of-frustrated-lewis-pairs-in-metal-organic-frameworks.pdf",
+    "page_start": 7,
+    "page_end": 7,
+    "score": 4.0,
+    "note": "hierarchy + page7 edges: B···pyridine HAS_DESCRIPTOR Lewis basicity/distance; B···phenol HAS_DESCRIPTOR space at active site; distances 7.1/5.5/5.4/4.8 Å"
+  }
+}

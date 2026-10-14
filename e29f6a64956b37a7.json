@@ -1,0 +1,230 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "AlOOH",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "OH vacancy",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "alkenes",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "alkynes",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "alkanes",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "alkenes (hydrogenated)",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "80 °C",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "3.0 MPa H2",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "100 °C",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "AlOOH"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "OH vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "OH vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "AlOOH"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "AlOOH"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "AlOOH"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alkenes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alkynes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "alkanes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "alkenes (hydrogenated)"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "80 °C"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "3.0 MPa H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "100 °C"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "e29f6a64956b37a7",
+    "source_pdf": "Solid surface frustrated Lewis pair constructedon layered AlOOH for hydrogenation reaction.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 9.0,
+    "note": "drop Molecule substrate list; only remaining AlOOH chunk; still lacks specific LA/LB"
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "gamma-Al2O3",
+      "props": {
+        "note": "partially hydroxylated; optimal OH coverage generates reactive Al–O pairs"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "AlIII···O3a FLP",
+      "props": {
+        "note": "non-adjacent AlIII–O3a pair (~4.1 Å); heterolytic CH4 C–H activation"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "AlIII",
+      "props": {
+        "note": "three-coordinate Al Lewis acid"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "O3a",
+      "props": {
+        "note": "threefold-coordinated surface O facing AlIII"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CH4 dissociation",
+      "props": {
+        "note": "heterolytic C–H cleavage"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CH4",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "Al-CH3",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "O-H",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "density of states",
+      "props": {
+        "note": "DOS related to O3a basicity / C–H activation"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "C-H bond activation activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "gamma-Al2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "gamma-Al2O3"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "AlIII···O3a FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII···O3a FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "gamma-Al2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "gamma-Al2O3"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "AlIII"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "gamma-Al2O3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O3a"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "AlIII"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O3a"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII···O3a FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "density of states"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "density of states"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "C-H bond activation activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "gamma-Al2O3"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CH4 dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "gamma-Al2O3"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 dissociation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 dissociation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "Al-CH3"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 dissociation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "O-H"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "998314bb9b20c23b",
+    "source_pdf": "Optimal Water Coverage on Alumina  A Key to Generate Lewis Acid Base Pairs that are.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 13.0,
+    "note": "hierarchy AlIII···O3a; DOS on specific FLP; drop Defect/Mechanism"
+  }
+}

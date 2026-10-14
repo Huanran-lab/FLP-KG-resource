@@ -1,0 +1,247 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Ni/ZnO",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "ZnO",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "Ni",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ni cluster",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "Zn-Ov",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "fatty acid ester hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "fatty acid ester",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "fatty alcohol",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Intermediate",
+      "name": "Hδ-/Hδ+ pair",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic cleavage",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ni/ZnO"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ni/ZnO"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "ZnO"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni/ZnO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni/ZnO"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ni cluster"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni/ZnO"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Zn-Ov"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ni/ZnO"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ni/ZnO"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "fatty acid ester hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "fatty acid ester hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "fatty acid ester"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "fatty acid ester hydrogenation"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "fatty acid ester hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "fatty alcohol"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "fatty acid ester hydrogenation"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic cleavage"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS",
+      "source": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "target": {
+        "label": "Intermediate",
+        "name": "Hδ-/Hδ+ pair"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Intermediate",
+        "name": "Hδ-/Hδ+ pair"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "fatty acid ester hydrogenation"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "5cb569d07e2d9577",
+    "source_pdf": "intensifying-hydrogen-heterocracking-via-regulating-the-zno-overlayer-for-enhanced-fatty-acid-ester-hydrogenation.pdf",
+    "page_start": 8,
+    "page_end": 8,
+    "score": 12.0,
+    "note": "batch-convention-pass; acid-base-on-material; sole; saved as-is (not fully 新逻辑)"
+  }
+}

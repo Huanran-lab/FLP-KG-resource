@@ -1,0 +1,288 @@
+{
+  "nodes": [
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "rh-In2O3@x(OH)y",
+      "props": {
+        "note": "rhombohedral In2O3-x(OH)y; hosts surface FLP"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "In···OH FLP",
+      "props": {
+        "note": "In···In-OH SFLP; heterolytic H2 → In-H + In-OH2+"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "In",
+      "props": {
+        "note": "coordinatively unsaturated In near Ov"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "In-OH",
+      "props": {
+        "note": "surface hydroxide; Lewis base before protonation"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "H2 dissociation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "In-H",
+      "props": {
+        "note": "hydride on In after heterolysis"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "In-OH2+",
+      "props": {
+        "note": "protonated hydroxide after heterolysis"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic dissociation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "C2H4",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "In"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "C2H4"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "rh-In2O3@x(OH)y"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2 dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 dissociation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 dissociation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "In-H"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 dissociation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "In-OH2+"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 dissociation"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic dissociation"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "52846e3ca688b25a",
+    "source_pdf": "Room‐Temperature Activation of H2 by a Surface Frustrated Lewis Pair.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 8.0,
+    "note": "hierarchy: surface FLP-CONTAINS->rh-In2O3@x(OH)y-CONTAINS->In···OH FLP; LA=In LB=In-OH; In-H/In-OH2+ are heterolysis products not sites"
+  }
+}

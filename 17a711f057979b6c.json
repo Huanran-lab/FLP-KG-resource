@@ -1,0 +1,804 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "γ-Al2O3",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "AlIII,O3a FLP",
+      "props": {
+        "note": "nonadjacent frustrated Al,O pair"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "AlIII,O2a FLP",
+      "props": {
+        "note": "adjacent AlIII–O2a; most reactive site in the paper",
+        "aliases": [
+          "AlIII···O2a FLP",
+          "AlIII-O2a FLP"
+        ]
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "AlIVb,O3b FLP",
+      "props": {
+        "note": "frustrated Al,O pair"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "AlIII",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "AlIVb",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "O3a",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "O2a",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "O3b",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Al band center",
+      "props": {
+        "note": "ε of unoccupied Al 3s–3p; Δε>0 lowers Lewis acidity",
+        "aliases": [
+          "Al 3s-3p band center",
+          "AlIII band center"
+        ]
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "O band center",
+      "props": {
+        "note": "ε of occupied O 2s–2p; upshift raises Lewis basicity",
+        "aliases": [
+          "O 2s-2p band center",
+          "O2a band center"
+        ]
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "PDOS",
+      "props": {
+        "note": "projected DOS on Al 3s–3p (acidity) and O 2s–2p (basicity); from sibling c41fa"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "H2 dissociation",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CH4 dissociation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CH4",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic dissociation",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "deformation energy",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "interaction energy",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "transition state energy",
+      "props": {
+        "note": "from sibling c41fa; on most-reactive AlIII,O2a FLP"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "water coverage",
+      "props": {
+        "note": "hydroxylation level; optimal pretreatment ~700 °C; volcano vs reactivity"
+      }
+    },
+    {
+      "label": "Condition",
+      "name": "partial dehydroxylation",
+      "props": {
+        "note": "surface pretreatment process; generates metastable AlIII on (110); optimal ~700 C"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "reactivity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "AlIII,O3a FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "AlIII,O2a FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "AlIVb,O3b FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII,O3a FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII,O2a FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "AlIVb,O3b FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "AlIII"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "AlIVb"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O3a"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O2a"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O3b"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "AlIII"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O3a"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "AlIII"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O2a"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "AlIVb"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O3b"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisAcid",
+        "name": "AlIII"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Al band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisAcid",
+        "name": "AlIVb"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Al band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisBase",
+        "name": "O3a"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "O band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisBase",
+        "name": "O2a"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "O band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "LewisBase",
+        "name": "O3b"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "O band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "DESCRIBED_BY",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "Al band center"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "PDOS"
+      },
+      "props": {}
+    },
+    {
+      "type": "DESCRIBED_BY",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "O band center"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "PDOS"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "Al band center"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "reactivity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "O band center"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "reactivity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII,O3a FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "deformation energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII,O3a FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "interaction energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII,O2a FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "deformation energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII,O2a FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "interaction energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlIII,O2a FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "transition state energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlIVb,O3b FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "deformation energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "AlIVb,O3b FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "interaction energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "deformation energy"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "reactivity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "interaction energy"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "reactivity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "transition state energy"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "reactivity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "water coverage"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "partial dehydroxylation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "water coverage"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Al band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "water coverage"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "O band center"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "water coverage"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "reactivity"
+      },
+      "props": {
+        "note": "volcano-type vs pretreatment/water; optimal ~700 °C"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Condition",
+        "name": "partial dehydroxylation"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "AlIII"
+      },
+      "props": {
+        "note": "metastable AlIII defect sites on major (110) termination"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2 dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CH4 dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "γ-Al2O3"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 dissociation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 dissociation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 dissociation"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 dissociation"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "Al band center"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "AlIII"
+      },
+      "props": {
+        "note": "Δε of Al 3s–3p reflects Lewis acidity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "O band center"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O2a"
+      },
+      "props": {
+        "note": "Δε of O 2s–2p reflects Lewis basicity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "Al band center"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "AlIII,O2a FLP"
+      },
+      "props": {
+        "note": "Δε reflects FLP acid-base strength (most reactive adjacent pair)"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "O band center"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "AlIII,O2a FLP"
+      },
+      "props": {
+        "note": "Δε reflects FLP acid-base strength (most reactive adjacent pair)"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "17a711f057979b6c",
+    "source_pdf": "γ‑Alumina The Essential and Unexpected Role of Water for the Structure, Stability, and Reactivity of “Defect” Sites.pdf",
+    "page_start": 12,
+    "page_end": 12,
+    "score": 0.0,
+    "note": "merged c41fa into 17a711: +PDOS, +transition state energy on AlIII,O2a FLP, band-center notes/aliases; drop ActiveSite; keep 3 FLPs + water/dehydroxylation; not CO2RR",
+    "merged_from": [
+      "c41fa68206548e4c"
+    ],
+    "page_note": "PDF p.12 = JACS 14441 discussion; related DFT spans adjacent pages"
+  }
+}

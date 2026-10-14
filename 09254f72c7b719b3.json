@@ -1,0 +1,229 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "MnO2",
+      "props": {
+        "note": "from defective MnO2-D; low-coordinated α-MnO2"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Mnδ+-OV FLP",
+      "props": {
+        "note": "defective Mnδ+–OV pair; tri-coordinated Mn with adjacent O"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "tri-coordinated Mn",
+      "props": {
+        "aliases": ["Mnδ+"],
+        "note": "unsaturated tri-coordinated Mn; Mnδ+"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "O",
+      "props": {
+        "note": "electron-rich O associated with OV in Mnδ+-OV pair",
+        "aliases": ["oxygen vacancy"]
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity strengthened via oxygen vacancy; electron-enriched O"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "NH3-TPD; more medium/strong acid sites on MnO2-D; acid strength rises with low Mn coordination"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Mn-O coordination number",
+      "props": {
+        "value": "3.0"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "polyol/sugar cascade oxidation to formic acid",
+      "props": {
+        "aliases": ["polyol/sugar oxidation to formic acid", "glycerol oxidation"]
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "glycerol",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "polyol/sugar",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "O2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "formic acid",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "formic acid selectivity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "MnO2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "MnO2"},
+      "target": {"label": "FLP", "name": "Mnδ+-OV FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Mnδ+-OV FLP"},
+      "target": {"label": "Material", "name": "MnO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "MnO2"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "Mnδ+-OV FLP"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "MnO2"},
+      "target": {"label": "LewisAcid", "name": "tri-coordinated Mn"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "MnO2"},
+      "target": {"label": "LewisBase", "name": "O"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "tri-coordinated Mn"},
+      "target": {"label": "LewisBase", "name": "O"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Mnδ+-OV FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis basicity"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Mnδ+-OV FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis acidity"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Mnδ+-OV FLP"},
+      "target": {"label": "ElectronicDescriptor", "name": "Mn-O coordination number"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "ElectronicDescriptor", "name": "Mn-O coordination number"},
+      "target": {"label": "Descriptor", "name": "Lewis acidity"},
+      "props": {
+        "note": "lower Mn-O coordination intensifies Lewis acid strength"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "MnO2"},
+      "target": {"label": "Reaction", "name": "polyol/sugar cascade oxidation to formic acid"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "MnO2"},
+      "target": {"label": "Reactant", "name": "O2"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "MnO2"},
+      "target": {"label": "Reactant", "name": "glycerol"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "polyol/sugar cascade oxidation to formic acid"},
+      "target": {"label": "Reactant", "name": "glycerol"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "polyol/sugar cascade oxidation to formic acid"},
+      "target": {"label": "Reactant", "name": "polyol/sugar"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "polyol/sugar cascade oxidation to formic acid"},
+      "target": {"label": "Reactant", "name": "O2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "polyol/sugar cascade oxidation to formic acid"},
+      "target": {"label": "Product", "name": "formic acid"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "Mnδ+-OV FLP"},
+      "target": {"label": "Activity", "name": "formic acid selectivity"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "09254f72c7b719b3",
+    "source_pdf": "Enhancing polyolsugar cascade oxidation toformic acid with defect rich MnO2 catalysts.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 0.0,
+    "note": "新逻辑: merge 4353; Mnδ+-OV; Ov ENABLES FLP; acidity/basicity/CN on specific FLP; not CO2RR"
+  }
+}

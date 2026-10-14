@@ -1,0 +1,240 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "h-BN",
+      "props": {
+        "note": "hexagonal boron nitride; defect-regulated crystalline scaffold",
+        "aliases": [
+          "hexagonal boron nitride"
+        ]
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "B/N lattice defect",
+      "props": {
+        "note": "precision defect regulation (NaBH4/NaNH2 ratio); unsaturated B and N; includes BN2-type vacancies",
+        "aliases": [
+          "BN2 vacancy",
+          "B and N defects"
+        ]
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "B···N FLP",
+      "props": {
+        "note": "sterically hindered unsaturated B (LA) + N (LB) fixed in h-BN lattice; FLP-like H2/D2 activation"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "B center",
+      "props": {
+        "note": "unsaturated / unbonded boron Lewis acid"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "N center",
+      "props": {
+        "note": "unsaturated / unbonded nitrogen Lewis base"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "H2/D2 activation",
+      "props": {
+        "note": "ambient-pressure H2/D2 dissociation via FLP-like behavior"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "D2",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "h-BN"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "h-BN"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "h-BN"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "h-BN"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "B/N lattice defect"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "B/N lattice defect"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "props": {
+        "note": "perfect h-BN inactive; defects create unquenched B/N FLP sites"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "h-BN"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "B center"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "h-BN"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "N center"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "B center"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "N center"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "h-BN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2/D2 activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "h-BN"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {
+        "note": "ambient-pressure H2/D2 splitting via FLP-like behavior"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "H2/D2 activation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "H2/D2 activation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "D2"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "47cec6cfbafcc017",
+    "source_pdf": "defect-regulated-frustrated-lewis-pair-behavior-of-boron-nitride-in-ambient-pressure-hydrogen-activation.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 31.0,
+    "note": "新逻辑: surface FLP→h-BN→B···N FLP; B/N defect ENABLES FLP; H2/D2 activation; sole"
+  }
+}

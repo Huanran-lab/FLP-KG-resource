@@ -1,0 +1,243 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "N-doped CeO2",
+      "props": {
+        "note": "N doping + Ov; hosts Ce···OH FLP"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ce···OH FLP",
+      "props": {
+        "note": "Ce3+ (LA) and Ce-OH (LB)"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce3+",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "Ce-OH",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic CO2 reduction; products CO/CH4/C2H4/C2H2"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CH4",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "C2H4",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "C2H2",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "selectivity",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "CO2 activation",
+      "props": {
+        "note": "FLP bonds/activates CO2; polarization and *COOH/*CO pathway"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "2.46 Å",
+        "note": "Ce3+—Ce-OH; solid FLP domain for CO2 activation"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "charge difference",
+      "props": {
+        "value": "Ce3+ +1.98 e; Ce-OH −1.38 e",
+        "note": "Bader; large charge difference forms active FLP electric field"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "N-doped CeO2" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "N-doped CeO2" },
+      "target": { "label": "FLP", "name": "Ce···OH FLP" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "Ce···OH FLP" },
+      "target": { "label": "Material", "name": "N-doped CeO2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "N-doped CeO2" },
+      "target": { "label": "Defect", "name": "oxygen vacancy" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "oxygen vacancy" },
+      "target": { "label": "FLP", "name": "Ce···OH FLP" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "N-doped CeO2" },
+      "target": { "label": "LewisAcid", "name": "Ce3+" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "N-doped CeO2" },
+      "target": { "label": "LewisBase", "name": "Ce-OH" },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "Ce3+" },
+      "target": { "label": "LewisBase", "name": "Ce-OH" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Ce···OH FLP" },
+      "target": { "label": "GeometricDescriptor", "name": "LA-LB distance" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Ce···OH FLP" },
+      "target": { "label": "ElectronicDescriptor", "name": "charge difference" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "FLP", "name": "Ce···OH FLP" },
+      "target": { "label": "Mechanism", "name": "CO2 activation" },
+      "props": {
+        "note": "surface FLPs bond and activate CO2"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "Mechanism", "name": "CO2 activation" },
+      "target": { "label": "Reaction", "name": "CO2RR" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "Mechanism", "name": "CO2 activation" },
+      "target": { "label": "Activity", "name": "CO2RR activity" },
+      "props": {
+        "note": "enhanced CO2 activation improves CO2RR productivity"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "N-doped CeO2" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "N-doped CeO2" },
+      "target": { "label": "Reaction", "name": "CO2RR" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "CO" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "CH4" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "C2H4" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "C2H2" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "Activity", "name": "CO2RR activity" },
+      "target": { "label": "Activity", "name": "selectivity" },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "13fdf317149676b8",
+    "source_pdf": "Cooperatively tailored surface frustrated Lewis pairs and N-doping on CeO2 for photocatalytic CO2 reduction to high-value hydrocarbon products.pdf",
+    "page_start": 4,
+    "page_end": 11,
+    "score": 12.0,
+    "note": "新逻辑: surface FLP→N-doped CeO2→Ce···OH FLP; Ov ENABLES specific FLP; LA=Ce3+ LB=Ce-OH; drop Intermediate; CO2RR (photo; CO/CH4/C2); no merge"
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "PN-La0.2Ce0.8O2",
+      "props": {
+        "note": "optimized La-doped porous nanorod CeO2; hosts (La, Ce)-O FLP; main catalyst"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "PN-CeO2",
+      "props": {
+        "note": "undoped porous nanorod CeO2 control; hosts (Ce, Ce)-O FLP"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "surface Ov; enables FLP construction; Ce3+ fraction rises with La doping"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella; PN-CeO2 series"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "(La, Ce)-O FLP",
+      "props": {
+        "note": "La/Ce Lewis acids + neighbouring lattice O on PN-La0.2Ce0.8O2; weaker product binding than (Ce, Ce)-O"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "(Ce, Ce)-O FLP",
+      "props": {
+        "note": "adjacent Ce3+ acids + lattice O on undoped PN-CeO2"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce3+",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "La3+",
+      "props": {
+        "note": "La dopant in (La, Ce)-O FLP"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "lattice O",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "tandem transformation of styrene and CO2",
+      "props": {
+        "note": "to phenylethylene carbonate; not CO2→CO/HCOOH"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "styrene",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "phenylethylene carbonate",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "surface Ce3+ fraction",
+      "props": {
+        "note": "PN-CeO2 28.1%; PN-La0.2Ce0.8O2 30.1%"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "FLP acid strength; La doping regulates FLP"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "spatial distance",
+      "props": {
+        "note": "LA–LB distance on surface FLP"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "strengthened via oxygen vacancy"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {
+        "note": "styrene conversion; optimized PN-La0.2Ce0.8O2 ~95%"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "selectivity",
+      "props": {
+        "note": "phenylethylene carbonate selectivity"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "stability",
+      "props": {
+        "note": "recyclable ≥4 cycles for PN-La0.2Ce0.8O2"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "PN-CeO2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "target": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "PN-CeO2"},
+      "target": {"label": "FLP", "name": "(Ce, Ce)-O FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "target": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "(Ce, Ce)-O FLP"},
+      "target": {"label": "Material", "name": "PN-CeO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "PN-CeO2"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "(Ce, Ce)-O FLP"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "Descriptor", "name": "Lewis basicity"},
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {"label": "Descriptor", "name": "Lewis basicity"},
+      "target": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {"label": "Descriptor", "name": "Lewis basicity"},
+      "target": {"label": "FLP", "name": "(Ce, Ce)-O FLP"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "target": {"label": "LewisAcid", "name": "Ce3+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "target": {"label": "LewisAcid", "name": "La3+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "PN-CeO2"},
+      "target": {"label": "LewisAcid", "name": "Ce3+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "target": {"label": "LewisBase", "name": "lattice O"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "PN-CeO2"},
+      "target": {"label": "LewisBase", "name": "lattice O"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Ce3+"},
+      "target": {"label": "LewisBase", "name": "lattice O"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "La3+"},
+      "target": {"label": "LewisBase", "name": "lattice O"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "target": {"label": "LewisAcid", "name": "Ce3+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "target": {"label": "LewisAcid", "name": "La3+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "target": {"label": "LewisBase", "name": "lattice O"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "FLP", "name": "(Ce, Ce)-O FLP"},
+      "target": {"label": "LewisAcid", "name": "Ce3+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "FLP", "name": "(Ce, Ce)-O FLP"},
+      "target": {"label": "LewisBase", "name": "lattice O"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "target": {"label": "Reaction", "name": "tandem transformation of styrene and CO2"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "PN-CeO2"},
+      "target": {"label": "Reaction", "name": "tandem transformation of styrene and CO2"},
+      "props": {
+        "note": "control; lower conversion than La-doped"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "tandem transformation of styrene and CO2"},
+      "target": {"label": "Reactant", "name": "styrene"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "tandem transformation of styrene and CO2"},
+      "target": {"label": "Reactant", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "tandem transformation of styrene and CO2"},
+      "target": {"label": "Product", "name": "phenylethylene carbonate"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "PN-La0.2Ce0.8O2"},
+      "target": {"label": "Molecule", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "PN-CeO2"},
+      "target": {"label": "Molecule", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "target": {"label": "Descriptor", "name": "surface Ce3+ fraction"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "(Ce, Ce)-O FLP"},
+      "target": {"label": "Descriptor", "name": "surface Ce3+ fraction"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis acidity"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "(La, Ce)-O FLP"},
+      "target": {"label": "Descriptor", "name": "spatial distance"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "surface Ce3+ fraction"},
+      "target": {"label": "Activity", "name": "catalytic activity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "Lewis acidity"},
+      "target": {"label": "Activity", "name": "catalytic activity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "spatial distance"},
+      "target": {"label": "Activity", "name": "catalytic activity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "Lewis acidity"},
+      "target": {"label": "Activity", "name": "selectivity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "spatial distance"},
+      "target": {"label": "Activity", "name": "selectivity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "Lewis acidity"},
+      "target": {"label": "Activity", "name": "stability"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "spatial distance"},
+      "target": {"label": "Activity", "name": "stability"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "d6217e32790b8918",
+    "source_pdf": "Regulation of frustrated Lewis pairs on CeO2facilitates tandem transformation of styrene andCO2.pdf",
+    "page_start": 3,
+    "page_end": 3,
+    "score": 38.0,
+    "note": "kept PN-La0.2Ce0.8O2 (main) + PN-CeO2 (control); hierarchy; drop La0.1/0.15/0.25/La2O3; Ov ENABLES specific FLPs; descriptors on specific FLPs; product=carbonate not CO/HCOOH"
+  }
+}

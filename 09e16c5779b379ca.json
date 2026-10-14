@@ -1,0 +1,254 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "UiO-66",
+      "props": {
+        "note": "highly-defective UiO-66; hosts Zr4+-O2- and Zr4+-OH- Lewis acid-base pairs",
+        "aliases": ["defective UiO-66"]
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "missing-linker defect",
+      "props": {
+        "note": "missing terephthalic acid linker; generates unsaturated Zr nodes / LP sites"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Zr4+···O2- FLP",
+      "props": {
+        "note": "atomic Lewis acid-base pair in defective UiO-66; active for CALD hydrogenation"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Zr4+···OH- FLP",
+      "props": {
+        "note": "atomic Lewis acid-base pair in defective UiO-66; active for CALD hydrogenation"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Zr4+",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "O2-",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "OH-",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "cinnamaldehyde hydrogenation",
+      "props": {
+        "note": "CALD → CALH in isopropanol (transfer hydrogenation)"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "cinnamaldehyde",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "isopropanol",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "cinnamyl alcohol",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "acetone",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "concerted hydrogen transfer",
+      "props": {}
+    },
+    {
+      "label": "ReactionStep",
+      "name": "isopropanol dissociation",
+      "props": {}
+    },
+    {
+      "label": "ReactionStep",
+      "name": "hydrogen transfer",
+      "props": {}
+    },
+    {
+      "label": "ReactionStep",
+      "name": "desorption",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "UiO-66"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "FLP", "name": "Zr4+···O2- FLP"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "FLP", "name": "Zr4+···OH- FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Zr4+···O2- FLP"},
+      "target": {"label": "Material", "name": "UiO-66"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Zr4+···OH- FLP"},
+      "target": {"label": "Material", "name": "UiO-66"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "Defect", "name": "missing-linker defect"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "missing-linker defect"},
+      "target": {"label": "FLP", "name": "Zr4+···O2- FLP"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "missing-linker defect"},
+      "target": {"label": "FLP", "name": "Zr4+···OH- FLP"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "LewisAcid", "name": "Zr4+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "LewisBase", "name": "O2-"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "LewisBase", "name": "OH-"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Zr4+"},
+      "target": {"label": "LewisBase", "name": "O2-"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Zr4+"},
+      "target": {"label": "LewisBase", "name": "OH-"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "Reaction", "name": "cinnamaldehyde hydrogenation"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "Reactant", "name": "cinnamaldehyde"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "UiO-66"},
+      "target": {"label": "Reactant", "name": "isopropanol"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "cinnamaldehyde hydrogenation"},
+      "target": {"label": "Reactant", "name": "cinnamaldehyde"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "cinnamaldehyde hydrogenation"},
+      "target": {"label": "Reactant", "name": "isopropanol"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "cinnamaldehyde hydrogenation"},
+      "target": {"label": "Product", "name": "cinnamyl alcohol"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "cinnamaldehyde hydrogenation"},
+      "target": {"label": "Product", "name": "acetone"},
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {"label": "Reaction", "name": "cinnamaldehyde hydrogenation"},
+      "target": {"label": "Mechanism", "name": "concerted hydrogen transfer"},
+      "props": {}
+    },
+    {
+      "type": "INVOLVES",
+      "source": {"label": "Mechanism", "name": "concerted hydrogen transfer"},
+      "target": {"label": "ReactionStep", "name": "isopropanol dissociation"},
+      "props": {}
+    },
+    {
+      "type": "INVOLVES",
+      "source": {"label": "Mechanism", "name": "concerted hydrogen transfer"},
+      "target": {"label": "ReactionStep", "name": "hydrogen transfer"},
+      "props": {}
+    },
+    {
+      "type": "INVOLVES",
+      "source": {"label": "Mechanism", "name": "concerted hydrogen transfer"},
+      "target": {"label": "ReactionStep", "name": "desorption"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "09e16c5779b379ca",
+    "source_pdf": "Solid Lewis acid-base pair catalysts constructed by regulations on defects of UiO-66 for the catalytic hydrogenation of cinnamaldehyde.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 0.0,
+    "note": "新逻辑: fix1-3; Material=UiO-66(defective); Defect=missing-linker; two FLPs Zr4+···O2-/OH-; drop Intermediate; not CO2RR"
+  }
+}

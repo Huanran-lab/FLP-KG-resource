@@ -1,0 +1,366 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "B/N-functionalized MOF",
+      "props": {
+        "note": "CoRE MOF scaffolds with linker N bases + installed boron acidic sites (LPAS library)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "B···N FLP",
+      "props": {
+        "note": "immobilized B/N Lewis pair active site (LPAS) on MOF linker"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "boron site",
+      "props": {
+        "note": "boron-containing acidic fragment installed near N"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "nitrogen site",
+      "props": {
+        "note": "basic N on organic linker"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "CO2→formate (HCOO− / formic-acid pathway); counts as CO2RR"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "formate",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "acidity of boron fragment"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity of nitrogen site"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "note": "B···N separation of the immobilized LPAS"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "orientation",
+      "props": {
+        "note": "relative orientation of B and N sites"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "CO2→formate hydrogenation activity"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "B/N-functionalized MOF"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "B/N-functionalized MOF"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "B/N-functionalized MOF"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "B/N-functionalized MOF"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "boron site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "B/N-functionalized MOF"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "nitrogen site"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "boron site"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "nitrogen site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "props": {
+        "note": "cumulative acid strength of B site for high CHTF activity"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "props": {
+        "note": "cumulative base strength of N site for high CHTF activity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "optimized B···N FLP (acid/base + geometry) → higher CO2→formate activity"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "props": {
+        "note": "B−N distance d; high-activity window ~2.4–3.2 Å"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "GeometricDescriptor",
+        "name": "orientation"
+      },
+      "props": {
+        "note": "donor–acceptor angle Φ; high-activity ~70–140°"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "GeometricDescriptor",
+        "name": "orientation"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "B/N-functionalized MOF"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "B/N-functionalized MOF"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "B/N-functionalized MOF"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "formate"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "894ac6c9c88d3d40",
+    "source_pdf": "engineering-frustrated-lewis-pair-active-sites-in-porous-organic-scaffolds-for-catalytic-co2-hydrogenation.pdf",
+    "page_start": 7,
+    "page_end": 7,
+    "score": 4.0,
+    "note": "hierarchy B···N on B/N-functionalized MOF; Lewis acidity/basicity; LA-LB distance; drop pore-limiting diameter; Reaction→CO2RR (formate counted); Activity→CO2RR activity; Lewis acidity/basicity FACILITATES B···N FLP CORRELATES_WITH CO2RR activity; keep LA-LB/orientation↔activity"
+  }
+}

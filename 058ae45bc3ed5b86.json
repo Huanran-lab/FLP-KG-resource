@@ -1,0 +1,201 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {
+        "note": "defect-enriched CeO2; interfacial FLP richest on CeO2(110)"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "creates adjacent Ce3+; enables interfacial FLP (Ce3+···O2−)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ce3+···O2− FLP",
+      "props": {
+        "note": "interfacial FLP: two adjacent Lewis acidic Ce3+ + Lewis basic lattice O2−",
+        "aliases": ["Ce3+···O FLP", "interfacial FLP"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce3+",
+      "props": {
+        "note": "two adjacent Ce3+ bind two O of CO2"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "O2−",
+      "props": {
+        "note": "lattice oxygen; binds C of CO2",
+        "aliases": ["lattice O"]
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "olefins",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "cyclic carbonates",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "tandem transformation of olefins and CO2 into cyclic carbonates",
+      "props": {
+        "note": "olefin epoxidation + CO2 cycloaddition; not CO2RR (carbonate product)"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "note": "adjacent Ce3+ and lattice O2− at proper distance on CeO2(110)"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "CeO2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "FLP", "name": "Ce3+···O2− FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Ce3+···O2− FLP"},
+      "target": {"label": "Material", "name": "CeO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "Ce3+···O2− FLP"},
+      "props": {
+        "note": "Ov creates adjacent Ce3+ next to lattice O2−"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "LewisAcid", "name": "Ce3+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "LewisBase", "name": "O2−"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Ce3+"},
+      "target": {"label": "LewisBase", "name": "O2−"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ce3+···O2− FLP"},
+      "target": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "Molecule", "name": "CO2"},
+      "props": {
+        "note": "C binds lattice O2−; two O of CO2 bind two Ce3+"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "Reaction", "name": "tandem transformation of olefins and CO2 into cyclic carbonates"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "tandem transformation of olefins and CO2 into cyclic carbonates"},
+      "target": {"label": "Reactant", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "tandem transformation of olefins and CO2 into cyclic carbonates"},
+      "target": {"label": "Reactant", "name": "olefins"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "tandem transformation of olefins and CO2 into cyclic carbonates"},
+      "target": {"label": "Product", "name": "cyclic carbonates"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "Activity", "name": "catalytic activity"},
+      "props": {
+        "note": "Ov clusters promote interfacial FLP and activity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "Ce3+···O2− FLP"},
+      "target": {"label": "Activity", "name": "catalytic activity"},
+      "props": {
+        "note": "FLP enables CO2 activation for the tandem route"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "058ae45bc3ed5b86",
+    "source_pdf": "interfacial-frustrated-lewis-pairs-of-ceo2-activate-co2-for-selective-tandem-transformation-of-olefins-and-co2-into.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 36.0,
+    "note": "新逻辑: Ce3+···O2−; FLP↔activity via CO2 activation (not selectivity); carbonate selectivity more Ce3+/hydrolysis; sibling 1f59 pending"
+  }
+}

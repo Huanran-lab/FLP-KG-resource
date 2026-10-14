@@ -1,0 +1,385 @@
+{
+  "nodes": [
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "AlOOH",
+      "props": {
+        "note": "precursor; calcination in air/N2 → Al2O3-air / Al2O3-N2"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Al2O3-air",
+      "props": {
+        "note": "calcined in air; hosts AlIV–O FLP; selective to unsaturated alcohol"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Al2O3-N2",
+      "props": {
+        "note": "calcined in N2; hosts AlV–O FLP; selective to saturated alcohol"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "OH vacancy",
+      "props": {
+        "note": "creates unsaturated Al / enables surface FLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "AlIV-O FLP",
+      "props": {
+        "note": "vertical adsorption; C=O selective → unsaturated alcohol"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "AlV-O FLP",
+      "props": {
+        "note": "flat adsorption; C=C and C=O → saturated alcohol"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "AlIV",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "AlV",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "surface O",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation of unsaturated aldehydes",
+      "props": {
+        "note": "CMA/PEA + H2"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CMA",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "PEA",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "unsaturated alcohol",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "saturated alcohol",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic H2 splitting",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "vertical adsorption",
+      "props": {
+        "note": "AlIV-O FLP; favors C=O → unsaturated alcohol"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "flat adsorption",
+      "props": {
+        "note": "AlV-O FLP; C=C and C=O → saturated alcohol"
+      }
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "adsorption energy",
+      "props": {}
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "energy barrier",
+      "props": {
+        "note": "H2 dissociation / hydrogenation barriers"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "H2 dissociation activity",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "hydrogenation activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "FORMS",
+      "source": { "label": "Material", "name": "AlOOH" },
+      "target": { "label": "Material", "name": "Al2O3-air" },
+      "props": {
+        "note": "calcination in air"
+      }
+    },
+    {
+      "type": "FORMS",
+      "source": { "label": "Material", "name": "AlOOH" },
+      "target": { "label": "Material", "name": "Al2O3-N2" },
+      "props": {
+        "note": "calcination in N2"
+      }
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "Al2O3-air" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "Al2O3-N2" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "Al2O3-air" },
+      "target": { "label": "FLP", "name": "AlIV-O FLP" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "Al2O3-N2" },
+      "target": { "label": "FLP", "name": "AlV-O FLP" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "AlIV-O FLP" },
+      "target": { "label": "Material", "name": "Al2O3-air" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "AlV-O FLP" },
+      "target": { "label": "Material", "name": "Al2O3-N2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "Al2O3-air" },
+      "target": { "label": "Defect", "name": "OH vacancy" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "Al2O3-N2" },
+      "target": { "label": "Defect", "name": "OH vacancy" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "OH vacancy" },
+      "target": { "label": "FLP", "name": "AlIV-O FLP" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "OH vacancy" },
+      "target": { "label": "FLP", "name": "AlV-O FLP" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "Al2O3-air" },
+      "target": { "label": "LewisAcid", "name": "AlIV" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "Al2O3-air" },
+      "target": { "label": "LewisBase", "name": "surface O" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "Al2O3-N2" },
+      "target": { "label": "LewisAcid", "name": "AlV" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "Al2O3-N2" },
+      "target": { "label": "LewisBase", "name": "surface O" },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "AlIV" },
+      "target": { "label": "LewisBase", "name": "surface O" },
+      "props": {
+        "note": "AlIV-O FLP"
+      }
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "AlV" },
+      "target": { "label": "LewisBase", "name": "surface O" },
+      "props": {
+        "note": "AlV-O FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "AlIV-O FLP" },
+      "target": { "label": "EnergeticDescriptor", "name": "adsorption energy" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "AlV-O FLP" },
+      "target": { "label": "EnergeticDescriptor", "name": "adsorption energy" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "AlIV-O FLP" },
+      "target": { "label": "EnergeticDescriptor", "name": "energy barrier" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "AlV-O FLP" },
+      "target": { "label": "EnergeticDescriptor", "name": "energy barrier" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "EnergeticDescriptor", "name": "adsorption energy" },
+      "target": { "label": "Activity", "name": "hydrogenation activity" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "EnergeticDescriptor", "name": "energy barrier" },
+      "target": { "label": "Activity", "name": "H2 dissociation activity" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "Al2O3-air" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "Al2O3-N2" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "Al2O3-air" },
+      "target": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "Al2O3-N2" },
+      "target": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "target": { "label": "Reactant", "name": "CMA" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "target": { "label": "Reactant", "name": "PEA" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "target": { "label": "Product", "name": "unsaturated alcohol" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "target": { "label": "Product", "name": "saturated alcohol" },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "target": { "label": "Mechanism", "name": "heterolytic H2 splitting" },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "target": { "label": "Mechanism", "name": "vertical adsorption" },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": { "label": "Reaction", "name": "hydrogenation of unsaturated aldehydes" },
+      "target": { "label": "Mechanism", "name": "flat adsorption" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "FLP", "name": "AlIV-O FLP" },
+      "target": { "label": "Mechanism", "name": "vertical adsorption" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "FLP", "name": "AlV-O FLP" },
+      "target": { "label": "Mechanism", "name": "flat adsorption" },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "515d7f4d4281930c",
+    "source_pdf": "Surface solid frustrated Lewis pair constructed on alumina for selective hydrogenation reaction.pdf",
+    "page_start": 3,
+    "page_end": 9,
+    "score": 13.0,
+    "note": "merged 1bce+1ed; AlIV-O/AlV-O; OH vacancy; vertical/flat selectivity; siblings deleted"
+  }
+}

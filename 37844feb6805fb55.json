@@ -1,0 +1,372 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "ZIOS",
+      "props": {
+        "note": "ZnIn2S4 / In(OH)3-x heterojunction photocatalyst",
+        "aliases": [
+          "ZnIn2S4/In(OH)3-x"
+        ]
+      }
+    },
+    {
+      "label": "Material",
+      "name": "In(OH)3-x",
+      "props": {
+        "note": "hydroxyl-deficient indium hydroxide; hosts FLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "ZnIn2S4",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella; contains ZIOS host"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic CO2 reduction"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "pDOS",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "pCOHP",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "charge density difference",
+      "props": {
+        "note": "CO2 adsorption on FLP (Fig. S9b); O at In-□, C at In-OH"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "type-II built-in electric field",
+      "props": {
+        "note": "ZIOS type-II heterojunction interface field; drives e- ZnIn2S4 -> In(OH)3-x"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "In-hydroxyl vacancy",
+      "props": {
+        "note": "In-□ / OHV; hydroxyl-deficient vacancy on In(OH)3-x",
+        "aliases": [
+          "In-□"
+        ]
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "In-OH",
+      "props": {
+        "note": "adjacent surface hydroxyl"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "In-□···In-OH FLP",
+      "props": {
+        "note": "surface FLP pair on In(OH)3-x in ZIOS"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "CO2 activation",
+      "props": {
+        "note": "FLP adsorbs/activates CO2 (COO*); then photoreduction to CO"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "CO rate; ZIOS ~2.76× vs ZIS"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO/H2 selectivity",
+      "props": {
+        "note": "CO/H2 1.6 on ZIOS vs 0.436 on ZIS; H2 suppressed"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "ZIOS"
+      },
+      "target": {
+        "label": "Material",
+        "name": "In(OH)3-x"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "ZIOS"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnIn2S4"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "ZIOS"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "ZIOS"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "ZIOS"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "type-II built-in electric field"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "type-II built-in electric field"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZIOS"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "In(OH)3-x"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "In(OH)3-x"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "In(OH)3-x"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "In-hydroxyl vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "In(OH)3-x"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "In-hydroxyl vacancy"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "pDOS"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "pCOHP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "charge density difference"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "CO2"
+      },
+      "props": {
+        "note": "O ads at In-□ (LA), C ads at In-OH (LB); CDD Fig. S9b"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "CO2 activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Mechanism",
+        "name": "CO2 activation"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {
+        "note": "FLP-activated CO2 + type-II e- transfer → CO"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "blocking FLP (pyridine/pyrrole) lowers CO2RR activity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "In-□···In-OH FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO/H2 selectivity"
+      },
+      "props": {
+        "note": "FLP + heterojunction raise CO/H2 vs ZIS"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "37844feb6805fb55",
+    "source_pdf": "Frustrated Lewis Pairs On-in(oh)3-x-facilitate-photocatalytic-co2-reduction.pdf",
+    "page_start": 3,
+    "page_end": 6,
+    "score": 17.0,
+    "note": "FLP ACTIVATES CO2 → CO2 activation FACILITATES CO2RR; FLP↔activity/CO-H2; Reaction=CO2RR"
+  }
+}

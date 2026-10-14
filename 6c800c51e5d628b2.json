@@ -1,0 +1,445 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "SNW-BCN",
+      "props": {
+        "note": "main B/N co-doped carbon FLP catalyst; most FLP sites"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "BCN",
+      "props": {
+        "note": "ball-milled control; fewer FLP sites than SNW-BCN"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "SNW-CN",
+      "props": {
+        "note": "N-doped control without B; lacks B-N/pyridinic-N FLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "B-N···pyridinic-N FLP",
+      "props": {
+        "note": "electron-deficient B-N (LA) + electron-rich pyridinic-N (LB)"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "B-N site",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "pyridinic-N site",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation of cinnamaldehyde",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "cinnamaldehyde",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "cinnamyl alcohol",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation of alpha,beta-unsaturated aldehydes",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "alpha,beta-unsaturated aldehydes",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "unsaturated alcohols",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation of nitrobenzene",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "nitrobenzene",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation of nitrocyclohexane",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "nitrocyclohexane",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "pyridine",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "pyrrole",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "ethyl acetate",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "150°C, 5.5 h, 1 MPa H2",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "H-H bond dissociation energy",
+      "props": {
+        "value": "0.36 eV",
+        "note": "on B-N···pyridinic-N FLP; from 778d439b51be2ca3"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B-N···pyridinic-N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B-N···pyridinic-N FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "B-N site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "pyridinic-N site"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogenation of cinnamaldehyde"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogenation of alpha,beta-unsaturated aldehydes"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogenation of nitrobenzene"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogenation of nitrocyclohexane"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of cinnamaldehyde"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "cinnamaldehyde"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of cinnamaldehyde"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of cinnamaldehyde"
+      },
+      "target": {
+        "label": "Product",
+        "name": "cinnamyl alcohol"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of alpha,beta-unsaturated aldehydes"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alpha,beta-unsaturated aldehydes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of alpha,beta-unsaturated aldehydes"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of alpha,beta-unsaturated aldehydes"
+      },
+      "target": {
+        "label": "Product",
+        "name": "unsaturated alcohols"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of nitrobenzene"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "nitrobenzene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of nitrobenzene"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of nitrocyclohexane"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "nitrocyclohexane"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of nitrocyclohexane"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "SNW-BCN"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPRESSES",
+      "source": {
+        "label": "Molecule",
+        "name": "pyridine"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B-N···pyridinic-N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPRESSES",
+      "source": {
+        "label": "Molecule",
+        "name": "pyrrole"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B-N···pyridinic-N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of cinnamaldehyde"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "150°C, 5.5 h, 1 MPa H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B-N···pyridinic-N FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "H-H bond dissociation energy"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "6c800c51e5d628b2",
+    "source_pdf": "covalent-organic-framework-derived-b-n-co-doped-carbon-flps-metal-free-catalysts-for-the-selective-hydrogenation-of-α-β.pdf",
+    "page_start": 3,
+    "page_end": 3,
+    "score": 23.0,
+    "note": "hierarchy: surface FLP-CONTAINS->SNW-BCN-CONTAINS->B-N···pyridinic-N FLP; FLP only on SNW-BCN; keep BCN/SNW-CN as controls; +H-H BDE from 778d"
+  }
+}

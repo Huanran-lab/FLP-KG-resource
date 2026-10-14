@@ -1,0 +1,206 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Nb2O5",
+      "props": {
+        "note": "NaBH4-reduced lamellar Nb2O5; high-density FLP host (e.g. 873K-Nb2O5)"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "spatially separates NbLV (LA) and Nb-OH (LB); NbLV–Vo–Nb-OH motif"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Nb···Nb-OH FLP",
+      "props": {
+        "note": "low-valence Nb (LA) + Nb-OH (LB) separated by Vo",
+        "aliases": ["NbLV-Vo-Nb-OH FLP"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Nb",
+      "props": {
+        "note": "low-valence Nb adjacent to Vo"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "Nb-OH",
+      "props": {
+        "note": "surface hydroxyl on Nb; not lattice O"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "methane",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "non-oxidative methane coupling",
+      "props": {
+        "note": "photocatalytic NOCM; not CO2RR"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "methane",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "hydrocarbons",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "hydrogen",
+      "props": {}
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "4.556 Å",
+        "note": "NbLV and Nb-OH spatially separated by Vo; unquenched FLP"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "photo-induced electron transfer",
+      "props": {
+        "note": "LA → LB under light; enhances LA/LB intensity (TD-DFT)"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "methane conversion rate",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "Nb2O5"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "Nb2O5"},
+      "target": {"label": "FLP", "name": "Nb···Nb-OH FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Nb···Nb-OH FLP"},
+      "target": {"label": "Material", "name": "Nb2O5"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "Nb2O5"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "Nb···Nb-OH FLP"},
+      "props": {
+        "note": "Vo separates NbLV and Nb-OH (NbLV–Vo–Nb-OH)"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "Nb2O5"},
+      "target": {"label": "LewisAcid", "name": "Nb"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "Nb2O5"},
+      "target": {"label": "LewisBase", "name": "Nb-OH"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Nb"},
+      "target": {"label": "LewisBase", "name": "Nb-OH"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Nb···Nb-OH FLP"},
+      "target": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "props": {
+        "value": "4.556 Å"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Nb···Nb-OH FLP"},
+      "target": {"label": "ElectronicDescriptor", "name": "photo-induced electron transfer"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "ElectronicDescriptor", "name": "photo-induced electron transfer"},
+      "target": {"label": "Activity", "name": "methane conversion rate"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "Nb2O5"},
+      "target": {"label": "Molecule", "name": "methane"},
+      "props": {
+        "note": "C–H activation on FLP"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "Nb2O5"},
+      "target": {"label": "Reaction", "name": "non-oxidative methane coupling"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "non-oxidative methane coupling"},
+      "target": {"label": "Reactant", "name": "methane"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "non-oxidative methane coupling"},
+      "target": {"label": "Product", "name": "hydrocarbons"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "non-oxidative methane coupling"},
+      "target": {"label": "Product", "name": "hydrogen"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "02aa5ab9fda97b01",
+    "source_pdf": "High-density frustrated Lewis pairs basedon Lamellar Nb2O5 for photocatalyticnon-oxidative methane coupling.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 0.0,
+    "note": "saved 新逻辑: NbLV···Nb-OH; LB=Nb-OH; LA-LB 4.556Å; photo-induced ET; not CO2RR"
+  }
+}

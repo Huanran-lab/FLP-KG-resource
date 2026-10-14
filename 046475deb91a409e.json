@@ -1,0 +1,192 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Al@N-Gr-2",
+      "props": {
+        "note": "single Al atom on N-doped graphene (N-Gr-2); main FLP host; best among Al@N-Gr-1/2 and Al@C2N"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Al···N FLP",
+      "props": {
+        "note": "frustrated Al/N Lewis pair; Al/NI most favorable for H2 splitting on Al@N-Gr-2",
+        "aliases": ["Al/N FLP", "Al/NI"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Al",
+      "props": {
+        "note": "electron-deficient Al single-atom center"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "N",
+      "props": {
+        "note": "pyridinic N near Al (NI/NII)"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "CO2 hydrogenation to HCOOH (DFT); RDS Ea = 0.59 eV (HCOO* hydrogenation)"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "HCOOH",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic H2 dissociation",
+      "props": {
+        "note": "H2 splitting on Al/N FLP; hydride on Al, proton on N"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2 hydrogenation activity",
+      "props": {
+        "note": "Al@N-Gr-2 highest among Al@N-Gr-1 / Al@C2N; RDS Ea 0.59 eV"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "Al@N-Gr-2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "Al@N-Gr-2"},
+      "target": {"label": "FLP", "name": "Al···N FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Al···N FLP"},
+      "target": {"label": "Material", "name": "Al@N-Gr-2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "Al@N-Gr-2"},
+      "target": {"label": "LewisAcid", "name": "Al"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "Al@N-Gr-2"},
+      "target": {"label": "LewisBase", "name": "N"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Al"},
+      "target": {"label": "LewisBase", "name": "N"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "Al@N-Gr-2"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {
+        "note": "heterolytic H2 dissociation on Al/N; enabled by Al→N charge transfer establishing Al/N FLP"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "Al@N-Gr-2"},
+      "target": {"label": "Molecule", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "Al@N-Gr-2"},
+      "target": {"label": "Reaction", "name": "CO2RR"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Reactant", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Reactant", "name": "H2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Product", "name": "HCOOH"},
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Mechanism", "name": "heterolytic H2 dissociation"},
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {"label": "FLP", "name": "Al···N FLP"},
+      "target": {"label": "Mechanism", "name": "heterolytic H2 dissociation"},
+      "props": {
+        "note": "Al/N FLP promotes H2 cleavage; enabled by Al→N charge transfer"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "Al···N FLP"},
+      "target": {"label": "Activity", "name": "CO2 hydrogenation activity"},
+      "props": {
+        "note": "Al/N FLP enables CO2→HCOOH; RDS Ea 0.59 eV"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "046475deb91a409e",
+    "source_pdf": "rational-design-of-main-group-metal-embedded-nitrogen-doped-carbon-materials-as-frustrated-lewis-pair-catalysts-for-co2.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 0.0,
+    "note": "saved: +PROCEEDS_VIA heterolytic H2 dissociation; Al···N FLP FACILITATES H2 cleavage; sibling 3775 pending"
+  }
+}

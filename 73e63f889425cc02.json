@@ -1,0 +1,239 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Ni1(OH)2/TiO2",
+      "props": {
+        "note": "Ni single atom stabilized by two OH ligands on anatase TiO2(101)"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "anatase TiO2(101)",
+      "props": {
+        "note": "oxide support"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ni···OH FLP",
+      "props": {
+        "note": "Ni–C2H3* interface with H in OH ligand; enables heterolytic H2 dissociation"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ni site",
+      "props": {
+        "note": "Ni single atom"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "OH ligand",
+      "props": {
+        "note": "H of OH; with adsorbed C2H3*/C2H5* as basic ligand"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "acetylene semi-hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "acetylene",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "ethylene",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Bader charge",
+      "props": {
+        "note": "Bader/charge analysis: ~0.38e from Ni to OH/TiO2; OH tunes Ni electronics vs Ni1/TiO2"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "Ni1(OH)2/TiO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "anatase TiO2(101)"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni1(OH)2/TiO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ni1(OH)2/TiO2"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ni···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ni···OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni1(OH)2/TiO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni1(OH)2/TiO2"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ni site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni1(OH)2/TiO2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "OH ligand"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ni···OH FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Bader charge"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ni1(OH)2/TiO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "acetylene semi-hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ni1(OH)2/TiO2"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {
+        "note": "heterolytic dissociation via FLP"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "acetylene semi-hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "acetylene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "acetylene semi-hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "acetylene semi-hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "ethylene"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ni site"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "OH ligand"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "73e63f889425cc02",
+    "source_pdf": "Hydroxyl improving the activity, selectivity andstability of supported Ni single atoms for selectivesemi-hydrogenation.pdf",
+    "page_start": 7,
+    "page_end": 7,
+    "score": 3.0,
+    "note": "hierarchy Ni···OH; descriptors on specific FLP; facet (101); specific OH-modulated Ni charge "
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "B,S-CN",
+      "props": {
+        "note": "B,S-codoped g-C3N4; hosts S···N M-FLP; outperforms CN/S-CN/B-CN"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "N1 site",
+      "props": {
+        "note": "electron-rich N near B; Lewis base"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "S site",
+      "props": {
+        "note": "electron-deficient S; Lewis acid"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "S···N FLP",
+      "props": {
+        "note": "M-FLP; S (LA) + N1 near B (LB)",
+        "aliases": [
+          "M-FLP"
+        ]
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic CO2 reduction to CO"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "proton-coupled electron transfer",
+      "props": {}
+    },
+    {
+      "label": "ReactionStep",
+      "name": "CO2 adsorption",
+      "props": {}
+    },
+    {
+      "label": "ReactionStep",
+      "name": "hydrogenation and dehydration",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "CO2 photoreduction activity"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO selectivity",
+      "props": {
+        "note": "~100% CO"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "apparent quantum efficiency",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "density of states",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "N 2p orbitals",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "C 2p orbitals",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "B 2pz",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "S 3pz",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "band gap",
+      "props": {
+        "note": "electronic property of M-FLP / B,S-CN"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "S···N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "S···N FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "S site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "N1 site"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "S site"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "N1 site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "band gap"
+      },
+      "props": {
+        "note": "B,S codoping / M-FLP construction narrows Eg vs CN"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "density of states"
+      },
+      "props": {
+        "note": "VB/CB DOS of B,S-CN; cf. CN"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "N 2p orbitals"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "C 2p orbitals"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "B 2pz"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "S 3pz"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "B,S-CN"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "proton-coupled electron transfer"
+      },
+      "props": {}
+    },
+    {
+      "type": "INVOLVES",
+      "source": {
+        "label": "Mechanism",
+        "name": "proton-coupled electron transfer"
+      },
+      "target": {
+        "label": "ReactionStep",
+        "name": "CO2 adsorption"
+      },
+      "props": {}
+    },
+    {
+      "type": "INVOLVES",
+      "source": {
+        "label": "Mechanism",
+        "name": "proton-coupled electron transfer"
+      },
+      "target": {
+        "label": "ReactionStep",
+        "name": "hydrogenation and dehydration"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "apparent quantum efficiency"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "S···N FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "M-FLP on B,S-CN outperforms CN/S-CN/B-CN"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "S···N FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO selectivity"
+      },
+      "props": {
+        "note": "M-FLP balances *COOH; favors CO over other products (~100%)"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "2283675756caef92",
+    "source_pdf": "mimicking-frustrated-lewis-pairs-on-graphitic-carbon-nitride-for-co2-photoreduction.pdf",
+    "page_start": 3,
+    "page_end": 3,
+    "score": 21.0,
+    "note": "merged 715f; CO2RR; S···N FLP↔activity/CO selectivity; sole for PDF"
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "In2O3-x(OH)y",
+      "props": {
+        "note": "hydroxylated defective indium oxide; FLP host"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "creates unsaturated In acid sites; strengthens basicity"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "In···OH FLP",
+      "props": {
+        "note": "unsaturated In (LA) + surface OH (LB); proximal unquenched LA–LB pair"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "In",
+      "props": {
+        "note": "unsaturated surface In near Ov"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "OH",
+      "props": {
+        "note": "surface hydroxide"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "RWGS: CO2 + H2 → CO + H2O (photo/thermal)"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "surface hydroxide concentration",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "oxygen vacancy concentration",
+      "props": {}
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "note": "proximal In···OH (adjacent unquenched LA–LB); no numeric distance reported"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2 adsorption capacity",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "CO production rate",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "FLP", "name": "In···OH FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "In···OH FLP"},
+      "target": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "In···OH FLP"},
+      "props": {
+        "note": "Ov exposes unsaturated In and sterically separates LA–LB"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "LewisAcid", "name": "In"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "LewisBase", "name": "OH"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "In"},
+      "target": {"label": "LewisBase", "name": "OH"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Descriptor", "name": "surface hydroxide concentration"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Descriptor", "name": "oxygen vacancy concentration"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "In···OH FLP"},
+      "target": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "surface hydroxide concentration"},
+      "target": {"label": "Activity", "name": "CO2 adsorption capacity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "surface hydroxide concentration"},
+      "target": {"label": "Activity", "name": "CO production rate"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "oxygen vacancy concentration"},
+      "target": {"label": "Activity", "name": "CO2 adsorption capacity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "oxygen vacancy concentration"},
+      "target": {"label": "Activity", "name": "CO production rate"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {
+        "note": "heterolytic H2 dissociation on FLP"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Molecule", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Reaction", "name": "CO2RR"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Reactant", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Reactant", "name": "H2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Product", "name": "CO"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Product", "name": "H2O"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "010faf1190221e86",
+    "source_pdf": "Illuminating CO2 reduction on frustrated Lewispair surfaces.pdf",
+    "page_start": 4,
+    "page_end": 4,
+    "score": 1.0,
+    "note": "saved 新逻辑: In···OH; conc. on Material; LA-LB distance; RWGS→CO2RR; drop Intermediate/Mechanism/Lewis basicity"
+  }
+}

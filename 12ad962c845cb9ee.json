@@ -1,0 +1,297 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Sn-BOC-U",
+      "props": {
+        "note": "Sn-doped ultrathin BiOCl with OVs"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Bi···O FLP",
+      "props": {
+        "note": "Bi (LA)···lattice O (LB) near OV; intensified by Sn doping; LA-LB ~4.5 Å"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Bi",
+      "props": {
+        "note": "Bi near Ov as LA"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "lattice O",
+      "props": {
+        "note": "lattice O near Ov as LB"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity strengthened via oxygen vacancy"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Sn doping",
+      "props": {
+        "note": "Sn4+ substitutes Bi in lattice"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "lattice distortion",
+      "props": {
+        "note": "Sn doping; Raman shift; Sn–O bonds"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "charge redistribution",
+      "props": {
+        "note": "Bi more positive, lattice O more negative (Bader); more intensive FLP feature"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "4.498 Å",
+        "note": "Sn-BOC-OV; shortened vs BOC-OV 4.575 Å"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "dipole moment",
+      "props": {
+        "note": "increased by Sn doping"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "internal electric field",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "CO2 photoreduction → CO"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "CO yield rate",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "CO2 activation",
+      "props": {
+        "note": "FLP-OV region; improved adsorption and activation (DFT Bader / Ead)"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "Sn-BOC-U" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "Sn-BOC-U" },
+      "target": { "label": "FLP", "name": "Bi···O FLP" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "Bi···O FLP" },
+      "target": { "label": "Material", "name": "Sn-BOC-U" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "Sn-BOC-U" },
+      "target": { "label": "Defect", "name": "oxygen vacancy" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "oxygen vacancy" },
+      "target": { "label": "FLP", "name": "Bi···O FLP" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "Sn-BOC-U" },
+      "target": { "label": "LewisAcid", "name": "Bi" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "Sn-BOC-U" },
+      "target": { "label": "LewisBase", "name": "lattice O" },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "Bi" },
+      "target": { "label": "LewisBase", "name": "lattice O" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Bi···O FLP" },
+      "target": { "label": "Descriptor", "name": "Lewis basicity" },
+      "props": {
+        "note": "OV strengthens basicity at FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "Material", "name": "Sn-BOC-U" },
+      "target": { "label": "Descriptor", "name": "Sn doping" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Descriptor", "name": "Sn doping" },
+      "target": { "label": "Descriptor", "name": "lattice distortion" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Descriptor", "name": "lattice distortion" },
+      "target": { "label": "ElectronicDescriptor", "name": "charge redistribution" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Bi···O FLP" },
+      "target": { "label": "ElectronicDescriptor", "name": "charge redistribution" },
+      "props": {
+        "note": "scheme B: charge redistribution describes intensified FLP polarity, not a cause that creates FLP"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "ElectronicDescriptor", "name": "charge redistribution" },
+      "target": { "label": "Descriptor", "name": "LA-LB distance" },
+      "props": {
+        "note": "shortens Bi···O distance"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Bi···O FLP" },
+      "target": { "label": "Descriptor", "name": "LA-LB distance" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Descriptor", "name": "Sn doping" },
+      "target": { "label": "Descriptor", "name": "dipole moment" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "Descriptor", "name": "dipole moment" },
+      "target": { "label": "Descriptor", "name": "internal electric field" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Bi···O FLP" },
+      "target": { "label": "Descriptor", "name": "internal electric field" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "Sn-BOC-U" },
+      "target": { "label": "Molecule", "name": "CO2" },
+      "props": {
+        "note": "on FLP-OV region"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "FLP", "name": "Bi···O FLP" },
+      "target": { "label": "Mechanism", "name": "CO2 activation" },
+      "props": {
+        "note": "FLP-OV active sites enable CO2 adsorption/activation"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "Mechanism", "name": "CO2 activation" },
+      "target": { "label": "Reaction", "name": "CO2RR" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "Sn-BOC-U" },
+      "target": { "label": "Reaction", "name": "CO2RR" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Molecule", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "CO" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "Descriptor", "name": "internal electric field" },
+      "target": { "label": "Activity", "name": "CO yield rate" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "FLP", "name": "Bi···O FLP" },
+      "target": { "label": "Activity", "name": "CO yield rate" },
+      "props": {
+        "note": "synergistic with enhanced IEF"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "12ad962c845cb9ee",
+    "source_pdf": "Dipole increase synergistic frustrated Lewis pairs induced by Sn dopant boosts ultrathin layered bismuth oxychloride for CO2 photoreduction.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 1.0,
+    "note": "新逻辑: surface FLP→Sn-BOC-U→Bi···O FLP; Ov ENABLES Bi···O; LA=Bi LB=lattice O; CO2RR (photoreduction→CO); no merge"
+  }
+}

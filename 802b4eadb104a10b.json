@@ -1,0 +1,485 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "BixIn2-xO3",
+      "props": {
+        "note": "single-site Bi3+ substituted In2O3; hosts stronger Bi···O SFLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "In2O3",
+      "props": {
+        "note": "defect-laden control; classic In···OH SFLP"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Bi···O FLP",
+      "props": {
+        "note": "Bi3+–O2− SFLP on BixIn2-xO3; stronger LA-LB pair for CO2 activation"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "In···OH FLP",
+      "props": {
+        "note": "unsaturated In proximal to In-OH near Ov on In2O3"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Bi3+",
+      "props": {
+        "note": "isomorphic LA-site replacement of In3+; strengthens Bi···O SFLP"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "unsaturated In",
+      "props": {
+        "note": "coordinatively unsaturated In near Ov"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "O2-",
+      "props": {
+        "note": "lattice/oxide base paired with Bi3+"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "In-OH",
+      "props": {
+        "note": "surface hydroxide LB on In2O3 SFLP"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic RWGS/CO2→CO (+H2O); some methanol"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "LA site In3+→Bi3+; Bi3+–O2− pair more reactive than In-based SFLP"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "activation energy barrier",
+      "props": {
+        "note": "DFT H2-dissociation barrier / Arrhenius apparent Ea (photo vs thermal)"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Gibbs free energy change",
+      "props": {
+        "note": "DFT ΔG for H2→H*; BixIn2-xO3 −0.05 eV vs endothermic on In2O3"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "~1000× CO rate vs In2O3; volcano vs Bi content; also higher CH3OH rate in flow"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Bi···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Bi···O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "In2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "In2O3"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "In2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "In2O3"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Bi···O FLP"
+      },
+      "props": {
+        "note": "Ov near Bi···O SFLP"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "In···OH FLP"
+      },
+      "props": {
+        "note": "unsaturated In / In-OH near Ov"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Bi3+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O2-"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Bi3+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O2-"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "In2O3"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "unsaturated In"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "In2O3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "unsaturated In"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "In-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Bi···O FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {
+        "note": "In3+→Bi3+ LA substitution boosts SFLP reactivity"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Bi···O FLP"
+      },
+      "props": {
+        "note": "stronger Bi3+–O2− LA enhances Bi···O SFLP reactivity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Bi···O FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "stronger Bi···O SFLP → higher photocatalytic CO2→CO rates (~1000× vs In2O3)"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "activation energy barrier"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "lower photochemical Ea / H2-dissociation barrier ↔ higher CO2RR activity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "Gibbs free energy change"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "H2→H* ΔG more favorable on BixIn2-xO3 (−0.05 eV) ↔ activity"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "BixIn2-xO3"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "H2O"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "802b4eadb104a10b",
+    "source_pdf": "Bismuth atom tailoring of indium oxide surfacefrustrated Lewis pairs boosts heterogeneous CO2photocatalytic hydrogenation.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 11.0,
+    "note": "CO2RR; hierarchy Bi···O / In···OH; Ov ENABLES both FLPs; LA acidity↔RWGS photoactivity; drop Lewis basicity chain; Ea/ΔG only CORRELATES_WITH activity (not FLP HAS_DESCRIPTOR); Lewis acidity FACILITATES Bi···O FLP CORRELATES_WITH CO2RR activity"
+  }
+}

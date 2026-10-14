@@ -1,0 +1,352 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Ag-CeO2(110)",
+      "props": {
+        "note": "host for Ag-FLP dual active sites (best among TM-FLP)"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "OV-constructed Ce3+/lattice O FLP; preferentially activates CO2"
+      }
+    },
+    {
+      "label": "ActiveSite",
+      "name": "Ag",
+      "props": {
+        "note": "single-atom site doped in CeO2(110); preferentially activates CH4; not FLP Lewis acid"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce3+",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "lattice O",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CH4 and CO2 to acetic acid",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CH4",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "acetic acid",
+      "props": {}
+    },
+    {
+      "label": "Intermediate",
+      "name": "acetate intermediate",
+      "props": {}
+    },
+    {
+      "label": "Intermediate",
+      "name": "H migration to acetic acid",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "TOF",
+      "props": {}
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "activation energy for C-C coupling",
+      "props": {}
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "activation energy for H migration",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity strengthened via oxygen vacancy"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Ag-CeO2(110)"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ag-CeO2(110)"
+      },
+      "target": {
+        "label": "ActiveSite",
+        "name": "Ag"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ag-CeO2(110)"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce3+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ag-CeO2(110)"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ce3+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ag-CeO2(110)"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "ActiveSite",
+        "name": "Ag"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {
+        "note": "SA doping facilitates OV formation, thus promotes FLP"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ag-CeO2(110)"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CH4 and CO2 to acetic acid"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 and CO2 to acetic acid"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 and CO2 to acetic acid"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 and CO2 to acetic acid"
+      },
+      "target": {
+        "label": "Product",
+        "name": "acetic acid"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_INTERMEDIATE",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 and CO2 to acetic acid"
+      },
+      "target": {
+        "label": "Intermediate",
+        "name": "acetate intermediate"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_INTERMEDIATE",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 and CO2 to acetic acid"
+      },
+      "target": {
+        "label": "Intermediate",
+        "name": "H migration to acetic acid"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ag-CeO2(110)"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CH4"
+      },
+      "props": {
+        "note": "preferentially at Ag SA site"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ag-CeO2(110)"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {
+        "note": "preferentially at surface FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 and CO2 to acetic acid"
+      },
+      "target": {
+        "label": "EnergeticDescriptor",
+        "name": "activation energy for C-C coupling"
+      },
+      "props": {
+        "note": "CH3* + CO2* → acetate; 0.92 eV on Ag-FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Reaction",
+        "name": "CH4 and CO2 to acetic acid"
+      },
+      "target": {
+        "label": "EnergeticDescriptor",
+        "name": "activation energy for H migration"
+      },
+      "props": {
+        "note": "RDS on Ag-FLP: H → acetate → acetic acid; 1.12 eV"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "EnergeticDescriptor",
+        "name": "activation energy for C-C coupling"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "TOF"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "EnergeticDescriptor",
+        "name": "activation energy for H migration"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "TOF"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "1846631e9da4cfd7",
+    "source_pdf": "Design of Single-Atom and Frustrated-Lewis-Pair dual active sites fordirect conversion of CH4 and CO2 to acetic acid.pdf",
+    "page_start": 3,
+    "page_end": 8,
+    "score": 22.0,
+    "note": "Ag as ActiveSite (SA), not LA; single surface FLP; SA ENABLES OV"
+  }
+}

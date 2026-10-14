@@ -1,0 +1,395 @@
+{
+  "nodes": [
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "Zr-MOL-D",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "Zr-MOL-P",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Zr4-δ-VO-Zr-OH",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Zr4-δ",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "Zr-OH",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic CO2 reduction to CO"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "CO2-TPD; Zr-OH alkaline sites stronger on Zr-MOL-D than Zr-MOL-P"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "NH3-TPD; Zr4-δ acidity stronger on Zr-MOL-D than Zr-MOL-P"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "4.96 Å",
+        "note": "Zr5-O24 on Zr-MOL-D; Zr-MOL-P 5.13 Å unlikely to form FLP"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Zr Bader charge",
+      "props": {
+        "note": "Zr valence lower on Zr-MOL-D than Zr-MOL-P (Zr4/Zr5 ~+2.57 e on P)"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Zr coordination number",
+      "props": {
+        "note": "average coordination reduced by VO / missing ligand"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "CO rate; Zr-MOL-D 49.4 vs Zr-MOL-P 4.2 μmol g−1 h−1 (~12×)"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Zr4-δ"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Zr-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "target": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Zr Bader charge"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "Zr coordination number"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "props": {
+        "note": "Zr5–O24 4.96 Å on D enables FLP; P 5.13 Å unlikely"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "props": {
+        "note": "defect engineering constructs Zr4-δ−VO−Zr−OH FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "Zr-MOL-D"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Zr4-δ-VO-Zr-OH"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "FLP makes *COOH exothermic; ~12× CO rate vs Zr-MOL-P"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "stronger acid/base sites on Zr-MOL-D (TPD) vs P"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "stronger acid/base sites on Zr-MOL-D (TPD) vs P"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "407f0dea81d6d91e",
+    "source_pdf": "defect-induced-all-solid-state-frustrated-lewis-pair-on-metal-organic-monolayer-accelerating-photocatalytic-co2.pdf",
+    "page_start": 1,
+    "page_end": 7,
+    "score": 10.0,
+    "note": "CO2RR; Ov ENABLES FLP; LA-LB distance ENABLES FLP; acidity/basicity as descriptors (not FACILITATES FLP); FLP↔activity; sole"
+  }
+}

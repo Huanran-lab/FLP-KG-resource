@@ -1,0 +1,197 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "TiO2-x",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ti3+",
+      "props": {
+        "note": "CUS Ti near OV; paper also phrases OV as LA site"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "surface hydroxyl",
+      "props": {
+        "note": "proximal/adjacent surface hydroxyls"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity strengthened via oxygen vacancy"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "TiO2-x"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "TiO2-x"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ti3+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "TiO2-x"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "surface hydroxyl"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "TiO2-x"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "TiO2-x"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "TiO2-x"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ti3+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "surface hydroxyl"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ti3+"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "27505d2e213ad9f2",
+    "source_pdf": "Construction of frustrated Lewis pairs on TiO2-x derived from perovskite for enhanced photocatalytic CO2 reduction.pdf",
+    "page_start": 8,
+    "page_end": 8,
+    "score": 10.0,
+    "note": "LA=Ti3+ (near OV); LB=surface hydroxyl; Reaction=CO2RR; fixed edge comma; saved"
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Co-NC",
+      "props": {
+        "note": "single-atom Co on N-doped carbon; hosts Co···N FLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Co···N FLP",
+      "props": {
+        "note": "Coδ+ (LA) / N (LB); H2 heterolysis on Co–N",
+        "aliases": [
+          "Co-N FLP",
+          "Co−N FLP"
+        ]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Coδ+",
+      "props": {
+        "note": "Co site",
+        "aliases": [
+          "Co site"
+        ]
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "N site",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydration",
+      "props": {
+        "note": "H2-promoted; alkenes→alcohols, epoxy alkanes→diols; not CO2RR"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "alkenes",
+      "props": {
+        "note": "styrenes, cyclic alkenes"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "epoxy alkanes",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "alcohol",
+      "props": {
+        "note": "incl. diols from epoxy hydration"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "H2 heterolysis on Co-N bond",
+      "props": {
+        "note": "forms Hδ−−Co−N−Hδ+"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "H2O-mediated path",
+      "props": {
+        "note": "to OHδ−−Co−N−Hδ+; lowers hydration Ea"
+      }
+    },
+    {
+      "label": "Condition",
+      "name": "H2-H2O activation",
+      "props": {
+        "note": "hydration needs H2; inert under N2"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {
+        "note": "per-acid activity vs zeolites/resins"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "selectivity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Co-NC"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Co-NC"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Co···N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Co···N FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Co-NC"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Co-NC"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Coδ+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Co-NC"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "N site"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Coδ+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "N site"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Co-NC"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {
+        "note": "heterolysis on Co···N FLP / Co–N"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Co-NC"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alkenes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "epoxy alkanes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2O"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "target": {
+        "label": "Product",
+        "name": "alcohol"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "H2 heterolysis on Co-N bond"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "H2O-mediated path"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "hydration"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "H2-H2O activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "FLP",
+        "name": "Co···N FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "H2 heterolysis on Co-N bond"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Co···N FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic activity"
+      },
+      "props": {
+        "note": "H2-promoted acid transformation; superior per-acid activity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Co···N FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "selectivity"
+      },
+      "props": {
+        "note": "superior selectivity vs classical solid acids"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "311fae6ae842210e",
+    "source_pdf": "hydrogen-catalyzed-acid-transformation-for-the-hydration-of-alkenes-and-epoxy-alkanes-over-co-n-frustrated-lewis-pair.pdf",
+    "page_start": 1,
+    "page_end": 5,
+    "score": 14.0,
+    "note": "merged 4ad8; Reaction=hydration (not CO2RR); FLP↔activity/selectivity; await delete 4ad8; note: ACTIVATES H2O overstated vs PDF"
+  }
+}

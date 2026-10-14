@@ -1,0 +1,201 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "nanodiamond-based carbon",
+      "props": {
+        "note": "N,B-doped nanodiamond-derived carbon (e.g. NBU600); graphitic lattice hosts B–N Lewis pairs"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "B···N FLP",
+      "props": {
+        "note": "directly bonded B–N unquenched Lewis pair in graphitic lattice"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "graphitic B",
+      "props": {
+        "note": "electron-deficient B doped in graphitic lattice (LA)"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "graphitic N",
+      "props": {
+        "note": "electron-rich N doped in graphitic lattice (LB)"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "substrate",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "hydrogenated product",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "nanodiamond-based carbon"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "nanodiamond-based carbon"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···N FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "nanodiamond-based carbon"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "graphitic B"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "graphitic N"
+      },
+      "props": {
+        "note": "directly bonded B–N in lattice"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "nanodiamond-based carbon"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "graphitic B"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "nanodiamond-based carbon"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "graphitic N"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "nanodiamond-based carbon"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "nanodiamond-based carbon"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "substrate"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "hydrogenated product"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "c1ff834844118677",
+    "source_pdf": "A Heterogeneous Metal‐Free Catalyst for Hydrogenation  Lewis Acid Base Pairs Integrated.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 19.0,
+    "note": "graphitic B···N FLP on nanodiamond carbon; drop Intermediate; LA/LB=graphitic B/N"
+  }
+}

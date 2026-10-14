@@ -1,0 +1,277 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "BCF@MOF-545",
+      "props": {
+        "note": "BCF guests in MOF-545 pores; hosts in situ BCF···TCPP-N FLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "MOF-545",
+      "props": {
+        "note": "Zr6-TCPP framework; recyclable support providing porphyrin N LB"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "BCF···TCPP-N FLP",
+      "props": {
+        "note": "guest BCF (LA) + porphyrin N of TCPP (LB) formed in situ"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "BCF",
+      "props": {
+        "aliases": [
+          "B(C6F5)3"
+        ],
+        "note": "tris(pentafluorophenyl)borane guest"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "TCPP-N",
+      "props": {
+        "note": "basic N atoms in TCPP porphyrin ring"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2 hydrogenation",
+      "props": {
+        "note": "to methoxyborate; methanol after hydrolysis"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "methoxyborate",
+      "props": {
+        "note": "[(MeO)B(C6F5)3]- / methoxyborane species"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "methanol",
+      "props": {
+        "note": "from methoxyborate hydrolysis"
+      }
+    },
+    {
+      "label": "Condition",
+      "name": "40 bars, 100°C, 20 h",
+      "props": {
+        "note": "typically H2 20 bar + CO2 20 bar"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "BCF···TCPP-N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "BCF···TCPP-N FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MOF-545"
+      },
+      "props": {
+        "note": "Zr-TCPP framework host"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "BCF"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "TCPP-N"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "BCF"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "TCPP-N"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2 hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "BCF@MOF-545"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "methoxyborate"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "methanol"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 hydrogenation"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "40 bars, 100°C, 20 h"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "7f2f928e8e8d2417",
+    "source_pdf": "Frustrated Lewis pair-mediated fixation of CO2within a metal–organic framework.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 16.0,
+    "note": "hierarchy BCF···TCPP-N on BCF@MOF-545; drop Intermediate/Mechanism/Catalyst dup"
+  }
+}

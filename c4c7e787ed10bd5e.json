@@ -1,0 +1,448 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "ZnO (100) surface",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "anion substitution defect",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "P/Zn FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "B/Zn FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "N/Zn FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "C/Zn FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "S/Zn FLP",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Zn site",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "P dopant",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "B dopant",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "N dopant",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "C dopant",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "S dopant",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "NO",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "NO reduction to NH3 (NOER)",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "NO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "NH3",
+      "props": {}
+    },
+    {
+      "label": "Intermediate",
+      "name": "NO*",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "donation/back-donation mechanism",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "ICOHP",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "NO* adsorption energy",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "NOER catalytic activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "anion substitution defect"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "anion substitution defect"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "P/Zn FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "anion substitution defect"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B/Zn FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "anion substitution defect"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "N/Zn FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "anion substitution defect"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "C/Zn FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "anion substitution defect"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "S/Zn FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Zn site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "P dopant"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "B dopant"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "N dopant"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "C dopant"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "S dopant"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "P/Zn FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B/Zn FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "N/Zn FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "C/Zn FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "S/Zn FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "NO"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "ZnO (100) surface"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "NO reduction to NH3 (NOER)"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "NO reduction to NH3 (NOER)"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "NO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "NO reduction to NH3 (NOER)"
+      },
+      "target": {
+        "label": "Product",
+        "name": "NH3"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_INTERMEDIATE",
+      "source": {
+        "label": "Reaction",
+        "name": "NO reduction to NH3 (NOER)"
+      },
+      "target": {
+        "label": "Intermediate",
+        "name": "NO*"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "NO reduction to NH3 (NOER)"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "donation/back-donation mechanism"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Intermediate",
+        "name": "NO*"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "ICOHP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Intermediate",
+        "name": "NO*"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "NO* adsorption energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "ICOHP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "NOER catalytic activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "NO* adsorption energy"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "NOER catalytic activity"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "c4c7e787ed10bd5e",
+    "source_pdf": "Construction of frustrated lewis pairs in ZnO surface for boosting electrocatalytic NO reduction to NH3 Theoretical prediction and experimental validation.pdf",
+    "page_start": 2,
+    "page_end": 7,
+    "score": 9.0,
+    "note": "kept as canonical for ZnO NOER PDF; deleted siblings 28ef9/4aae/6536/77e3; sole"
+  }
+}

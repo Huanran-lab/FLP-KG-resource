@@ -1,0 +1,344 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "In2O3-x(OH)y",
+      "props": {
+        "note": "defect-laden hydroxylated indium oxide; surface FLP host (Surface Analogues paper)"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "with proximal InOH favors terminal InOH···In FLP vs bridge InOH→In"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "InOH···In FLP",
+      "props": {
+        "note": "paper notation InOH···In; LA=unsaturated In, LB=terminal InOH; not classical InOH→In",
+        "aliases": ["In···OH FLP", "InOH···In"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "In",
+      "props": {
+        "note": "coordinately unsaturated In(III)"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "InOH",
+      "props": {
+        "note": "terminal surface hydroxide; Lewis base"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "RWGS: CO2 + H2 → CO + H2O (thermo/photo)"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic H2 splitting",
+      "props": {
+        "note": "on InOH···In → proton/hydride pair for CO2 reduction"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "higher in excited state (photo) vs ground state"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "higher in excited state; tunable via electronegativity of LB site"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "electrostatic polarization",
+      "props": {
+        "note": "adjacent LA In / LB InOH polarization; drives H2 heterolysis on FLP"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "charge density",
+      "props": {
+        "note": "around LA In / LB InOH; favors terminal InOH···In over bridge InOH→In"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "electronegativity",
+      "props": {
+        "note": "element electronegativity as design lever to tune LA In / LB InOH of the FLP"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "energy barrier",
+      "props": {
+        "note": "H2 dissociation barrier on InOH···In; lowered by stronger LA/LB (GS or ES)"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2 hydrogenation rate",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "FLP", "name": "InOH···In FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "InOH···In FLP"},
+      "props": {
+        "note": "Ov near InOH favors terminal FLP over quenched InOH→In"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "LewisAcid", "name": "In"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "LewisBase", "name": "InOH"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "In"},
+      "target": {"label": "LewisBase", "name": "InOH"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis acidity"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Descriptor", "name": "Lewis basicity"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Descriptor", "name": "electrostatic polarization"},
+      "props": {
+        "note": "LA–LB polarization enables heterolytic H2 activation (RWGS first step)"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Descriptor", "name": "charge density"},
+      "props": {
+        "note": "local charge density favors active terminal InOH···In"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Descriptor", "name": "electronegativity"},
+      "props": {
+        "note": "tuning LA/LB via element electronegativity (design variable)"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": {"label": "Descriptor", "name": "charge density"},
+      "target": {"label": "FLP", "name": "InOH···In FLP"},
+      "props": {
+        "note": "charge density around In/InOH favors terminal FLP vs quenched bridge adduct"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {
+        "note": "heterolytic splitting on InOH···In; enabled by electrostatic polarization of adjacent LA/LB"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Molecule", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "In2O3-x(OH)y"},
+      "target": {"label": "Reaction", "name": "CO2RR"},
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Mechanism", "name": "heterolytic H2 splitting"},
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Mechanism", "name": "heterolytic H2 splitting"},
+      "props": {
+        "note": "via electrostatic polarization of adjacent In / InOH"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Reactant", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Reactant", "name": "H2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Product", "name": "CO"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "CO2RR"},
+      "target": {"label": "Product", "name": "H2O"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "electrostatic polarization"},
+      "target": {"label": "Descriptor", "name": "energy barrier"},
+      "props": {
+        "note": "stronger LA/LB polarization → lower H2 dissociation barrier"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "electrostatic polarization"},
+      "target": {"label": "Activity", "name": "CO2 hydrogenation rate"},
+      "props": {
+        "note": "polarization-enhanced H2 activation → higher RWGS/CO2RR rate"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "energy barrier"},
+      "target": {"label": "Activity", "name": "CO2 hydrogenation rate"},
+      "props": {
+        "note": "lower H2 dissociation barrier ↔ higher activity"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "InOH···In FLP"},
+      "target": {"label": "Activity", "name": "CO2 hydrogenation rate"},
+      "props": {
+        "note": "ES FLP has enhanced acidity/basicity vs GS"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "Lewis acidity"},
+      "target": {"label": "Activity", "name": "CO2 hydrogenation rate"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "Lewis basicity"},
+      "target": {"label": "Activity", "name": "CO2 hydrogenation rate"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "0662a765c9f3f558",
+    "source_pdf": "Surface Analogues of Molecular Frustrated Lewis Pairs inHeterogeneous CO2 Hydrogenation Catalysis.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 0.0,
+    "note": "新逻辑: InOH···In; CO2RR; polarization on ACTIVATES H2/mechanism + CORRELATES_WITH barrier/activity; distinct from 010faf"
+  }
+}

@@ -1,0 +1,481 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Ga-CeO2(111)",
+      "props": {
+        "note": "Ga-doped CeO2(111) with Ov; Ga is promoter and active LA in Ga···O FLP"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "CeO2(111)",
+      "props": {
+        "note": "undoped control; hosts Ce···O FLP near Ov"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "promoted by Ga doping; templates surface FLPs"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ga···O FLP",
+      "props": {
+        "note": "Ga3+ (LA) + lattice O (LB); heterolytic H2; active in alkyne hydrogenation"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ce···O FLP",
+      "props": {
+        "note": "Ce (LA) + lattice O (LB) near Ov"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ga3+",
+      "props": {
+        "note": "Ga dopant Lewis acid; forms Ga−H hydride"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce4+",
+      "props": {
+        "note": "exposed Ce site near Ov"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "lattice O",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "alkyne hydrogenation",
+      "props": {
+        "note": "acetylene semi-hydrogenation to ethylene"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "C2H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "C2H4",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "Ga vs Ce LA strength affecting hydrogenation barriers"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "ionic radius",
+      "props": {
+        "note": "Ga3+ vs Ce size mismatch related to doping / FLP geometry"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity aided by oxygen vacancy"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "hydrogenation activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ga···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ga···O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "CeO2(111)"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "CeO2(111)"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "CeO2(111)"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "CeO2(111)"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ga3+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce4+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "CeO2(111)"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce4+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "CeO2(111)"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ga3+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ce4+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ga···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ga···O FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ga···O FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "ionic radius"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "hydrogenation activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "ionic radius"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "hydrogenation activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ga-CeO2(111)"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "C2H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "C2H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "C2H4"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "97036374e06e31e4",
+    "source_pdf": "On the mechanism of alkyne hydrogenation catalyzed by Ga-doped ceria.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 36.0,
+    "note": "hierarchy Ga···O + Ce···O on Ga-CeO2(111); acidity/ionic radius on Ga···O; sole for PDF (deleted 2b3c0/5738; no d-band)"
+  }
+}

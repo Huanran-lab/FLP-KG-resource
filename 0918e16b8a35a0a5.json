@@ -1,0 +1,249 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "BCN-2",
+      "props": {
+        "note": "defective boron carbon nitride; hosts undercoordinated B···N FLP for NRR",
+        "aliases": ["BCN", "defective boron carbon nitride"]
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "B···N FLP",
+      "props": {
+        "note": "unsaturated B (LA) + unsaturated N (LB) dual site for N2 activation"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "undercoordinated B",
+      "props": {
+        "note": "electron-deficient B Lewis acid",
+        "aliases": ["unsaturated B atom", "undercoordinated B site", "B"]
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "undercoordinated N",
+      "props": {
+        "note": "electron-rich N Lewis base",
+        "aliases": ["unsaturated N atom", "undercoordinated N site", "N"]
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "electrocatalytic nitrogen reduction",
+      "props": {
+        "note": "NRR; N2 to NH3",
+        "aliases": ["electrocatalytic nitrogen reduction reaction", "electrochemical nitrogen reduction"]
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "N2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "NH3",
+      "props": {
+        "aliases": ["ammonia"]
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "C incorporation",
+      "props": {
+        "note": "C into BN framework; induces electron-deficient undercoordinated B (LA) and increases electron-rich undercoordinated N (LB)"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "B electron deficiency",
+      "props": {
+        "note": "electron-deficient B (ELF/DOS empty orbitals above EF); LA character of undercoordinated B"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "N electron richness",
+      "props": {
+        "note": "electron-rich N (DOS fully occupied orbitals; ELF electron accumulation); LB character of undercoordinated N"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "steric and electronic hindrance",
+      "props": {
+        "note": "precludes dative LA-LB bond; maintains frustrated state"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "Faradaic efficiency",
+      "props": {
+        "note": "FE 18.9% for NH3"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "NH3 yield rate",
+      "props": {
+        "note": "20.9 μg h−1 mg−1 cat.",
+        "aliases": ["ammonia yield"]
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "BCN-2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "BCN-2"},
+      "target": {"label": "FLP", "name": "B···N FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "B···N FLP"},
+      "target": {"label": "Material", "name": "BCN-2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "BCN-2"},
+      "target": {"label": "LewisAcid", "name": "undercoordinated B"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "BCN-2"},
+      "target": {"label": "LewisBase", "name": "undercoordinated N"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "undercoordinated B"},
+      "target": {"label": "LewisBase", "name": "undercoordinated N"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Material", "name": "BCN-2"},
+      "target": {"label": "Descriptor", "name": "C incorporation"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "B···N FLP"},
+      "target": {"label": "ElectronicDescriptor", "name": "B electron deficiency"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "B···N FLP"},
+      "target": {"label": "ElectronicDescriptor", "name": "N electron richness"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Descriptor", "name": "C incorporation"},
+      "target": {"label": "ElectronicDescriptor", "name": "B electron deficiency"},
+      "props": {
+        "note": "C into BN induces undercoordinated electron-deficient B (LA)"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Descriptor", "name": "C incorporation"},
+      "target": {"label": "ElectronicDescriptor", "name": "N electron richness"},
+      "props": {
+        "note": "C into BN increases undercoordinated electron-rich N (LB)"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "ElectronicDescriptor", "name": "B electron deficiency"},
+      "target": {"label": "FLP", "name": "B···N FLP"},
+      "props": {
+        "note": "electron-deficient B as LA of B···N FLP"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "ElectronicDescriptor", "name": "N electron richness"},
+      "target": {"label": "FLP", "name": "B···N FLP"},
+      "props": {
+        "note": "electron-rich N as LB of B···N FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "B···N FLP"},
+      "target": {"label": "Descriptor", "name": "steric and electronic hindrance"},
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {"label": "Descriptor", "name": "steric and electronic hindrance"},
+      "target": {"label": "FLP", "name": "B···N FLP"},
+      "props": {
+        "note": "keeps LA-LB frustrated rather than quenched as adduct"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "BCN-2"},
+      "target": {"label": "Reaction", "name": "electrocatalytic nitrogen reduction"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "BCN-2"},
+      "target": {"label": "Reactant", "name": "N2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "electrocatalytic nitrogen reduction"},
+      "target": {"label": "Reactant", "name": "N2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "electrocatalytic nitrogen reduction"},
+      "target": {"label": "Product", "name": "NH3"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "B···N FLP"},
+      "target": {"label": "Activity", "name": "Faradaic efficiency"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "B···N FLP"},
+      "target": {"label": "Activity", "name": "NH3 yield rate"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "0918e16b8a35a0a5",
+    "source_pdf": "Creating Frustrated Lewis Pairs in Defective Boron Carbon Nitride for Electrocatalytic.pdf",
+    "page_start": 1,
+    "page_end": 6,
+    "score": 0.0,
+    "note": "新逻辑: B···N on BCN-2; C incorporation→B electron deficiency→B···N FLP; drop orphan Defect + dup Molecule N2; not CO2RR"
+  }
+}

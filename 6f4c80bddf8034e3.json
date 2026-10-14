@@ -1,0 +1,187 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "NU-1000",
+      "props": {
+        "note": "Zr6 MOF support; LB grafted by SALI, then LA+H2 → NU-1000-FLP-H2"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "B···pyridinic-N FLP",
+      "props": {
+        "note": "B(2,6-C6F2H3)3 (LA) + dimethylpyridine LB anchored in NU-1000 mesopores; forms FLP-H2 under H2"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "B(2,6-C6F2H3)3",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "dimethylpyridine LB",
+      "props": {
+        "note": "4-(2,6-dimethylpyridin-4-yl)benzoic acid grafted via SALI"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "nitroolefin reduction",
+      "props": {
+        "note": "selective hydrogenation of nitroolefins to nitroalkanes"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "nitroolefin",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "nitroalkane",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "NU-1000"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "NU-1000"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···pyridinic-N FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···pyridinic-N FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "NU-1000"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "NU-1000"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "B(2,6-C6F2H3)3"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "NU-1000"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "dimethylpyridine LB"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "NU-1000"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "nitroolefin reduction"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "NU-1000"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "nitroolefin reduction"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "nitroolefin"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "nitroolefin reduction"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "nitroolefin reduction"
+      },
+      "target": {
+        "label": "Product",
+        "name": "nitroalkane"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "6f4c80bddf8034e3",
+    "source_pdf": "metal-organic-frameworks-based-frustrated-lewis-pairs-for-selective-reduction-of-nitroolefins-to-nitroalkanes.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 24.0,
+    "note": "batch-convention-pass; acid-base-on-material; hierarchy NU-1000 B···pyridinic-N; drop CO2 prior-work"
+  }
+}

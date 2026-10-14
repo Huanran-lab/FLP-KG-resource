@@ -1,0 +1,177 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "d-Al2O3",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "g-Al2O3",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "pentacoordinated Al3+",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Alp site",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "surface oxygen species",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "styrene hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "styrene",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "ethylbenzene",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "1 MPa H2, 100 °C",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "d-Al2O3"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "pentacoordinated Al3+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "d-Al2O3"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Alp site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "d-Al2O3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "surface oxygen species"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "d-Al2O3"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "d-Al2O3"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "styrene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "ethylbenzene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "1 MPa H2, 100 °C"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "7f687e0b85c97845",
+    "source_pdf": "Frustrated Lewis pairs on pentacoordinated Al3+-enriched Al2O3 promote heterolytic hydrogenactivation and hydrogenation.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 19.0,
+    "note": "batch-convention-pass; acid-base-on-material"
+  }
+}

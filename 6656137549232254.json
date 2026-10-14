@@ -1,0 +1,323 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "h-PFN1",
+      "props": {
+        "note": "hybrid porous FLP network; bulky triarylborane (B1) + POSS; water-tolerant"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "B···diamine FLP",
+      "props": {
+        "note": "in situ FLP: network-bound triarylborane LA + diamine substrate LB"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "triarylborane (B1)",
+      "props": {
+        "note": "bulky triduryl/tris(tetramethylphenyl)borane units in h-PFN",
+        "aliases": [
+          "B1"
+        ]
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "diamine",
+      "props": {
+        "note": "o-diamine substrate acting as LB of in situ FLP"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2 cyclization with diamines",
+      "props": {
+        "note": "CO2 + o-diamines → benzimidazoles; PhSiH3 as reductant"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "aromatic o-diamine",
+      "props": {
+        "note": "aromatic o-diamine substrates"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "phenylsilane",
+      "props": {
+        "note": "PhSiH3 reductant/hydride source"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "benzimidazoles",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "120 °C, 10 bar CO2, THF",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "low CO2 pressure",
+      "props": {
+        "note": "gentle/low CO2 pressure operation"
+      }
+    },
+    {
+      "label": "Condition",
+      "name": "water tolerance",
+      "props": {
+        "note": "h-PFN water-insensitive FLP catalysis"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "CO2 binding selectivity",
+      "props": {
+        "note": "from sibling 6c84d"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {
+        "note": "benzimidazole formation activity"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "h-PFN1"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "h-PFN1"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "B···diamine FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "B···diamine FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "h-PFN1"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "h-PFN1"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "triarylborane (B1)"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "h-PFN1"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "diamine"
+      },
+      "props": {
+        "note": "diamine substrate as LB"
+      }
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "triarylborane (B1)"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "diamine"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "h-PFN1"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2 cyclization with diamines"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "h-PFN1"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cyclization with diamines"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cyclization with diamines"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "aromatic o-diamine"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cyclization with diamines"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "phenylsilane"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cyclization with diamines"
+      },
+      "target": {
+        "label": "Product",
+        "name": "benzimidazoles"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cyclization with diamines"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "120 °C, 10 bar CO2, THF"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cyclization with diamines"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "low CO2 pressure"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 cyclization with diamines"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "water tolerance"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "B···diamine FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "CO2 binding selectivity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "CO2 binding selectivity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic activity"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "6656137549232254",
+    "source_pdf": "Frustrated Lewis Pair Meets-polyhedral-oligomeric-silsesquioxane-water-tolerant-hybrid-porous-networks-for-robust.pdf",
+    "page_start": 4,
+    "page_end": 4,
+    "score": 27.0,
+    "note": "keeper merge +6c84d: B···diamine on h-PFN1; B1 LA; CO2+diamine→benzimidazoles; PhSiH3; CO2 binding selectivity↔activity; drop h-PFN2; deleted 6c84d",
+    "merged_from": [
+      "6c84d5221dc9c174"
+    ]
+  }
+}

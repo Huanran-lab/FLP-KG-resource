@@ -1,0 +1,443 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "AuPt/WOx",
+      "props": {
+        "note": "Au-promoted Pt/WOx; best glycerol→1,3-PD catalyst (e.g. 0.025AuPt/WOx)"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Pt/WOx",
+      "props": {
+        "note": "mother catalyst; Pt–WOx interface for heterolytic H2"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Au",
+      "props": {
+        "note": "highly dispersed Au; promotes FLP, occupies Ov / cuts Lewis-acid sites"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "on WOx; Lewis-acid sites favoring 1,2-PD/1-PO path; Au prefers Ov"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Pt···W FLP",
+      "props": {
+        "note": "FLP-type pair at Pt–WOx interface (Pt + activated W); heterolytic H2 → H+/H-; Au enlarges FLP domains"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "activated W",
+      "props": {
+        "note": "activated/unsaturated W on WOx; LA of Pt···W FLP-type pair"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "Pt",
+      "props": {
+        "note": "Pt at Pt–WOx interface; partners activated W for FLP-type H2 heterolysis"
+      }
+    },
+    {
+      "label": "ActiveSite",
+      "name": "IGBA",
+      "props": {
+        "note": "in situ generated Brønsted-acid sites (H+); dehydrate glycerol; not Intermediate",
+        "aliases": [
+          "in situ generated Brønsted-acid sites"
+        ]
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "glycerol hydrogenolysis",
+      "props": {
+        "note": "selective to 1,3-propanediol; not CO2RR"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "glycerol",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "1,3-propanediol",
+      "props": {
+        "aliases": [
+          "1,3-PD"
+        ]
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic H2 dissociation",
+      "props": {
+        "note": "H2 → H+ + H- at Pt–WOx interface; H+→dehydration, H-→hydrogenation"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {
+        "note": "Ov-related surface Lewis acid on WOx; Au decreases it"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "glycerol conversion",
+      "props": {
+        "note": "AuPt/WOx up to 81.4% at 413 K, 1 MPa H2"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "1,3-PD selectivity",
+      "props": {
+        "note": "AuPt/WOx up to 51.6%; suppresses 1,2-PD/1-PO"
+      }
+    },
+    {
+      "label": "Condition",
+      "name": "413 K, 1 MPa H2",
+      "props": {
+        "note": "mild hydrogenolysis conditions"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Pt/WOx"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Au"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Pt···W FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Pt···W FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Pt/WOx"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {
+        "note": "Ov Lewis acid favors classical 1,2-PD/1-PO path"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "Pt/WOx"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "activated W"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Pt"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "activated W"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Pt"
+      },
+      "props": {
+        "note": "Pt–WOx interface Pt···W FLP-type pair; enables heterolytic H2"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "glycerol hydrogenolysis"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "Pt···W FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {
+        "note": "Pt···W FLP-type enables heterolytic H2 → spatially separated H+ / H-"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "glycerol hydrogenolysis"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "glycerol"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "glycerol hydrogenolysis"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "glycerol hydrogenolysis"
+      },
+      "target": {
+        "label": "Product",
+        "name": "1,3-propanediol"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "glycerol hydrogenolysis"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic H2 dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "FLP",
+        "name": "Pt···W FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic H2 dissociation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "AuPt/WOx"
+      },
+      "target": {
+        "label": "ActiveSite",
+        "name": "IGBA"
+      },
+      "props": {
+        "note": "IGBA from FLP H+; active for chemoselective dehydration"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Pt···W FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "glycerol conversion"
+      },
+      "props": {
+        "note": "more FLP/IGBA after Au → higher conversion"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Pt···W FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "1,3-PD selectivity"
+      },
+      "props": {
+        "note": "more FLP-type domains / IGBA+hydride → higher 1,3-PD sel vs Ov Lewis-acid path"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ActiveSite",
+        "name": "IGBA"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "1,3-PD selectivity"
+      },
+      "props": {
+        "note": "positive correlation IGBA ↔ 1,3-PD performance"
+      }
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "glycerol hydrogenolysis"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "413 K, 1 MPa H2"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "553180955dc0ebe5",
+    "source_pdf": "Selective Hydrogenolysis of Glycerol to 1 3‐Propanediol  Manipulating the Frustrated Lewis.pdf",
+    "page_start": 4,
+    "page_end": 4,
+    "score": 6.0,
+    "note": "新逻辑: AuPt/WOx Pt···W FLP (LA=activated W, LB=Pt); H+/H- as heterolysis products → IGBA ActiveSite; Au ENABLES FLP; Ov→Lewis acidity; FLP↔conversion/1,3-PD sel; sole"
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "BN-NCN-T",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "BN-NCN-750",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "BN-NCN-550",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "BN-NCN-650",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "BN-NCN-850",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "nitrogen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "boron Lewis acid",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "nitrogen Lewis base",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "phenylacetylene hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "styrene hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "phenylacetylene",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "styrene",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "ethylbenzene",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "styrene",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "apparent activation energy",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "100°C, 1 MPa H2, 24 h",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "BN-NCN-T"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "nitrogen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "nitrogen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "BN-NCN-T"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "boron Lewis acid"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "BN-NCN-T"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "nitrogen Lewis base"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "BN-NCN-T"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "BN-NCN-T"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "BN-NCN-T"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "phenylacetylene hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "BN-NCN-T"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "phenylacetylene hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "phenylacetylene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "phenylacetylene hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "phenylacetylene hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "ethylbenzene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "styrene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "styrene hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "ethylbenzene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Reaction",
+        "name": "phenylacetylene hydrogenation"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "apparent activation energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "apparent activation energy"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "phenylacetylene hydrogenation"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "100°C, 1 MPa H2, 24 h"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "2b3eb1aebf0bc446",
+    "source_pdf": "Construction of Boron‐ and Nitrogen‐Enriched Nanoporous  ‐Conjugated Networks Towards.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 16.0,
+    "note": "saved as-is; sole for PDF"
+  }
+}

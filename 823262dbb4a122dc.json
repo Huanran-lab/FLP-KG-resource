@@ -1,0 +1,239 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "13X zeolite",
+      "props": {
+        "note": "13X zeolite framework; provides Oδ− LB"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Ru/13X zeolite",
+      "props": {
+        "note": "Ru confined in 13X cavity; hosts Ruδ+···Oδ− FLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ruδ+···Oδ− FLP",
+      "props": {
+        "note": "confined Ruδ+ (LA) + framework Oδ− (LB) in 13X; FLP-type NH3 N−H heterolysis"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ruδ+",
+      "props": {
+        "note": "confined Ruδ+ Lewis acid"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "Oδ−",
+      "props": {
+        "note": "framework Oδ− Lewis base (aluminate O)"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "NH3 decomposition",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "NH3",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "N2",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic cleavage",
+      "props": {
+        "note": "FLP-type heterolytic N−H cleavage of NH3"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ru/13X zeolite"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ru/13X zeolite"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ruδ+···Oδ− FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ru/13X zeolite"
+      },
+      "target": {
+        "label": "Material",
+        "name": "13X zeolite"
+      },
+      "props": {
+        "note": "13X framework host"
+      }
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ruδ+···Oδ− FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ru/13X zeolite"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ru/13X zeolite"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ruδ+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ru/13X zeolite"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Oδ−"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ruδ+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Oδ−"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ru/13X zeolite"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "NH3 decomposition"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "NH3 decomposition"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "NH3"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "NH3 decomposition"
+      },
+      "target": {
+        "label": "Product",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "NH3 decomposition"
+      },
+      "target": {
+        "label": "Product",
+        "name": "N2"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "NH3 decomposition"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic cleavage"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ru/13X zeolite"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "NH3"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "823262dbb4a122dc",
+    "source_pdf": "confined-ru-sites-in-a-13x-zeolite-for-ultrahigh-h2-production-from-nh3-decomposition.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 6.0,
+    "note": "hierarchy Ruδ+···Oδ− FLP on Ru/13X; acid/base/CATALYZES/ACTIVATES on Ru/13X; drop ActiveSite/SCA/Activity"
+  }
+}

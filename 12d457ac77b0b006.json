@@ -1,0 +1,275 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "In2O3-x(OH)y",
+      "props": {
+        "note": "hydroxylated defective indium oxide; FLP host"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "In···OH FLP",
+      "props": {
+        "note": "coordinatively unsaturated In (LA) ··· surface hydroxyl O (LB)"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "In",
+      "props": {
+        "note": "coordinatively unsaturated In"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "OH",
+      "props": {
+        "note": "surface hydroxyl O as LB"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "RWGS pathway: CO2 + H2 → CO + H2O"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "multistep RWGS mechanism",
+      "props": {}
+    },
+    {
+      "label": "ReactionStep",
+      "name": "H2 dissociation",
+      "props": {}
+    },
+    {
+      "label": "ReactionStep",
+      "name": "CO2 reduction",
+      "props": {}
+    },
+    {
+      "label": "ReactionStep",
+      "name": "CO2 adsorption",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "RWGS activity",
+      "props": {
+        "note": "CO2RR via RWGS on surface FLP"
+      }
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "rate-limiting CO2 reduction barrier",
+      "props": {
+        "note": "CO2 reduction at In···OH FLP is rate-limiting"
+      }
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "CO2 adsorption barrier",
+      "props": {
+        "note": "~0.19 eV lower at 180 °C vs 20 °C"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "~3.35 Å @20 °C; ~3.39 Å @180 °C",
+        "note": "In···OH; thermally increased FLP spatial separation favors H2 activation"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "In2O3-x(OH)y" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "In2O3-x(OH)y" },
+      "target": { "label": "FLP", "name": "In···OH FLP" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "In···OH FLP" },
+      "target": { "label": "Material", "name": "In2O3-x(OH)y" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "In2O3-x(OH)y" },
+      "target": { "label": "LewisAcid", "name": "In" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "In2O3-x(OH)y" },
+      "target": { "label": "LewisBase", "name": "OH" },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "In" },
+      "target": { "label": "LewisBase", "name": "OH" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "In2O3-x(OH)y" },
+      "target": { "label": "Reaction", "name": "CO2RR" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "CO" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "H2O" },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Mechanism", "name": "multistep RWGS mechanism" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "In2O3-x(OH)y" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "In2O3-x(OH)y" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "INVOLVES",
+      "source": { "label": "Mechanism", "name": "multistep RWGS mechanism" },
+      "target": { "label": "ReactionStep", "name": "H2 dissociation" },
+      "props": {}
+    },
+    {
+      "type": "INVOLVES",
+      "source": { "label": "Mechanism", "name": "multistep RWGS mechanism" },
+      "target": { "label": "ReactionStep", "name": "CO2 reduction" },
+      "props": {}
+    },
+    {
+      "type": "INVOLVES",
+      "source": { "label": "Mechanism", "name": "multistep RWGS mechanism" },
+      "target": { "label": "ReactionStep", "name": "CO2 adsorption" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "FLP", "name": "In···OH FLP" },
+      "target": { "label": "ReactionStep", "name": "H2 dissociation" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "FLP", "name": "In···OH FLP" },
+      "target": { "label": "ReactionStep", "name": "CO2 adsorption" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "FLP", "name": "In···OH FLP" },
+      "target": { "label": "ReactionStep", "name": "CO2 reduction" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "FLP", "name": "In···OH FLP" },
+      "target": { "label": "Activity", "name": "RWGS activity" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "In···OH FLP" },
+      "target": { "label": "GeometricDescriptor", "name": "LA-LB distance" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "GeometricDescriptor", "name": "LA-LB distance" },
+      "target": { "label": "FLP", "name": "In···OH FLP" },
+      "props": {
+        "note": "increased In···OH separation at higher T enhances FLP reactivity for H2 activation"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "ReactionStep", "name": "CO2 reduction" },
+      "target": { "label": "EnergeticDescriptor", "name": "rate-limiting CO2 reduction barrier" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "In···OH FLP" },
+      "target": { "label": "EnergeticDescriptor", "name": "CO2 adsorption barrier" },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "12d457ac77b0b006",
+    "source_pdf": "Metadynamics-Biased ab Initio Molecular Dynamics Study ofHeterogeneous CO2 Reduction via Surface Frustrated Lewis Pairs.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 15.0,
+    "note": "新逻辑: surface FLP→In2O3-x(OH)y→In···OH FLP; LA=In LB=OH; CO2RR (RWGS→CO); drop Intermediate; no merge with 24a467"
+  }
+}

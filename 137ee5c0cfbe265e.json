@@ -1,0 +1,209 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {
+        "note": "porous nanorod CeO2; FLP host"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "surface defect",
+      "props": {
+        "note": "surface defects regulate solid FLP construction"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "(CeI,CeII)-OIIc",
+      "props": {
+        "note": "two adjacent reduced Ce (LA) with neighbouring surface O (LB); LA-LB 3.99 Å"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce",
+      "props": {
+        "note": "CeI/CeII adjacent reduced Ce sites"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "OIIc",
+      "props": {
+        "note": "surface/lattice oxygen as LB"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "H2 dissociation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "dissociated H",
+      "props": {}
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "activation barrier",
+      "props": {}
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "reaction energy",
+      "props": {}
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "3.99 Å",
+        "note": "(CeI,CeII)-OIIc site"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "charge redistribution",
+      "props": {
+        "note": "stronger charge contraction by two adjacent reduced Ce; scheme B"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "surface Ce3+ fraction",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "CeO2" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "FLP", "name": "(CeI,CeII)-OIIc" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "(CeI,CeII)-OIIc" },
+      "target": { "label": "Material", "name": "CeO2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "Defect", "name": "surface defect" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "surface defect" },
+      "target": { "label": "FLP", "name": "(CeI,CeII)-OIIc" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "LewisAcid", "name": "Ce" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "LewisBase", "name": "OIIc" },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "Ce" },
+      "target": { "label": "LewisBase", "name": "OIIc" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "(CeI,CeII)-OIIc" },
+      "target": { "label": "GeometricDescriptor", "name": "LA-LB distance" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "GeometricDescriptor", "name": "LA-LB distance" },
+      "target": { "label": "FLP", "name": "(CeI,CeII)-OIIc" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "(CeI,CeII)-OIIc" },
+      "target": { "label": "ElectronicDescriptor", "name": "charge redistribution" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "(CeI,CeII)-OIIc" },
+      "target": { "label": "Descriptor", "name": "surface Ce3+ fraction" },
+      "props": {
+        "note": "from sibling 623394; Ce···O FLP ↔ (CeI,CeII)-OIIc"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "Reaction", "name": "H2 dissociation" },
+      "target": { "label": "EnergeticDescriptor", "name": "activation barrier" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "Reaction", "name": "H2 dissociation" },
+      "target": { "label": "EnergeticDescriptor", "name": "reaction energy" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "Reaction", "name": "H2 dissociation" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "H2 dissociation" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "H2 dissociation" },
+      "target": { "label": "Product", "name": "dissociated H" },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "137ee5c0cfbe265e",
+    "source_pdf": "Solid frustrated-Lewis-pair catalysts constructed byregulations on surface defects of porous nanorodsof CeO2.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 8.0,
+    "note": "新逻辑: surface FLP→CeO2→(CeI,CeII)-OIIc; LA=Ce LB=OIIc; defect ENABLES specific FLP; drop Intermediate; not CO2RR (H2 dissociation); no merge"
+  }
+}

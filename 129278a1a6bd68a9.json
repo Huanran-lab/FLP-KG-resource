@@ -1,0 +1,366 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "NiFeLDH-FLPs",
+      "props": {
+        "note": "NiFeLDH molten-salt nanorods with CeO2 FLPs outer layer"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {
+        "note": "outer FLPs layer encapsulating NiFeLDH (heterostructure)"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "NiOOH",
+      "props": {
+        "note": "reconstructed active surface during OER (XANES/EXAFS as NiOOH-FLPs)"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "on CeO2; EPR g=2.003; linked to Ce3+/Ce4+; enables FLP sites"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ce···O FLP",
+      "props": {
+        "note": "Ce near oxygen vacancy (LA) ··· surface/lattice O (LB) on CeO2 FLPs layer; OV + acid/base TPD evidence"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce",
+      "props": {
+        "note": "Ce near oxygen vacancy on CeO2 FLPs layer; OH- enrichment at acid sites (Results AIMD)"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "lattice O",
+      "props": {
+        "note": "surface/lattice O on CeO2 FLPs layer; contributes to Cl- electrostatic repulsion (Results AIMD)"
+      }
+    },
+    {
+      "label": "ActiveSite",
+      "name": "Ni 3d O 2p Ce 4f unit site",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "PDOS",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "d-p hybridization",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "f-p-d orbital coupling",
+      "props": {
+        "note": "Ce 4f-O 2p-Ni 3d gradient orbital coupling; FLP-mediated / FLP-regulated; strengthens Ni-O"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "oxygen non-bonding ONB",
+      "props": {
+        "note": "extra ONB as electron donor / buffer; stabilizes Ni-O; breaks *OH/*OOH scaling"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "*OH/*OOH scaling gap",
+      "props": {
+        "value": "3.08 eV",
+        "note": "closer to ideal 2.46 eV than typical 3.2 eV"
+      }
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "OER RDS barrier",
+      "props": {
+        "value": "0.50 eV",
+        "note": "Ni(Fe)OOH-FLPs at 1.23 V; vs 0.74 eV without FLP"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "OH-",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "Cl-",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "oxygen evolution reaction",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "seawater electrolysis",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "O2",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "OER activity",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "Cl- resistance",
+      "props": {
+        "note": "no hypochlorite detected; FLPs layer resists Cl- adsorption/ClOR"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "selective ion permeability",
+      "props": {
+        "note": "FLPs layer decomposes water, captures OH-, repels Cl- (MD + experiments)"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "SUPPORTED_ON",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "props": {
+        "note": "outer encapsulating FLPs layer"
+      }
+    },
+    {
+      "type": "FORMS",
+      "source": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "target": {"label": "Material", "name": "NiOOH"},
+      "props": {
+        "note": "surface reconstruction under OER"
+      }
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "CeO2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "FLP", "name": "Ce···O FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Ce···O FLP"},
+      "target": {"label": "Material", "name": "CeO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "Ce···O FLP"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "LewisAcid", "name": "Ce"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "CeO2"},
+      "target": {"label": "LewisBase", "name": "lattice O"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Ce"},
+      "target": {"label": "LewisBase", "name": "lattice O"},
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {"label": "FLP", "name": "Ce···O FLP"},
+      "target": {"label": "Mechanism", "name": "selective ion permeability"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "target": {"label": "Molecule", "name": "H2O"},
+      "props": {
+        "note": "FLPs layer decomposes water molecules"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "target": {"label": "Molecule", "name": "OH-"},
+      "props": {
+        "note": "capture hydroxyl anions at FLP/acid sites"
+      }
+    },
+    {
+      "type": "SUPPRESSES",
+      "source": {"label": "FLP", "name": "Ce···O FLP"},
+      "target": {"label": "Molecule", "name": "Cl-"},
+      "props": {
+        "note": "repel chloride; inhibit ClOR"
+      }
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "target": {"label": "ActiveSite", "name": "Ni 3d O 2p Ce 4f unit site"},
+      "props": {
+        "note": "from sibling; working OER phase = Ni(Fe)OOH-FLPs"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "ActiveSite", "name": "Ni 3d O 2p Ce 4f unit site"},
+      "target": {"label": "ElectronicDescriptor", "name": "PDOS"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "ActiveSite", "name": "Ni 3d O 2p Ce 4f unit site"},
+      "target": {"label": "ElectronicDescriptor", "name": "d-p hybridization"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "ActiveSite", "name": "Ni 3d O 2p Ce 4f unit site"},
+      "target": {"label": "ElectronicDescriptor", "name": "f-p-d orbital coupling"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ce···O FLP"},
+      "target": {"label": "ElectronicDescriptor", "name": "f-p-d orbital coupling"},
+      "props": {
+        "note": "FLP-mediated / FLP-regulated gradient coupling"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "ElectronicDescriptor", "name": "f-p-d orbital coupling"},
+      "target": {"label": "Descriptor", "name": "oxygen non-bonding ONB"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "target": {"label": "Descriptor", "name": "*OH/*OOH scaling gap"},
+      "props": {
+        "note": "FLP-modulated OER scaling on reconstructed Ni(Fe)OOH surface"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "target": {"label": "EnergeticDescriptor", "name": "OER RDS barrier"},
+      "props": {
+        "note": "Ni(Fe)OOH-FLPs at 1.23 V; vs 0.74 eV without FLP"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "target": {"label": "Reaction", "name": "oxygen evolution reaction"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "NiFeLDH-FLPs"},
+      "target": {"label": "Reaction", "name": "seawater electrolysis"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "oxygen evolution reaction"},
+      "target": {"label": "Molecule", "name": "OH-"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "oxygen evolution reaction"},
+      "target": {"label": "Product", "name": "O2"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "oxygen non-bonding ONB"},
+      "target": {"label": "Activity", "name": "OER activity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "Descriptor", "name": "*OH/*OOH scaling gap"},
+      "target": {"label": "Activity", "name": "OER activity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "EnergeticDescriptor", "name": "OER RDS barrier"},
+      "target": {"label": "Activity", "name": "OER activity"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "Ce···O FLP"},
+      "target": {"label": "Activity", "name": "Cl- resistance"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "Ce···O FLP"},
+      "target": {"label": "Activity", "name": "OER activity"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "129278a1a6bd68a9",
+    "source_pdf": "Frustrated Lewis Pair Mediated f‐p‐d Orbital Coupling  Achieving Selective Seawater.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 12.0,
+    "note": "新逻辑: surface FLP→CeO2→Ce···O FLP; LA=Ce LB=lattice O; Ov ENABLES specific FLP; descriptors on Ce···O FLP; no merge"
+  }
+}

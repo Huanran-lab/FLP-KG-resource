@@ -1,0 +1,223 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "MIL-101(Cr)",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "imine reduction",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation of alkylidene malonates",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "imine",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "HBPin",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "alkylidene malonate",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "amine",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "reduced alkylidene malonate",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "room temperature",
+      "props": {}
+    },
+    {
+      "label": "Condition",
+      "name": "toluene",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "MIL-101(Cr)-LP",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "MIL-101(Cr)"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MIL-101(Cr)-LP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "MIL-101(Cr)-LP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "MIL-101(Cr)-LP"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "imine reduction"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "MIL-101(Cr)-LP"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogenation of alkylidene malonates"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "imine reduction"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "imine"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "imine reduction"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "HBPin"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "imine reduction"
+      },
+      "target": {
+        "label": "Product",
+        "name": "amine"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of alkylidene malonates"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alkylidene malonate"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation of alkylidene malonates"
+      },
+      "target": {
+        "label": "Product",
+        "name": "reduced alkylidene malonate"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "MIL-101(Cr)"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "imine reduction"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "room temperature"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_CONDITION",
+      "source": {
+        "label": "Reaction",
+        "name": "imine reduction"
+      },
+      "target": {
+        "label": "Condition",
+        "name": "toluene"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "5319ddc5dde2d678",
+    "source_pdf": "Metal-Organic Framework Anchored with aLewis Pair as a New Paradigm for Catalysis.pdf",
+    "page_start": 6,
+    "page_end": 6,
+    "score": 6.0,
+    "note": "batch-convention-pass; acid-base-on-material; Catalyst→Material merge"
+  }
+}

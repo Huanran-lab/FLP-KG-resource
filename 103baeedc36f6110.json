@@ -1,0 +1,255 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "ms-NiAl-P350",
+      "props": {
+        "note": "P-doped NiAl-oxide (not Ni2P); maize-straw hierarchical porous monolith; phosphorized at 350 °C"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ni(-O-Al)···P FLP",
+      "props": {
+        "note": "Ni(-O-Al)···P; spatially separated Ni and P"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ni site",
+      "props": {
+        "note": "electron acceptor; more positive via Ni–O → O–Al charge transfer"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "P site",
+      "props": {
+        "note": "electron donor; P preferentially bonded to O (P–O)"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Ni-O-Al interaction",
+      "props": {
+        "note": "Al3+-doped NiO-type phase from 800 °C calcination; stabilizes oxide against Ni2P formation"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "3.7 Å"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "charge redistribution",
+      "props": {
+        "note": "electron transfer from Ni–O to nearby O–Al; P donates electrons"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Bader charge",
+      "props": {
+        "note": "Ni more positive via Ni–O → O–Al transfer; P as electron donor (structural polarity of FLP)"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "charge density difference",
+      "props": {
+        "note": "differential charge density of H2 on Ni(-O-Al)···P FLP (Fig. 3b); electron path P→H1→H2→Ni"
+      }
+    },
+    {
+      "label": "EnergeticDescriptor",
+      "name": "H2 activation barrier",
+      "props": {
+        "value": "0.32 eV",
+        "note": "heterolytic H–H on FLP; vs 0.91 eV on classic NiO Lewis pair"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "H2 activation",
+      "props": {
+        "note": "heterolytic dissociation to H–Ni and H–P via Ni(-O-Al)···P FLP"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "methyl laurate",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "soybean oil",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrotreating to green diesel",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "C11H24",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "C12H26",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "ms-NiAl-P350"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "ms-NiAl-P350"},
+      "target": {"label": "FLP", "name": "Ni(-O-Al)···P FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Ni(-O-Al)···P FLP"},
+      "target": {"label": "Material", "name": "ms-NiAl-P350"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "ms-NiAl-P350"},
+      "target": {"label": "LewisAcid", "name": "Ni site"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "ms-NiAl-P350"},
+      "target": {"label": "LewisBase", "name": "P site"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Ni site"},
+      "target": {"label": "LewisBase", "name": "P site"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "Material", "name": "ms-NiAl-P350"},
+      "target": {"label": "Descriptor", "name": "Ni-O-Al interaction"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Descriptor", "name": "Ni-O-Al interaction"},
+      "target": {"label": "FLP", "name": "Ni(-O-Al)···P FLP"},
+      "props": {
+        "note": "stabilizes P-doped NiAl-oxide so FLP forms instead of Ni2P"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ni(-O-Al)···P FLP"},
+      "target": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ni(-O-Al)···P FLP"},
+      "target": {"label": "ElectronicDescriptor", "name": "charge redistribution"},
+      "props": {
+        "note": "Ni more positive, P electron donor; describes FLP polarity, not a cause that creates FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "Ni(-O-Al)···P FLP"},
+      "target": {"label": "ElectronicDescriptor", "name": "Bader charge"},
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {"label": "Material", "name": "ms-NiAl-P350"},
+      "target": {"label": "Mechanism", "name": "H2 activation"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "Mechanism", "name": "H2 activation"},
+      "target": {"label": "EnergeticDescriptor", "name": "H2 activation barrier"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "Mechanism", "name": "H2 activation"},
+      "target": {"label": "ElectronicDescriptor", "name": "charge density difference"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "ms-NiAl-P350"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {
+        "note": "heterolytic dissociation to H–Ni and H–P via FLP"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "ms-NiAl-P350"},
+      "target": {"label": "Reaction", "name": "hydrotreating to green diesel"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "hydrotreating to green diesel"},
+      "target": {"label": "Reactant", "name": "methyl laurate"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "hydrotreating to green diesel"},
+      "target": {"label": "Reactant", "name": "soybean oil"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "hydrotreating to green diesel"},
+      "target": {"label": "Product", "name": "C11H24"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "hydrotreating to green diesel"},
+      "target": {"label": "Product", "name": "C12H26"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "103baeedc36f6110",
+    "source_pdf": "Frustrated Lewis pair catalyst realizesefficient green diesel production.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 0.0,
+    "note": "新逻辑: Ni(-O-Al)···P; Bader on FLP; CDD on H2 activation (Fig.3b); from sibling 310179; not CO2RR"
+  }
+}

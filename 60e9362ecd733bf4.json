@@ -1,0 +1,208 @@
+{
+  "nodes": [
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "Ru/MgO(111)",
+      "props": {
+        "note": "Ru single atom on O-terminated MgO(111); hosts Ru2+/Of FLP-like ion pair"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "MgO(111)",
+      "props": {
+        "note": "polar O-terminated facet"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "strengthens Lewis basicity of lattice O"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ru···O FLP",
+      "props": {
+        "note": "Ru2+ (LA) + Of (LB); FLP-like ion pair sterically separated by Ru-OOO hollow O"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ru",
+      "props": {
+        "note": "Ru2+ at Ru-OOO hollow site; Bader ~+1.3"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "Of",
+      "props": {
+        "note": "surface O proximal to Ru-OOO hollow; Bader ~−1.5 (more negative than Ru-bonded O)"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "H2 activation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H+",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H-",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic dissociation",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "Ru 3d-O 2p hybridization",
+      "props": {
+        "note": "pDOS: extensive Ru 3d–O 2p overlap on Ru/MgO(111) vs poor on Ru/MgO(110); enables ionic Ru2+/Of pair"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity strengthened via oxygen vacancy"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "Ru/MgO(111)" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "Ru/MgO(111)" },
+      "target": { "label": "FLP", "name": "Ru···O FLP" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "Ru···O FLP" },
+      "target": { "label": "Material", "name": "Ru/MgO(111)" },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": { "label": "Material", "name": "Ru/MgO(111)" },
+      "target": { "label": "Material", "name": "MgO(111)" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "MgO(111)" },
+      "target": { "label": "Defect", "name": "oxygen vacancy" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "oxygen vacancy" },
+      "target": { "label": "Descriptor", "name": "Lewis basicity" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "Descriptor", "name": "Lewis basicity" },
+      "target": { "label": "FLP", "name": "Ru···O FLP" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "Ru/MgO(111)" },
+      "target": { "label": "LewisAcid", "name": "Ru" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "Ru/MgO(111)" },
+      "target": { "label": "LewisBase", "name": "Of" },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "Ru" },
+      "target": { "label": "LewisBase", "name": "Of" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Ru···O FLP" },
+      "target": { "label": "ElectronicDescriptor", "name": "Ru 3d-O 2p hybridization" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "ElectronicDescriptor", "name": "Ru 3d-O 2p hybridization" },
+      "target": { "label": "FLP", "name": "Ru···O FLP" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "Ru/MgO(111)" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "Ru/MgO(111)" },
+      "target": { "label": "Reaction", "name": "H2 activation" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "H2 activation" },
+      "target": { "label": "Reactant", "name": "H2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "H2 activation" },
+      "target": { "label": "Product", "name": "H+" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "H2 activation" },
+      "target": { "label": "Product", "name": "H-" },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": { "label": "Reaction", "name": "H2 activation" },
+      "target": { "label": "Mechanism", "name": "heterolytic dissociation" },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "60e9362ecd733bf4",
+    "source_pdf": "rapid-interchangeable-hydrogen-hydride-and-proton-species-at-the-interface-of-transition-metal-atom-on-oxide-surface.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 12.0,
+    "note": "merged d5d73 (+Of/Bader, Ru 3d-O 2p hybridization, FORMS_PAIR_WITH); await delete d5d73"
+  }
+}

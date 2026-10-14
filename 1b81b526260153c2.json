@@ -1,0 +1,218 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {}
+    },
+    {
+      "label": "Material",
+      "name": "Ni-doped CeO2",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce site",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "O site",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "selective hydrogenation of acetylene",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "acetylene",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "ethylene",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "heterolytic dissociation of H2",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped CeO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "O site"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "selective hydrogenation of acetylene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "selective hydrogenation of acetylene"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "selective hydrogenation of acetylene"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "acetylene"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "selective hydrogenation of acetylene"
+      },
+      "target": {
+        "label": "Product",
+        "name": "ethylene"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "selective hydrogenation of acetylene"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "heterolytic dissociation of H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Activity",
+        "name": "catalytic activity"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-doped CeO2"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "1b81b526260153c2",
+    "source_pdf": "design-of-effective-catalysts-for-selective-alkyne-hydrogenation-by-doping-of-ceria-with-a-single-atom-promotor.pdf",
+    "page_start": 1,
+    "page_end": 3,
+    "score": 22.0,
+    "note": "batch-convention-pass; acid-base-on-material; no Intermediate"
+  }
+}

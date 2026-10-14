@@ -1,0 +1,329 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Ga-doped TiO2-SiO2",
+      "props": {
+        "note": "hydrogenated Ga3+-doped TiO2–SiO2; hosts Ga···Ti-OH FLP (M–VO–Ti–OH)"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "VO bridges Ga dopant and Ti–OH in M–VO–Ti–OH FLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ga···Ti-OH FLP",
+      "props": {
+        "note": "long-distance FLP (0.31–0.37 nm); Ga LA + neighboring Ti–OH LB"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ga",
+      "props": {
+        "note": "Ga3+ dopant as LA; photoexcited electron transfer toward Ti–OH"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "Ti-OH",
+      "props": {
+        "note": "surface hydroxyl LB neighboring the Ga site"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "photocatalytic non-oxidative coupling of CH4",
+      "props": {
+        "note": "NOCM to C2H6; high CH4 conversion under irradiation"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CH4",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "C2H6",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "note": "long spacing (0.31–0.37 nm) promotes C–H stretching"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "acid intensity",
+      "props": {
+        "note": "Lewis acidity of Ga; enhanced under photoirradiation"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "base intensity",
+      "props": {
+        "note": "Lewis basicity / base intensity of Ti–OH; aided by Ov in M–VO–Ti–OH; enhanced under photoirradiation"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "photocatalytic activity",
+      "props": {
+        "note": "CH4 conversion / C2H6 formation under light"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ga-doped TiO2-SiO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ga-doped TiO2-SiO2"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ga···Ti-OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ga···Ti-OH FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ga-doped TiO2-SiO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Ga-doped TiO2-SiO2"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ga-doped TiO2-SiO2"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ga"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ga-doped TiO2-SiO2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Ti-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ga"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Ti-OH"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "base intensity"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "base intensity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ga···Ti-OH FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ga···Ti-OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "LA-LB distance"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ga···Ti-OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "acid intensity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ga···Ti-OH FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "base intensity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "LA-LB distance"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "photocatalytic activity"
+      },
+      "props": {
+        "note": "long LA–LB distance promotes C–H stretching"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "acid intensity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "photocatalytic activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "base intensity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "photocatalytic activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ga-doped TiO2-SiO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "photocatalytic non-oxidative coupling of CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ga-doped TiO2-SiO2"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "photocatalytic non-oxidative coupling of CH4"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "photocatalytic non-oxidative coupling of CH4"
+      },
+      "target": {
+        "label": "Product",
+        "name": "C2H6"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "835600e040b8dba6",
+    "source_pdf": "Design of frustrated Lewis pair in defectiveTiO2 for photocatalytic non-oxidative methanecoupling.pdf",
+    "page_start": 4,
+    "page_end": 13,
+    "score": 6.0,
+    "note": "hierarchy Ga···Ti-OH; descriptors on specific FLP; Ov→basicity→FLP; drop Intermediate/unused TiO2-SiO2; merge Lewis basicity into base intensity"
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Cs2CuBr4 PQDs",
+      "props": {
+        "note": "Cu-based perovskite QDs; hosts Cu···Cs SFLP; Cu d-band aids CO2 act."
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Cu···Cs FLP",
+      "props": {
+        "note": "SFLP-like; Cu (Br-surrounded) LA + sterically isolated Cs LB; ~4.0 Å",
+        "aliases": [
+          "SFLP",
+          "Cu···Cs SFLP"
+        ]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Cu site",
+      "props": {
+        "note": "Cu central atom surrounded by Br"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "Cs site",
+      "props": {
+        "note": "sterically isolated Cs"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "~4.003 Å",
+        "note": "Cs–nearest Br separation; steric hindrance for SFLP"
+      }
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "d-band",
+      "props": {
+        "note": "intrinsic Cu d-band; with SFLP strengthens CO2 ads/act."
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "gas-solid photocatalytic CO2 reduction to CO and CH4"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {
+        "note": "148.98 μmol g−1"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "CH4",
+      "props": {
+        "note": "74.81 μmol g−1"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "CO2 activation",
+      "props": {
+        "note": "SFLP dual-site ads: O on Cs (LB), C-O on Cu (LA)"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "photocatalytic CRR performance"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Cs2CuBr4 PQDs"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Cs2CuBr4 PQDs"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Cu···Cs FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Cu···Cs FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Cs2CuBr4 PQDs"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Cs2CuBr4 PQDs"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Cu site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Cs2CuBr4 PQDs"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Cs site"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Cu site"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "Cs site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Cu···Cs FLP"
+      },
+      "target": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "GeometricDescriptor",
+        "name": "LA-LB distance"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Cu···Cs FLP"
+      },
+      "props": {
+        "note": "~4.0 Å steric isolation vs CsPbBr3 ~2.97 Å (no SFLP)"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "Cs2CuBr4 PQDs"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "d-band"
+      },
+      "props": {
+        "note": "Cu d-band of PQDs"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Cs2CuBr4 PQDs"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Cs2CuBr4 PQDs"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "FLP",
+        "name": "Cu···Cs FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "CO2 activation"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Mechanism",
+        "name": "CO2 activation"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Cu···Cs FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "SFLP dual-site ads/act. vs CsPbBr3"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "d-band"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "Cu d-band + SFLP synergistically boost CRR"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "234fc5f5e698b65f",
+    "source_pdf": "Frustrated Lewis Pair Sites-boosting-co2-photoreduction-on-cs2cubr4-perovskite-quantum-dots.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 14.0,
+    "note": "新逻辑: Cu···Cs SFLP; LA-LB ~4.0 Å ENABLES FLP; d-band↔CO2RR activity; Reaction=CO2RR; sole"
+  }
+}

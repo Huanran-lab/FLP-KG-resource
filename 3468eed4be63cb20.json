@@ -1,0 +1,471 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Ni-doped ceria",
+      "props": {
+        "aliases": [
+          "Ni-doped CeO2"
+        ],
+        "note": "ionic Ni embedded in ceria; CO2 methanation catalyst"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "surface Ov; Ce3+ fraction tracks Ov / Ce-O FLP density"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "surface Ce3+",
+      "props": {
+        "note": "with ionic Ni forms Ni-Ce pair; not Lewis base"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella for Ce-O FLP only"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ce-O FLP",
+      "props": {
+        "note": "Ce4+ (LA) / lattice O (LB); H2 → Ce-H + O-H"
+      }
+    },
+    {
+      "label": "ActiveSite",
+      "name": "Ni-O CLP",
+      "props": {
+        "note": "Ni2+ / lattice O classical Lewis pair; not FLP; H2 → Ni-H + O-H"
+      }
+    },
+    {
+      "label": "ActiveSite",
+      "name": "Ni-Ce pair",
+      "props": {
+        "note": "Ni2+ / Ce3+ pair site; CO2 activation; not FLP"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce4+",
+      "props": {
+        "note": "LA of Ce-O FLP"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ni2+",
+      "props": {
+        "note": "acid center of Ni-O CLP / Ni-Ce pair"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "lattice O",
+      "props": {
+        "note": "LB of Ce-O FLP and Ni-O CLP"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2 methanation",
+      "props": {
+        "aliases": [
+          "CO2 hydrogenation"
+        ]
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CH4",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "charge transfer",
+      "props": {
+        "note": "at Ni-Ce pair / NiCe site"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2 methanation activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce-O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ce-O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "ActiveSite",
+        "name": "Ni-O CLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "ActiveSite",
+        "name": "Ni-Ce pair"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "ActiveSite",
+        "name": "Ni-O CLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "ActiveSite",
+        "name": "Ni-Ce pair"
+      },
+      "target": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "surface Ce3+"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce-O FLP"
+      },
+      "props": {
+        "note": "Ov exposes Ce–O FLP"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce4+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ni2+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ce4+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {
+        "note": "Ce-O FLP"
+      }
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ni2+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {
+        "note": "Ni-O CLP"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2 methanation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ni-doped ceria"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "Ce-O FLP"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {
+        "note": "heterolytic H2 → Ce-H + O-H; barrier ~0"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "ActiveSite",
+        "name": "Ni-O CLP"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "H2"
+      },
+      "props": {
+        "note": "H2 → Ni-H + O-H; barrier ~0.11 eV; extra H2 sites vs pure ceria"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "ActiveSite",
+        "name": "Ni-Ce pair"
+      },
+      "target": {
+        "label": "Molecule",
+        "name": "CO2"
+      },
+      "props": {
+        "note": "CO2 ads/activation at Ni-Ce; favorable vs carbonate-only paths"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Ce-O FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2 methanation activity"
+      },
+      "props": {
+        "note": "via H2 activation / surface OH; co-acts with Ni-O CLP and Ni-Ce"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 methanation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 methanation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2 methanation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CH4"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "ActiveSite",
+        "name": "Ni-Ce pair"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "charge transfer"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "charge transfer"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2 methanation activity"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "3468eed4be63cb20",
+    "source_pdf": "Ionic Nickel Embedded in Ceria with High Specific CO2 Methanation Activity.pdf",
+    "page_start": 2,
+    "page_end": 9,
+    "score": 15.0,
+    "note": "saved: FLP only Ce-O; CLP/Ni-Ce ActiveSite; Ov+surface Ce3+; FLP/CLP→H2; Ni-Ce→CO2; sole"
+  }
+}

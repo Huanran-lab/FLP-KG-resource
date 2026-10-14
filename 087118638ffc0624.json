@@ -1,0 +1,192 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "NU-1000",
+      "props": {
+        "note": "Zr-MOF platform; SALI-anchored P/B FLP in 31 Å mesopores; catalyst denoted NU-1000-FLP-H2 after H2"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "P···B FLP",
+      "props": {
+        "note": "P/B type MOF-FLP; paper NU-1000-FLP / NU-1000-FLP-H2 (H2-treated phosphonium–borohydride ion pair)",
+        "aliases": ["NU-1000-FLP", "NU-1000-FLP-H2", "P/B type MOF-FLP"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "B(C6F5)3",
+      "props": {
+        "note": "installed into NU-1000-LB under H2; stronger LA than N/B-type B(C6F5)2(Mes)"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "(2,4,6-Me3C6H2)2P(2-Me-4-COOHC6H3)",
+      "props": {
+        "note": "phosphine LB anchored on Zr6 nodes via SALI (carboxylic acid)"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation of N-heterocycles",
+      "props": {
+        "note": "selective; quinoline→tetrahydroquinoline, indole→indoline under moderate H2"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "quinoline",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "indole",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "tetrahydroquinoline",
+      "props": {
+        "aliases": ["1,2,3,4-tetrahydroquinoline"]
+      }
+    },
+    {
+      "label": "Product",
+      "name": "indoline",
+      "props": {}
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "note": "sterically separated P···B in NU-1000 mesopores (frustrated pair); no numeric Å reported"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "N-heterocycle hydrogenation activity",
+      "props": {
+        "note": "high yield + recyclability vs homogeneous FLP / prior N/B MOF-FLP"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "NU-1000"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "NU-1000"},
+      "target": {"label": "FLP", "name": "P···B FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "P···B FLP"},
+      "target": {"label": "Material", "name": "NU-1000"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "NU-1000"},
+      "target": {"label": "LewisAcid", "name": "B(C6F5)3"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "NU-1000"},
+      "target": {"label": "LewisBase", "name": "(2,4,6-Me3C6H2)2P(2-Me-4-COOHC6H3)"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "B(C6F5)3"},
+      "target": {"label": "LewisBase", "name": "(2,4,6-Me3C6H2)2P(2-Me-4-COOHC6H3)"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {"label": "FLP", "name": "P···B FLP"},
+      "target": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "NU-1000"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {
+        "note": "P/B FLP → phosphonium–borohydride (NU-1000-FLP-H2)"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "NU-1000"},
+      "target": {"label": "Reaction", "name": "hydrogenation of N-heterocycles"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "hydrogenation of N-heterocycles"},
+      "target": {"label": "Reactant", "name": "quinoline"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "hydrogenation of N-heterocycles"},
+      "target": {"label": "Reactant", "name": "indole"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "hydrogenation of N-heterocycles"},
+      "target": {"label": "Product", "name": "tetrahydroquinoline"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "hydrogenation of N-heterocycles"},
+      "target": {"label": "Product", "name": "indoline"},
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "GeometricDescriptor", "name": "LA-LB distance"},
+      "target": {"label": "Activity", "name": "N-heterocycle hydrogenation activity"},
+      "props": {
+        "note": "frustrated P···B separation enables H2 activation / N-heterocycle hyd"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {"label": "FLP", "name": "P···B FLP"},
+      "target": {"label": "Activity", "name": "N-heterocycle hydrogenation activity"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "087118638ffc0624",
+    "source_pdf": "introducing-frustrated-lewis-pairs-to-metal-organic-framework-for-selective-hydrogenation-of-n-heterocycles.pdf",
+    "page_start": 1,
+    "page_end": 7,
+    "score": 0.0,
+    "note": "新逻辑: merge 0eb338/4ce60; P···B on NU-1000; LA-LB distance (not Lewis acidity); N-heterocycle hyd"
+  }
+}

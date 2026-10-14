@@ -1,0 +1,421 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "COFs-1-FLPs",
+      "props": {
+        "note": "brominated COF-1 support with anchored triarylphosphine (PPh2) then BCF; paper notation COFs-1-FLPs"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "COFs-2-FLPs",
+      "props": {
+        "note": "brominated COF-2 support with anchored triarylphosphine (PPh2) then BCF; paper notation COFs-2-FLPs"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "BCF···PPh2 FLP",
+      "props": {
+        "note": "BCF (LA) + framework-anchored triarylphosphine (LB)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "BCF···α-aminophosphine FLP",
+      "props": {
+        "note": "BCF with α-aminophosphine analogue as LB variant"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "BCF",
+      "props": {
+        "note": "tris(pentafluorophenyl)borane"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "triarylphosphine",
+      "props": {
+        "note": "PPh2-type base anchored in COF via C–P coupling"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "α-aminophosphine",
+      "props": {
+        "note": "aminophosphine analogue LB"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "alkyne hydrogenation",
+      "props": {
+        "note": "selective hydrogenation to Z-alkenes"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "alkynes",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "Z-alkenes",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "Z-5-decene",
+      "props": {
+        "note": "from 5-decyne example"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "BCF···PPh2 FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "BCF···PPh2 FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "BCF···α-aminophosphine FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "BCF···α-aminophosphine FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "BCF···PPh2 FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "BCF···PPh2 FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "BCF···α-aminophosphine FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "BCF···α-aminophosphine FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "BCF"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "BCF"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "triarylphosphine"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "triarylphosphine"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "α-aminophosphine"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "α-aminophosphine"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "BCF"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "triarylphosphine"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "BCF"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "α-aminophosphine"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "COFs-2-FLPs"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "COFs-1-FLPs"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alkynes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alkynes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "Z-alkenes"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkyne hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "Z-5-decene"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "a357a93b9d94efdf",
+    "source_pdf": "Covalent organic frameworks anchored withfrustrated Lewis pairs for hydrogenation of alkyneswith H2.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 39.0,
+    "note": "hierarchy on COFs-1/2-FLPs; BCF···PPh2 and BCF···α-aminophosphine; drop Catalyst/Condition/bare COFs-1/2"
+  }
+}

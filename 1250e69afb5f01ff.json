@@ -1,0 +1,186 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {}
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "ActiveSite",
+      "name": "FLP site",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "hydrogenation",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "small molecules",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "hydrogenated products",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "adsorption configuration",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity strengthened via oxygen vacancy"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "small molecules"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "small molecules"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "hydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "hydrogenated products"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "ActiveSite",
+        "name": "FLP site"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "ActiveSite",
+        "name": "FLP site"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "adsorption configuration"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "adsorption configuration"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "1250e69afb5f01ff",
+    "source_pdf": "adsorption-of-molecules-on-defective-ceo2-for-advanced-catalysis.pdf",
+    "page_start": 1,
+    "page_end": 1,
+    "score": 11.0,
+    "note": "batch-convention-pass; acid-base-on-material"
+  }
+}

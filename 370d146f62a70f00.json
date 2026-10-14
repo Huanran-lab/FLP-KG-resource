@@ -1,0 +1,424 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "PHI-FLP",
+      "props": {
+        "note": "poly(heptazine imide) nanosheets with H-bond-mediated FLP",
+        "aliases": [
+          "PHI nanosheets"
+        ]
+      }
+    },
+    {
+      "label": "Material",
+      "name": "PHI",
+      "props": {
+        "note": "poly(heptazine imide) without constructed HM-FLP (control)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "HM-FLP",
+      "props": {
+        "note": "hydrogen-bonding-mediated FLP: hydroxyl H···cyano N",
+        "aliases": [
+          "H···N≡C FLP"
+        ]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "hydroxyl H",
+      "props": {
+        "note": "electron-deficient H of surface OH; LA",
+        "aliases": [
+          "H atom"
+        ]
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "cyano N",
+      "props": {
+        "note": "electron-rich N of terminal –C≡N; LB",
+        "aliases": [
+          "N atom"
+        ]
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "hydrogen bonding",
+      "props": {
+        "note": "N···H H-bond mediates spatial LA–LB pair / FLP construction"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis acidity",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "band gap",
+      "props": {}
+    },
+    {
+      "label": "ElectronicDescriptor",
+      "name": "conduction band position",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "CO2 adsorption capacity",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "CO2 desorption temperature",
+      "props": {
+        "note": "proxy of CO2 binding / activation strength"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic CO2 reduction to CO"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {
+        "note": "main photoreduction product"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "CO2 photoreduction activity"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "CO selectivity",
+      "props": {
+        "note": "~91.7% CO vs H2 on PHI-FLP; higher than PHI"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "HM-FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "HM-FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "hydroxyl H"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "cyano N"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "hydroxyl H"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "cyano N"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Descriptor",
+        "name": "hydrogen bonding"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "HM-FLP"
+      },
+      "props": {
+        "note": "H-bond mediates construction of HM-FLP"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "HM-FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "HM-FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Lewis basicity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "band gap"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "target": {
+        "label": "ElectronicDescriptor",
+        "name": "conduction band position"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "CO2 adsorption capacity"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Descriptor",
+        "name": "CO2 adsorption capacity"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "CO2 desorption temperature"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "HM-FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {
+        "note": "H-bond FLP bends/activates CO2; aids heterolytic cleavage"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "PHI-FLP"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "HM-FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {
+        "note": "HM-FLP boosts CO2 activation (bend/polarize) and charge separation; CO2RR activity ~2.5x vs PHI"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "HM-FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO selectivity"
+      },
+      "props": {
+        "note": "PHI-FLP higher CO sel than PHI; suppresses HER (~91.7% CO)"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "band gap"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "ElectronicDescriptor",
+        "name": "conduction band position"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "CO2 adsorption capacity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "CO2RR activity"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "370d146f62a70f00",
+    "source_pdf": "Construction of Frustrated Lewis Pairs in Poly heptazine Imide  Nanosheets via Hydrogen.pdf",
+    "page_start": 1,
+    "page_end": 6,
+    "score": 11.0,
+    "note": "merged 63bcaf+722e; HM-FLP H···N≡C; H-bond ENABLES; CO2RR; FLP↔activity/CO sel; band gap/CB/ads on Material; await delete 63bcaf/722e"
+  }
+}

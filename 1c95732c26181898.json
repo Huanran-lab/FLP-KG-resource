@@ -1,0 +1,231 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {
+        "note": "highly defective (MW-assisted); hosts Ce3+···O FLP for CO2+CH3OH → MMC"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "separates Ce3+ (LA) and O2− (LB); Ce3+–VO–Ce3+ clustering"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ce3+···O FLP",
+      "props": {
+        "note": "adjacent Ce3+ (LA) + lattice O2− (LB) separated by Ov (~4 Å); needs surface Ce3+ >30%"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce3+",
+      "props": {
+        "note": "adjacent surface Ce3+; Ce3+-to-CO2 charge transfer"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "lattice O",
+      "props": {
+        "note": "lattice O2−"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance",
+      "props": {
+        "value": "~4 Å",
+        "note": "Ov spatially separates Ce3+ and O2−"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "Ce3+ content",
+      "props": {
+        "note": "surface Ce3+ fraction; FLP when >30% (Ce3+–VO–Ce3+ clustering)"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2 and CH3OH conversion to monomethylcarbonate",
+      "props": {
+        "note": "not CO2RR; MMC as probe of FLP CO2 activation"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "CH3OH",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "monomethylcarbonate",
+      "props": {
+        "note": "MMC"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "CO2 activation",
+      "props": {
+        "note": "bidentate carbonate bridging FLP; Ce3+-to-CO2 charge transfer"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "MMC formation activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "CeO2" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "FLP", "name": "Ce3+···O FLP" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "Ce3+···O FLP" },
+      "target": { "label": "Material", "name": "CeO2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "Defect", "name": "oxygen vacancy" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "oxygen vacancy" },
+      "target": { "label": "FLP", "name": "Ce3+···O FLP" },
+      "props": {
+        "note": "Ov creates ~4 Å LA–LB separation / Ce3+–VO–Ce3+"
+      }
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "LewisAcid", "name": "Ce3+" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "LewisBase", "name": "lattice O" },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "Ce3+" },
+      "target": { "label": "LewisBase", "name": "lattice O" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Ce3+···O FLP" },
+      "target": { "label": "GeometricDescriptor", "name": "LA-LB distance" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "Descriptor", "name": "Ce3+ content" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Descriptor", "name": "Ce3+ content" },
+      "target": { "label": "FLP", "name": "Ce3+···O FLP" },
+      "props": {
+        "note": ">30% surface Ce3+ enables clustered FLP"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "FLP", "name": "Ce3+···O FLP" },
+      "target": { "label": "Mechanism", "name": "CO2 activation" },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "Mechanism", "name": "CO2 activation" },
+      "target": { "label": "Reaction", "name": "CO2 and CH3OH conversion to monomethylcarbonate" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "FLP", "name": "Ce3+···O FLP" },
+      "target": { "label": "Activity", "name": "MMC formation activity" },
+      "props": {
+        "note": "high defectivity + Ce3+ >30% (e.g. MW(100)-red) → higher MMC"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "Reactant", "name": "CH3OH" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "CeO2" },
+      "target": { "label": "Reaction", "name": "CO2 and CH3OH conversion to monomethylcarbonate" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "CO2 and CH3OH conversion to monomethylcarbonate" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "CO2 and CH3OH conversion to monomethylcarbonate" },
+      "target": { "label": "Reactant", "name": "CH3OH" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2 and CH3OH conversion to monomethylcarbonate" },
+      "target": { "label": "Product", "name": "monomethylcarbonate" },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "1c95732c26181898",
+    "source_pdf": "ceo2-frustrated-lewis-pairs-improving-co2-and-ch3oh-conversion-to-monomethylcarbonate.pdf",
+    "page_start": 1,
+    "page_end": 10,
+    "score": 12.0,
+    "note": "新逻辑: Ce3+···O FLP; Ov/Ce3+>30% ENABLES FLP; CO2 act. via bidentate carbonate; not CO2RR; sibling b3e41"
+  }
+}

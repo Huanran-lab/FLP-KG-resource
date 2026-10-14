@@ -1,0 +1,341 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "ZnSn(OH)6 cube",
+      "props": {
+        "note": "Sc; (100); long-distance FLP contrast"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "ZnSn(OH)6 octahedron",
+      "props": {
+        "note": "So; (111); short-distance FLP; higher CO2RR"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy (Sc)",
+      "props": {
+        "value": "~1.36e16 spin/g",
+        "note": "from photocorrosion of light-unstable terminal Sn-OH on (100)"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy (So)",
+      "props": {
+        "value": "~7.98e13 spin/g",
+        "note": "much lower OV from more stable (111) terminal Sn-OH"
+      }
+    },
+    {
+      "label": "Condition",
+      "name": "vacuum irradiation",
+      "props": {
+        "note": "4 h pre-irradiation; facet-dependent OV → FLP"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "unsaturated Snδ+",
+      "props": {
+        "note": "at OV"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "Zn-OH",
+      "props": {
+        "note": "Sc (100) FLP base; light-stable terminal Zn-OH"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "OH",
+      "props": {
+        "note": "So (111) FLP base; -OH on same Sn as OV"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Snδ+···Zn-OH FLP",
+      "props": {
+        "note": "Sc; LA-LB 0.488 nm"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Snδ+···OH FLP",
+      "props": {
+        "note": "So; LA-LB 0.207 nm"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance (Sc)",
+      "props": {
+        "value": "0.488 nm"
+      }
+    },
+    {
+      "label": "GeometricDescriptor",
+      "name": "LA-LB distance (So)",
+      "props": {
+        "value": "0.207 nm"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "photocatalytic; main CO, minor CH4"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {
+        "note": "main"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "CH4",
+      "props": {
+        "note": "minor"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "CO2 activation",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "CO2RR activity",
+      "props": {
+        "note": "So > Sc"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "ZnSn(OH)6 cube" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "FLP", "name": "surface FLP" },
+      "target": { "label": "Material", "name": "ZnSn(OH)6 octahedron" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 cube" },
+      "target": { "label": "FLP", "name": "Snδ+···Zn-OH FLP" },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 octahedron" },
+      "target": { "label": "FLP", "name": "Snδ+···OH FLP" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "Snδ+···Zn-OH FLP" },
+      "target": { "label": "Material", "name": "ZnSn(OH)6 cube" },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": { "label": "FLP", "name": "Snδ+···OH FLP" },
+      "target": { "label": "Material", "name": "ZnSn(OH)6 octahedron" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 cube" },
+      "target": { "label": "Defect", "name": "oxygen vacancy (Sc)" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 octahedron" },
+      "target": { "label": "Defect", "name": "oxygen vacancy (So)" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Condition", "name": "vacuum irradiation" },
+      "target": { "label": "Defect", "name": "oxygen vacancy (Sc)" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Condition", "name": "vacuum irradiation" },
+      "target": { "label": "Defect", "name": "oxygen vacancy (So)" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "oxygen vacancy (Sc)" },
+      "target": { "label": "FLP", "name": "Snδ+···Zn-OH FLP" },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "Defect", "name": "oxygen vacancy (So)" },
+      "target": { "label": "FLP", "name": "Snδ+···OH FLP" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 cube" },
+      "target": { "label": "LewisAcid", "name": "unsaturated Snδ+" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 cube" },
+      "target": { "label": "LewisBase", "name": "Zn-OH" },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 octahedron" },
+      "target": { "label": "LewisAcid", "name": "unsaturated Snδ+" },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 octahedron" },
+      "target": { "label": "LewisBase", "name": "OH" },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "unsaturated Snδ+" },
+      "target": { "label": "LewisBase", "name": "Zn-OH" },
+      "props": {
+        "note": "Sc"
+      }
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": { "label": "LewisAcid", "name": "unsaturated Snδ+" },
+      "target": { "label": "LewisBase", "name": "OH" },
+      "props": {
+        "note": "So"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Snδ+···Zn-OH FLP" },
+      "target": { "label": "GeometricDescriptor", "name": "LA-LB distance (Sc)" },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": { "label": "FLP", "name": "Snδ+···OH FLP" },
+      "target": { "label": "GeometricDescriptor", "name": "LA-LB distance (So)" },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": { "label": "FLP", "name": "Snδ+···OH FLP" },
+      "target": { "label": "Activity", "name": "CO2RR activity" },
+      "props": {
+        "note": "vs Sc Snδ+···Zn-OH FLP (0.488 nm): shorter So LA-LB (0.207 nm) → stronger orbital interaction → higher activity"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "FLP", "name": "Snδ+···OH FLP" },
+      "target": { "label": "Mechanism", "name": "CO2 activation" },
+      "props": {
+        "note": "more efficient FLP"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": { "label": "FLP", "name": "Snδ+···Zn-OH FLP" },
+      "target": { "label": "Mechanism", "name": "CO2 activation" },
+      "props": {
+        "note": "less efficient contrast"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": { "label": "Mechanism", "name": "CO2 activation" },
+      "target": { "label": "Reaction", "name": "CO2RR" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 cube" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 octahedron" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 cube" },
+      "target": { "label": "Reaction", "name": "CO2RR" },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": { "label": "Material", "name": "ZnSn(OH)6 octahedron" },
+      "target": { "label": "Reaction", "name": "CO2RR" },
+      "props": {
+        "note": "higher than Sc"
+      }
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Reactant", "name": "CO2" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "CO" },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": { "label": "Reaction", "name": "CO2RR" },
+      "target": { "label": "Product", "name": "CH4" },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "19af38ee4572b292",
+    "source_pdf": "Crystal facet-dependent frustrated Lewis pairs on dual-metal hydroxide for photocatalytic CO2 reduction.pdf",
+    "page_start": 2,
+    "page_end": 6,
+    "score": 1.0,
+    "note": "lean: Sc OV→Snδ+···Zn-OH (0.488 nm) vs So OV→Snδ+···OH (0.207 nm); distance contrast → activity; CO2RR"
+  }
+}

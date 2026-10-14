@@ -1,0 +1,470 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "SAPO-34",
+      "props": {
+        "note": "CHA topology; hosts PMB+···framework-O FLP in cage"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "SSZ-13",
+      "props": {
+        "note": "CHA chabazite; FLP-containing zeolite used in GC-MS experiments"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella; zeolite-cage FLP only (this work)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "PMB+···O FLP",
+      "props": {
+        "note": "supramolecular FLP in CHA cage: PMB+ (LA) + Si–O–Al− (LB); steric frustration",
+        "aliases": [
+          "zeolite cage FLP",
+          "PMB+/Si-O-Al FLP"
+        ]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "polymethylbenzenium (PMB+)",
+      "props": {
+        "note": "hydrocarbon-pool carbocation; LA; acidity tunable by methyl number"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "deprotonated framework oxygen",
+      "props": {
+        "note": "Si–O–Al− bridged oxygen; LB",
+        "aliases": [
+          "Si-O-Al-"
+        ]
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "H2 heterolysis",
+      "props": {
+        "note": "H–H activation on zeolite-cage FLP"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "alkane dehydrogenation",
+      "props": {
+        "note": "C–H activation; n≥3 (e.g. propane→propene); CH4/C2H6 barriers prohibitive"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "methanol-to-olefin (MTO)",
+      "props": {
+        "note": "context: FLP path proposed as one component of MTO network"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "alkane",
+      "props": {
+        "note": "focus propane; higher alkanes n≥3"
+      }
+    },
+    {
+      "label": "Product",
+      "name": "alkene",
+      "props": {
+        "note": "e.g. propene from propane"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "PMB+ Lewis acidity",
+      "props": {
+        "note": "fewer methyl groups → stronger LA → lower H–H/C–H barriers"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "H2 activation activity",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "alkane dehydrogenation activity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SAPO-34"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SSZ-13"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "SAPO-34"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "SSZ-13"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SAPO-34"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SSZ-13"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "SAPO-34"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "polymethylbenzenium (PMB+)"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "SSZ-13"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "polymethylbenzenium (PMB+)"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "SAPO-34"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "deprotonated framework oxygen"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "SSZ-13"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "deprotonated framework oxygen"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "polymethylbenzenium (PMB+)"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "deprotonated framework oxygen"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "PMB+ Lewis acidity"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Descriptor",
+        "name": "PMB+ Lewis acidity"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "props": {
+        "note": "fewer methyl on PMB+ → stronger LA → higher FLP activity (H–H/C–H)"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {
+        "note": "H–H heterolysis"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alkane"
+      },
+      "props": {
+        "note": "C–H activation / dehydrogenation for n≥3"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "SAPO-34"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2 heterolysis"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "SSZ-13"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "H2 heterolysis"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "SAPO-34"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "alkane dehydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "SSZ-13"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "alkane dehydrogenation"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 heterolysis"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkane dehydrogenation"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "alkane"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "alkane dehydrogenation"
+      },
+      "target": {
+        "label": "Product",
+        "name": "alkene"
+      },
+      "props": {}
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Reaction",
+        "name": "H2 heterolysis"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "methanol-to-olefin (MTO)"
+      },
+      "props": {
+        "note": "FLP H2/alkane path proposed as part of MTO network"
+      }
+    },
+    {
+      "type": "FACILITATES",
+      "source": {
+        "label": "Reaction",
+        "name": "alkane dehydrogenation"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "methanol-to-olefin (MTO)"
+      },
+      "props": {
+        "note": "FLP alkane path as one MTO component"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "PMB+ Lewis acidity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "H2 activation activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "PMB+ Lewis acidity"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "alkane dehydrogenation activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "H2 activation activity"
+      },
+      "props": {
+        "note": "DFT + GC-MS in FLP-containing CHA zeolites"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "PMB+···O FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "alkane dehydrogenation activity"
+      },
+      "props": {
+        "note": "propane dehydrogenation confirmed on SAPO-34/SSZ-13"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "37009d513ce41e54",
+    "source_pdf": "Frustrated Lewis Pair in Zeolite Cages for Alkane Activations.pdf",
+    "page_start": 1,
+    "page_end": 7,
+    "score": 29.0,
+    "note": "saved: CHA SAPO-34/SSZ-13 PMB+···O FLP; acidity FACILITATES FLP; drop intro oxides; sole"
+  }
+}

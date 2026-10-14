@@ -1,0 +1,233 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "MIL-101(Cr)",
+      "props": {
+        "note": "host MOF; SBU Cr3(μ3-O)(COO)6(OH)(H2O)2; dehydrated before FLP loading"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "MIL-101(Cr)-FLP-H2",
+      "props": {
+        "note": "B(C6F5)2(Mes)/DABCO anchored in pores then treated with H2; working catalyst (~1.0 mmol FLP g−1)"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella; MOF-confined molecular FLP"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "B(C6F5)2(Mes)···DABCO FLP",
+      "props": {
+        "note": "anchored FLP; after H2 forms [HDABCO]+[HB(C6F5)2(Mes)]− ammonium hydridoborate",
+        "aliases": ["B···N FLP", "MIL-101(Cr)-FLP"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "B(C6F5)2(Mes)",
+      "props": {
+        "note": "mesityl-bis(pentafluorophenyl)borane LA"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "DABCO",
+      "props": {
+        "note": "1,4-diazabicyclo[2.2.2]octane; one N grafts to open CrIII, other pairs with LA"
+      }
+    },
+    {
+      "label": "ActiveSite",
+      "name": "open CrIII site",
+      "props": {
+        "note": "remaining unsaturated CrIII on SBU; preferentially binds C=N (N···Cr), not the FLP acid"
+      }
+    },
+    {
+      "label": "ActiveSite",
+      "name": "hydroxy group",
+      "props": {
+        "note": "SBU μ-OH / -OH; preferentially binds C=N via N···HO (DFT Eads ≈ −34.8 kJ mol−1)"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "chemoselective hydrogenation of α,β-unsaturated imines",
+      "props": {
+        "note": "selective C=N reduction; C=C retained; not CO2 hydrogenation"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "α,β-unsaturated imine",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "unsaturated amine",
+      "props": {
+        "note": "imine reduced; alkene intact"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Molecule",
+      "name": "C=N",
+      "props": {
+        "note": "imine bond targeted for reduction"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "C=C",
+      "props": {
+        "note": "alkene bond retained under MOF-FLP catalysis"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "FLP", "name": "B(C6F5)2(Mes)···DABCO FLP"},
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "Material", "name": "MIL-101(Cr)"},
+      "props": {
+        "note": "FLP grafted on dehydrated MIL-101(Cr) pore walls"
+      }
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "B(C6F5)2(Mes)···DABCO FLP"},
+      "target": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "LewisAcid", "name": "B(C6F5)2(Mes)"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "LewisBase", "name": "DABCO"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "B(C6F5)2(Mes)"},
+      "target": {"label": "LewisBase", "name": "DABCO"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "FLP", "name": "B(C6F5)2(Mes)···DABCO FLP"},
+      "target": {"label": "LewisAcid", "name": "B(C6F5)2(Mes)"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "FLP", "name": "B(C6F5)2(Mes)···DABCO FLP"},
+      "target": {"label": "LewisBase", "name": "DABCO"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "ActiveSite", "name": "open CrIII site"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "ActiveSite", "name": "hydroxy group"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "Reaction", "name": "chemoselective hydrogenation of α,β-unsaturated imines"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "chemoselective hydrogenation of α,β-unsaturated imines"},
+      "target": {"label": "Reactant", "name": "α,β-unsaturated imine"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "chemoselective hydrogenation of α,β-unsaturated imines"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "chemoselective hydrogenation of α,β-unsaturated imines"},
+      "target": {"label": "Product", "name": "unsaturated amine"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "Molecule", "name": "H2"},
+      "props": {
+        "note": "heterolytic H2 activation by B/DABCO FLP"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "ActiveSite", "name": "open CrIII site"},
+      "target": {"label": "Molecule", "name": "C=N"},
+      "props": {
+        "note": "N···Cr binding orients imine for selective reduction"
+      }
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "ActiveSite", "name": "hydroxy group"},
+      "target": {"label": "Molecule", "name": "C=N"},
+      "props": {
+        "note": "N···HO H-bonding; slightly stronger than N···Cr per DFT"
+      }
+    },
+    {
+      "type": "SUPPRESSES",
+      "source": {"label": "Material", "name": "MIL-101(Cr)-FLP-H2"},
+      "target": {"label": "Molecule", "name": "C=C"},
+      "props": {
+        "note": "homogeneous FLP reduces both C=N and C=C; MOF pore environment suppresses alkene reduction"
+      }
+    }
+  ],
+  "meta": {
+    "chunk_id": "f1e10fca1888f86c",
+    "source_pdf": "Promoting Frustrated Lewis Pairs for Heterogeneous Chemoselective Hydrogenation via the.pdf",
+    "page_start": 1,
+    "page_end": 4,
+    "score": 37.0,
+    "note": "rebuilt from PDF: hierarchy; B···DABCO FLP; Cr/OH activate C=N not FLP; drop HB/HDABCO CONTAINS; not CO2 hydrogenation"
+  }
+}

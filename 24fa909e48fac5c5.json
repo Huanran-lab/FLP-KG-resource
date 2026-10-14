@@ -1,0 +1,318 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "SiO2-700",
+      "props": {
+        "note": "silica dehydroxylated at 700 °C"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "[(≡SiO)2(AlO-C6H4-PPh2)(Et2O)]",
+      "props": {
+        "note": "phosphine-tethered silica via Al phenolate linker; precursor before borane loading"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "phosphine/HB(C6F5)2@SiO2",
+      "props": {
+        "note": "supported FLP: tethered PPh2 (LB) + Piers reagent HB(C6F5)2 (LA); main active catalyst"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "phosphine/B(C6F5)3@SiO2",
+      "props": {
+        "note": "supported FLP: tethered PPh2 (LB) + B(C6F5)3/BArF (LA); lower activity"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "silica-supported P/B FLP; Al is tether spacer only, not FLP acid"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "HB(C6F5)2",
+      "props": {
+        "note": "Piers' reagent"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "B(C6F5)3",
+      "props": {
+        "note": "referred as BArF in paper"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "tethered PPh2",
+      "props": {
+        "note": "from (4-hydroxyphenyl)diphenylphosphine; surface formula AlO-C6H4-PPh2"
+      }
+    },
+    {
+      "label": "Reaction",
+      "name": "Z-selective hydrogenation of alkynes",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "3-hexyne",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "Z-3-hexene",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "[(≡SiO)2(AlO-C6H4-PPh2)(Et2O)]"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SiO2-700"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/HB(C6F5)2@SiO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SiO2-700"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/B(C6F5)3@SiO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "SiO2-700"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/HB(C6F5)2@SiO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "[(≡SiO)2(AlO-C6H4-PPh2)(Et2O)]"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_COMPONENT",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/B(C6F5)3@SiO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "[(≡SiO)2(AlO-C6H4-PPh2)(Et2O)]"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "phosphine/HB(C6F5)2@SiO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "phosphine/B(C6F5)3@SiO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/HB(C6F5)2@SiO2"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "HB(C6F5)2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/HB(C6F5)2@SiO2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "tethered PPh2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/B(C6F5)3@SiO2"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "B(C6F5)3"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/B(C6F5)3@SiO2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "tethered PPh2"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "HB(C6F5)2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "tethered PPh2"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "B(C6F5)3"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "tethered PPh2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/HB(C6F5)2@SiO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "Z-selective hydrogenation of alkynes"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/B(C6F5)3@SiO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "Z-selective hydrogenation of alkynes"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "phosphine/HB(C6F5)2@SiO2"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "Z-selective hydrogenation of alkynes"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "3-hexyne"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "Z-selective hydrogenation of alkynes"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "Z-selective hydrogenation of alkynes"
+      },
+      "target": {
+        "label": "Product",
+        "name": "Z-3-hexene"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "24fa909e48fac5c5",
+    "source_pdf": "Development of silica-supported frustrated Lewispairs highly active transition metal-free catalystsfor the Z-selective reduction of alkynes.pdf",
+    "page_start": 4,
+    "page_end": 8,
+    "score": 0.0,
+    "note": "renamed: phosphine/HB(C6F5)2@SiO2 and phosphine/B(C6F5)3@SiO2; no scheme numbers"
+  }
+}

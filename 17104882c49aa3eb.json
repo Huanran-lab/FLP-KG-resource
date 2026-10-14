@@ -1,0 +1,517 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {
+        "note": "ceria FLP host (PN supports)"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "PN CeO2",
+      "props": {
+        "note": "porous nanorod CeO2; high surface defects / Ce3+"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "Ptcluster/PN CeO2",
+      "props": {
+        "note": "Pt clusters on PN CeO2; dual-active with Ce···O FLP"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {}
+    },
+    {
+      "label": "FLP",
+      "name": "Ce···O FLP",
+      "props": {
+        "note": "Ce3+ (LA) and lattice O (LB) near Ov on ceria"
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce3+",
+      "props": {}
+    },
+    {
+      "label": "LewisBase",
+      "name": "lattice O",
+      "props": {}
+    },
+    {
+      "label": "ActiveSite",
+      "name": "Pt cluster",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2RR",
+      "props": {
+        "note": "RWGS: CO2 + H2 → CO + H2O"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reactant",
+      "name": "H2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CO",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "H2O",
+      "props": {}
+    },
+    {
+      "label": "Mechanism",
+      "name": "dual-active site mechanism",
+      "props": {
+        "note": "Pt cluster activates H2; Ce···O FLP activates CO2"
+      }
+    },
+    {
+      "label": "Mechanism",
+      "name": "CO2 activation",
+      "props": {
+        "note": "on Ce···O FLP; elongated C=O and bent O-C-O"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "surface Ce3+ fraction",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Ce3+ O fraction",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "CO2 adsorption energy",
+      "props": {
+        "note": "from sibling 579016; FLP sites on CeO2(110)"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "C=O bond length",
+      "props": {
+        "note": "descriptor of CO2 activation on FLP"
+      }
+    },
+    {
+      "label": "Descriptor",
+      "name": "O-C-O angle",
+      "props": {
+        "note": "descriptor of CO2 activation on FLP"
+      }
+    },
+    {
+      "label": "Activity",
+      "name": "catalytic activity",
+      "props": {}
+    },
+    {
+      "label": "Activity",
+      "name": "selectivity",
+      "props": {}
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "FLP",
+        "name": "surface FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {
+        "label": "Material",
+        "name": "PN CeO2"
+      },
+      "target": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "Defect",
+        "name": "oxygen vacancy"
+      },
+      "target": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "LewisAcid",
+        "name": "Ce3+"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {
+        "label": "LewisAcid",
+        "name": "Ce3+"
+      },
+      "target": {
+        "label": "LewisBase",
+        "name": "lattice O"
+      },
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {
+        "label": "Material",
+        "name": "Ptcluster/PN CeO2"
+      },
+      "target": {
+        "label": "Material",
+        "name": "PN CeO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_ACTIVE_SITE",
+      "source": {
+        "label": "Material",
+        "name": "Ptcluster/PN CeO2"
+      },
+      "target": {
+        "label": "ActiveSite",
+        "name": "Pt cluster"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {
+        "note": "via Ce···O FLP"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "CO2 activation"
+      },
+      "props": {
+        "note": "FLP promotes strong CO2 adsorption and activation"
+      }
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Mechanism",
+        "name": "CO2 activation"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "C=O bond length"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "Mechanism",
+        "name": "CO2 activation"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "O-C-O angle"
+      },
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {
+        "label": "Material",
+        "name": "Ptcluster/PN CeO2"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {
+        "note": "Pt cluster site"
+      }
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "CeO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {
+        "label": "Material",
+        "name": "Ptcluster/PN CeO2"
+      },
+      "target": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "CO2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Reactant",
+        "name": "H2"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "CO"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Product",
+        "name": "H2O"
+      },
+      "props": {}
+    },
+    {
+      "type": "PROCEEDS_VIA",
+      "source": {
+        "label": "Reaction",
+        "name": "CO2RR"
+      },
+      "target": {
+        "label": "Mechanism",
+        "name": "dual-active site mechanism"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "surface Ce3+ fraction"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "Ce3+ O fraction"
+      },
+      "props": {}
+    },
+    {
+      "type": "HAS_DESCRIPTOR",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Descriptor",
+        "name": "CO2 adsorption energy"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "FLP",
+        "name": "Ce···O FLP"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "selectivity"
+      },
+      "props": {
+        "note": "weak *CO adsorption on FLP facilitates CO release and suppresses CH4 (methanation)"
+      }
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "surface Ce3+ fraction"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "Ce3+ O fraction"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "catalytic activity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "surface Ce3+ fraction"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "selectivity"
+      },
+      "props": {}
+    },
+    {
+      "type": "CORRELATES_WITH",
+      "source": {
+        "label": "Descriptor",
+        "name": "Ce3+ O fraction"
+      },
+      "target": {
+        "label": "Activity",
+        "name": "selectivity"
+      },
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "17104882c49aa3eb",
+    "source_pdf": "Platinum and Frustrated Lewis Pairs on Ceria as Dual‐Active Sites for Efficient Reverse.pdf",
+    "page_start": 2,
+    "page_end": 2,
+    "score": 56.0,
+    "note": "新逻辑: surface FLP→CeO2→Ce···O FLP; Ov ENABLES specific FLP; LA=Ce3+ LB=lattice O; CO2RR (RWGS→CO); drop Intermediate H* and surface defect; keep Ce3+ descriptors; no merge; Catalyst→Material merge"
+  }
+}

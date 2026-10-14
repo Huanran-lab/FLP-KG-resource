@@ -1,0 +1,179 @@
+{
+  "nodes": [
+    {
+      "label": "Material",
+      "name": "Ni/CeO2",
+      "props": {
+        "note": "Ni on CeO2; FLP host (morphology series refined in sibling chunks)"
+      }
+    },
+    {
+      "label": "Material",
+      "name": "CeO2",
+      "props": {
+        "note": "oxide support"
+      }
+    },
+    {
+      "label": "Defect",
+      "name": "oxygen vacancy",
+      "props": {
+        "note": "creates unsaturated Ce acid sites; paper FLP motif often written OV–OH"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "surface FLP",
+      "props": {
+        "note": "umbrella"
+      }
+    },
+    {
+      "label": "FLP",
+      "name": "Ce···OH FLP",
+      "props": {
+        "note": "unsaturated Ce (LA) + surface OH (LB); paper denotes OV–OH FLP",
+        "aliases": ["OV-OH FLP", "Ce3+···OH FLP"]
+      }
+    },
+    {
+      "label": "LewisAcid",
+      "name": "Ce3+",
+      "props": {
+        "note": "unsaturated Ce near Ov; Lewis acid"
+      }
+    },
+    {
+      "label": "LewisBase",
+      "name": "OH",
+      "props": {
+        "note": "surface hydroxyl; Lewis base"
+      }
+    },
+    {
+      "label": "Molecule",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Reaction",
+      "name": "CO2 methanation",
+      "props": {
+        "note": "CO2 + 4H2 → CH4 + 2H2O; not CO2RR (product CH4)"
+      }
+    },
+    {
+      "label": "Reactant",
+      "name": "CO2",
+      "props": {}
+    },
+    {
+      "label": "Product",
+      "name": "CH4",
+      "props": {}
+    },
+    {
+      "label": "Descriptor",
+      "name": "Lewis basicity",
+      "props": {
+        "note": "basicity strengthened via oxygen vacancy"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "type": "CONTAINS",
+      "source": {"label": "FLP", "name": "surface FLP"},
+      "target": {"label": "Material", "name": "Ni/CeO2"},
+      "props": {}
+    },
+    {
+      "type": "CONTAINS",
+      "source": {"label": "Material", "name": "Ni/CeO2"},
+      "target": {"label": "FLP", "name": "Ce···OH FLP"},
+      "props": {}
+    },
+    {
+      "type": "LOCATED_ON",
+      "source": {"label": "FLP", "name": "Ce···OH FLP"},
+      "target": {"label": "Material", "name": "Ni/CeO2"},
+      "props": {}
+    },
+    {
+      "type": "SUPPORTED_ON",
+      "source": {"label": "Material", "name": "Ni/CeO2"},
+      "target": {"label": "Material", "name": "CeO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_DEFECT",
+      "source": {"label": "Material", "name": "Ni/CeO2"},
+      "target": {"label": "Defect", "name": "oxygen vacancy"},
+      "props": {}
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "FLP", "name": "Ce···OH FLP"},
+      "props": {
+        "note": "Ov exposes/sterically separates Ce acid from OH base"
+      }
+    },
+    {
+      "type": "ENABLES",
+      "source": {"label": "Defect", "name": "oxygen vacancy"},
+      "target": {"label": "Descriptor", "name": "Lewis basicity"},
+      "props": {}
+    },
+    {
+      "type": "HAS_ACID_SITE",
+      "source": {"label": "Material", "name": "Ni/CeO2"},
+      "target": {"label": "LewisAcid", "name": "Ce3+"},
+      "props": {}
+    },
+    {
+      "type": "HAS_BASE_SITE",
+      "source": {"label": "Material", "name": "Ni/CeO2"},
+      "target": {"label": "LewisBase", "name": "OH"},
+      "props": {}
+    },
+    {
+      "type": "FORMS_PAIR_WITH",
+      "source": {"label": "LewisAcid", "name": "Ce3+"},
+      "target": {"label": "LewisBase", "name": "OH"},
+      "props": {}
+    },
+    {
+      "type": "CATALYZES",
+      "source": {"label": "Material", "name": "Ni/CeO2"},
+      "target": {"label": "Reaction", "name": "CO2 methanation"},
+      "props": {}
+    },
+    {
+      "type": "ACTIVATES",
+      "source": {"label": "Material", "name": "Ni/CeO2"},
+      "target": {"label": "Molecule", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_REACTANT",
+      "source": {"label": "Reaction", "name": "CO2 methanation"},
+      "target": {"label": "Reactant", "name": "CO2"},
+      "props": {}
+    },
+    {
+      "type": "HAS_PRODUCT",
+      "source": {"label": "Reaction", "name": "CO2 methanation"},
+      "target": {"label": "Product", "name": "CH4"},
+      "props": {}
+    }
+  ],
+  "meta": {
+    "chunk_id": "00391520122e3074",
+    "source_pdf": "Frustrated Lewis Pairs Boosting-low-temperature-co2-methanation-performance-over-ni-ceo2-nanocatalysts.pdf",
+    "page_start": 4,
+    "page_end": 4,
+    "score": 36.0,
+    "note": "新逻辑: Ce3+···OH; acid/base on Material; Ov ENABLES FLP and Lewis basicity; not CO2RR"
+  }
+}
